@@ -28,10 +28,10 @@ This is a static website migration. All paths are relative to repository root:
 
 **Purpose**: Prepare repository for migration and validate environment
 
-- [ ] T001 Verify all website files are committed to Git repository (check 19 HTML, 47 CSS, 24 JS, 174 images)
-- [ ] T002 Create feature branch `001-website-migration` from main branch
-- [ ] T003 [P] Verify .gitignore excludes .claude/, node_modules/, .DS_Store, .specify/memory/* (except constitution.md)
-- [ ] T004 [P] Document current Raspberry Pi URL for side-by-side testing in research.md
+- [X] T001 Verify all website files are committed to Git repository (check 18 HTML, 47 CSS, 24 JS, 174 images)
+- [X] T002 Create feature branch `001-website-migration` from main branch
+- [X] T003 [P] Verify .gitignore excludes .claude/, node_modules/, .DS_Store, .specify/memory/* (except constitution.md)
+- [X] T004 [P] Document current Raspberry Pi URL for side-by-side testing in research.md
 
 ---
 

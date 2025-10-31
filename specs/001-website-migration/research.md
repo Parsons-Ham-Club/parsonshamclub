@@ -276,6 +276,42 @@ Use **VS Code Live Server extension** for local preview.
 
 ---
 
+## 6. Original Website Archive & Testing Reference
+
+### Decision
+Use **archived website files** from `WebSite X5 - Websites.zip` as reference for validation testing.
+
+### Rationale
+- **Raspberry Pi no longer functional**: Original hosting server is offline, cannot access live site for side-by-side comparison
+- **Complete archive available**: Zip file contains full website snapshot from Oct 17, 2023 (last backup before Pi failure)
+- **All files preserved**: Archive includes all 18 HTML pages, 174 images, CSS, JS, and PHP files for reference
+- **Testing approach**: Extract archive locally to compare GitHub Pages deployment against original files
+
+### Implementation Notes
+
+**Archive Location**: `WebSite X5 - Websites.zip` (14MB) in repository root
+
+**Archive Contents**:
+- 18 HTML pages (last modified Sep 9, 2023)
+- All directories: /admin/, /images/, /gallery/, /res/, /style/, /pcss/, /pluginAppObj/
+- PHP files: imsearch.php, x5feed.php (to be replaced/removed)
+- Static files: x5feed.xml, sitemap.xml, favicon.png
+
+**Testing Workflow**:
+1. Extract archive to temporary location: `/tmp/original-website/`
+2. Open extracted index.html in browser (File → Open)
+3. Open GitHub Pages URL in another browser tab
+4. Compare side-by-side for visual regression testing
+5. Validate all 18 pages using this method
+
+**Alternative URL**: Since Raspberry Pi is offline, visual regression testing will use:
+- **Original**: Extracted archive files opened locally in browser
+- **New**: GitHub Pages URL (https://parsons-ham-club.github.io/parsonshamclub/)
+
+**Note**: The archive represents the final state of the website before migration. No live Raspberry Pi URL available for testing.
+
+---
+
 ## Summary of Decisions
 
 | Research Topic | Decision | Key Benefit |
