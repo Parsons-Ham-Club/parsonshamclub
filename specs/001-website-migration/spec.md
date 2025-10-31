@@ -31,12 +31,12 @@ As a **prospective ham radio operator or community member**, I want to send a me
 
 **Why this priority**: The contact form is the primary way for non-members to communicate with the club. Without this, visitors have no easy way to reach out. However, the site is still valuable for information even without the contact form (they can call or email directly).
 
-**Independent Test**: Fill out the contact form with test data (email, subject, message, optional file attachment) and submit. Verify that ae0aq@gmail.com receives the email with all form data and the attachment. This validates the Formspree integration independently of other features.
+**Independent Test**: Fill out the contact form with test data (email, subject, message, optional file attachment) and submit. Verify that ae0aq@yahoo.com receives the email with all form data and the attachment. This validates the Formspree integration independently of other features.
 
 **Acceptance Scenarios**:
 
 1. **Given** a visitor is on the Contact page, **When** they fill out the form (email, subject, message) and click Send, **Then** the form submits successfully and they are redirected to the homepage
-2. **Given** the form was submitted, **When** checking ae0aq@gmail.com inbox, **Then** an email arrives with subject "Email from Parsons Ham Club Website" containing the visitor's email, subject, and message
+2. **Given** the form was submitted, **When** checking ae0aq@yahoo.com inbox, **Then** an email arrives with subject "Email from Parsons Ham Club Website" containing the visitor's email, subject, and message
 3. **Given** a visitor attaches a file to the contact form, **When** they submit the form, **Then** the email received includes the file attachment
 4. **Given** a visitor submits the form with invalid email, **When** they click Send, **Then** appropriate validation error message displays
 5. **Given** spam prevention is active, **When** a bot attempts to submit the form, **Then** the submission is blocked by Formspree's spam protection
@@ -114,7 +114,7 @@ As a **ham radio club officer**, I want the old Raspberry Pi site to remain oper
 
 **Contact Form**:
 - **FR-015**: The contact form MUST collect visitor email address (required), subject (optional), message (optional), and file attachment (optional)
-- **FR-016**: Form submissions MUST send email to ae0aq@gmail.com with subject "Email from Parsons Ham Club Website"
+- **FR-016**: Form submissions MUST send email to ae0aq@yahoo.com with subject "Email from Parsons Ham Club Website"
 - **FR-017**: Email MUST include visitor's email address, subject, message, and any file attachment
 - **FR-018**: Form MUST validate email address format before submission
 - **FR-019**: Form MUST include spam protection to prevent bot submissions
@@ -159,7 +159,7 @@ This is a static website migration with no database, but key data structures inc
 **Migration Completeness**:
 - **SC-001**: All 19 pages load successfully on GitHub Pages URL with zero visual differences from original site (verified by side-by-side comparison)
 - **SC-002**: All 174 images display correctly with no broken image links (verified by automated link checker)
-- **SC-003**: Contact form successfully delivers test emails to ae0aq@gmail.com with all form data intact (verified by 5 test submissions)
+- **SC-003**: Contact form successfully delivers test emails to ae0aq@yahoo.com with all form data intact (verified by 5 test submissions)
 
 **Performance & Reliability**:
 - **SC-004**: Page load times on GitHub Pages are equal to or faster than original Raspberry Pi hosting (target: <3 seconds for homepage on standard broadband)

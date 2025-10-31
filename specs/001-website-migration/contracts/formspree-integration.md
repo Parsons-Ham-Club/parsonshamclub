@@ -87,7 +87,7 @@ Replace PHP-based contact form (`/imemail/imEmailForm.php`) with Formspree stati
 
 1. **Create Account**:
    - Go to https://formspree.io
-   - Sign up with `ae0aq@gmail.com` (club email)
+   - Sign up with `ae0aq@yahoo.com` (club email)
    - Verify email address
    - Select **Free Plan** (50 submissions/month)
 
@@ -97,7 +97,7 @@ Replace PHP-based contact form (`/imemail/imEmailForm.php`) with Formspree stati
    - Get Form ID (format: `xpznABCD`)
 
 3. **Configure Form Settings** (via Formspree dashboard):
-   - **Email recipient**: ae0aq@gmail.com (pre-filled from account)
+   - **Email recipient**: ae0aq@yahoo.com (pre-filled from account)
    - **Subject template**: "Email from Parsons Ham Club Website"
    - **Success redirect**: https://parsons-ham-club.github.io/parsonshamclub/index.html
    - **Enable reCAPTCHA**: Yes (v2 Invisible)
@@ -118,12 +118,12 @@ Replace PHP-based contact form (`/imemail/imEmailForm.php`) with Formspree stati
 
 ## Email Template
 
-### Email Format Sent to ae0aq@gmail.com
+### Email Format Sent to ae0aq@yahoo.com
 
 ```
 From: Formspree <noreply@formspree.io>
 Reply-To: [visitor's email from imObjectForm_3_2]
-To: ae0aq@gmail.com
+To: ae0aq@yahoo.com
 Subject: Email from Parsons Ham Club Website
 
 Field: imObjectForm_3_2
@@ -157,7 +157,7 @@ User Agent: [visitor's browser]
    - Email format correct
    - Honeypot field empty (not a bot)
    - reCAPTCHA passes (if triggered)
-5. **Formspree sends email** to ae0aq@gmail.com
+5. **Formspree sends email** to ae0aq@yahoo.com
 6. **Formspree archives** submission in dashboard
 7. **User redirected** to index.html (homepage)
 
@@ -184,7 +184,7 @@ User Agent: [visitor's browser]
 
 **Test 1: Valid Submission (all fields)**
 - Input: valid email, subject, message, file attachment
-- Expected: Email arrives at ae0aq@gmail.com with all data, redirect to homepage
+- Expected: Email arrives at ae0aq@yahoo.com with all data, redirect to homepage
 - Status: [  ] Pass / [  ] Fail
 
 **Test 2: Valid Submission (required only)**
@@ -224,9 +224,9 @@ User Agent: [visitor's browser]
 
 ## Migration Checklist
 
-- [ ] Create Formspree account with ae0aq@gmail.com
+- [ ] Create Formspree account with ae0aq@yahoo.com
 - [ ] Create new form in Formspree dashboard
-- [ ] Configure email recipient (ae0aq@gmail.com)
+- [ ] Configure email recipient (ae0aq@yahoo.com)
 - [ ] Configure subject template ("Email from Parsons Ham Club Website")
 - [ ] Configure success redirect (homepage URL)
 - [ ] Enable reCAPTCHA v2 Invisible
@@ -253,7 +253,7 @@ If Formspree integration fails or doesn't work as expected:
 **Monthly Review** (Bob's responsibility):
 - Check Formspree dashboard for submission count (stay under 50/month on free tier)
 - Review archived submissions for spam (mark as spam in dashboard)
-- Verify emails still arriving at ae0aq@gmail.com
+- Verify emails still arriving at ae0aq@yahoo.com
 
 **Upgrade Trigger**:
 - If club consistently exceeds 40 submissions/month (approaching limit)

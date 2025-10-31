@@ -176,13 +176,13 @@ This is a static website migration. All paths are relative to repository root:
 
 ## Phase 5: User Story 2 - Contact Form Functionality (Priority: P2)
 
-**Goal**: Replace PHP contact form with Formspree integration, enabling visitors to send messages to ae0aq@gmail.com
+**Goal**: Replace PHP contact form with Formspree integration, enabling visitors to send messages to ae0aq@yahoo.com
 
-**Independent Test**: Fill out contact form with test data (email, subject, message, optional attachment) and verify email arrives at ae0aq@gmail.com with all form data intact
+**Independent Test**: Fill out contact form with test data (email, subject, message, optional attachment) and verify email arrives at ae0aq@yahoo.com with all form data intact
 
 ### Formspree Account Setup for User Story 2
 
-- [ ] T083 [US2] Create Formspree account at https://formspree.io with ae0aq@gmail.com
+- [ ] T083 [US2] Create Formspree account at https://formspree.io with ae0aq@yahoo.com
 - [ ] T084 [US2] Verify email address (check inbox for Formspree verification email)
 - [ ] T085 [US2] Select Free Plan (50 submissions/month)
 - [ ] T086 [US2] Create new form in Formspree dashboard: "Parsons Ham Club Contact Form"
@@ -190,7 +190,7 @@ This is a static website migration. All paths are relative to repository root:
 
 ### Formspree Configuration for User Story 2
 
-- [ ] T088 [US2] Configure email recipient: ae0aq@gmail.com (should be pre-filled from account)
+- [ ] T088 [US2] Configure email recipient: ae0aq@yahoo.com (should be pre-filled from account)
 - [ ] T089 [US2] Configure subject template: "Email from Parsons Ham Club Website"
 - [ ] T090 [US2] Configure success redirect: https://parsons-ham-club.github.io/parsonshamclub/index.html
 - [ ] T091 [US2] Enable reCAPTCHA v2 Invisible for spam protection
@@ -210,13 +210,13 @@ This is a static website migration. All paths are relative to repository root:
 - [ ] T098 [US2] Fill out form: valid email (test@example.com), subject ("Test submission"), message ("This is a test"), attach small PDF (<10MB)
 - [ ] T099 [US2] Click Send button
 - [ ] T100 [US2] Verify redirect to homepage (index.html) after submission
-- [ ] T101 [US2] Check ae0aq@gmail.com inbox for email with subject "Email from Parsons Ham Club Website"
+- [ ] T101 [US2] Check ae0aq@yahoo.com inbox for email with subject "Email from Parsons Ham Club Website"
 - [ ] T102 [US2] Verify email contains visitor email (test@example.com), subject, message, and PDF attachment
 - [ ] T103 [US2] Verify Reply-To header is set to visitor email (test@example.com)
 
 **Test 2: Valid Submission (required only)**
 - [ ] T104 [US2] Fill out form: valid email only, leave subject/message/attachment empty
-- [ ] T105 [US2] Verify email arrives at ae0aq@gmail.com with minimal data
+- [ ] T105 [US2] Verify email arrives at ae0aq@yahoo.com with minimal data
 
 **Test 3: Invalid Email**
 - [ ] T106 [US2] Fill out form with invalid email format (e.g., "notanemail")
@@ -271,7 +271,7 @@ This is a static website migration. All paths are relative to repository root:
 
 - [ ] T125 [US3] Install VS Code on Bob's computer (download from https://code.visualstudio.com)
 - [ ] T126 [US3] Install Git on Bob's computer (download from https://git-scm.com/downloads or verify with `git --version`)
-- [ ] T127 [US3] Configure Git with Bob's name and email: `git config --global user.name "Bob Hoffman"` and `git config --global user.email "ae0aq@gmail.com"`
+- [ ] T127 [US3] Configure Git with Bob's name and email: `git config --global user.name "Bob Hoffman"` and `git config --global user.email "ae0aq@yahoo.com"`
 - [ ] T128 [US3] Clone repository in VS Code: Command Palette → Git: Clone → paste https://github.com/Parsons-Ham-Club/parsonshamclub.git
 - [ ] T129 [US3] Install Live Server extension in VS Code (Extensions → search "Live Server" → Install)
 - [ ] T130 [US3] Authenticate Bob's GitHub account in VS Code (when first push is attempted, VS Code will prompt)
@@ -369,7 +369,7 @@ This is a static website migration. All paths are relative to repository root:
 
 - [ ] T181 Monitor GitHub Pages uptime for 7 days (check https://www.githubstatus.com)
 - [ ] T182 Monitor Formspree submissions for 30 days (check dashboard weekly)
-- [ ] T183 Check ae0aq@gmail.com inbox weekly for 1 month (verify form emails arriving)
+- [ ] T183 Check ae0aq@yahoo.com inbox weekly for 1 month (verify form emails arriving)
 - [ ] T184 Monitor Bob's Git activity (verify he's pushing changes without assistance)
 
 ### Raspberry Pi Decommission
