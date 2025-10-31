@@ -118,10 +118,10 @@ This is a static website migration. All paths are relative to repository root:
 
 ### GitHub Pages Deployment for User Story 1
 
-- [ ] T045 [US1] Push all changes to feature branch `001-website-migration`
-- [ ] T046 [US1] Merge feature branch to main branch (GitHub Pages deploys from main)
-- [ ] T047 [US1] Wait 1-2 minutes for GitHub Pages rebuild to complete
-- [ ] T048 [US1] Verify site is live at https://parsons-ham-club.github.io/parsonshamclub/
+- [X] T045 [US1] Push all changes to feature branch `001-website-migration`
+- [X] T046 [US1] Merge feature branch to main branch (GitHub Pages deploys from main)
+- [X] T047 [US1] Wait 1-2 minutes for GitHub Pages rebuild to complete
+- [X] T048 [US1] Verify site is live at https://parsons-ham-club.github.io/parsonshamclub/
 
 ### Visual Regression Testing for User Story 1 (Manual)
 
