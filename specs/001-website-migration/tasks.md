@@ -41,9 +41,9 @@ This is a static website migration. All paths are relative to repository root:
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete
 
-- [ ] T005 Create complete file inventory checklist for visual regression testing (all 19 HTML pages)
-- [ ] T006 [P] Setup local testing environment: VS Code + Live Server extension installed and verified
-- [ ] T007 [P] Create backup of all PHP files being deleted (zip archive for reference: admin/, imemail/, captcha/, res/*.php)
+- [X] T005 Create complete file inventory checklist for visual regression testing (all 18 HTML pages)
+- [X] T006 [P] Setup local testing environment: VS Code + Live Server extension installed and verified
+- [X] T007 [P] Create backup of all PHP files being deleted (tar.gz archive for reference: admin/, imemail/, captcha/, res/*.php)
 
 **Checkpoint**: Foundation ready - user story implementation can now begin in parallel
 
