@@ -76,35 +76,35 @@ This is a static website migration. All paths are relative to repository root:
 
 ### File Cleanup for User Story 1
 
-- [ ] T012 [P] [US1] Delete /admin/ directory (856KB, 70+ files) from repository
-- [ ] T013 [P] [US1] Delete /imemail/ directory (contact form PHP processor) from repository
-- [ ] T014 [P] [US1] Delete /captcha/ directory (PHP captcha generator) from repository
-- [ ] T015 [US1] Delete PHP engine files from /res/: x5engine.php, access.inc.php, search.inc.php, imemail.inc.php
-- [ ] T016 [P] [US1] Delete PHPMailer files from /res/: class.phpmailer.php, class.smtp.php, class.exception.php, PHPMailerAutoload.php, l10n.php
-- [ ] T017 [P] [US1] Delete imsearch.php from repository root (search page)
-- [ ] T018 [US1] Commit file deletions with message: "Remove PHP dependencies for GitHub Pages migration"
+- [X] T012 [P] [US1] Delete /admin/ directory (856KB, 70+ files) from repository
+- [X] T013 [P] [US1] Delete /imemail/ directory (contact form PHP processor) from repository
+- [X] T014 [P] [US1] Delete /captcha/ directory (PHP captcha generator) from repository
+- [X] T015 [US1] Delete PHP engine files from /res/: x5engine.php, access.inc.php, search.inc.php, imemail.inc.php
+- [X] T016 [P] [US1] Delete PHPMailer files from /res/: class.phpmailer.php, class.smtp.php, class.exception.php, PHPMailerAutoload.php, l10n.php
+- [X] T017 [P] [US1] Delete imsearch.php from repository root (search page)
+- [X] T018 [US1] Commit file deletions with message: "Remove PHP dependencies for GitHub Pages migration"
 
 ### RSS Feed Updates for User Story 1
 
-- [ ] T019 [P] [US1] Update index.html line 33: change `href="x5feed.php"` to `href="x5feed.xml"`
-- [ ] T020 [P] [US1] Update contact.html line 24: change `href="x5feed.php"` to `href="x5feed.xml"`
-- [ ] T021 [P] [US1] Update about-us.html line 24: change `href="x5feed.php"` to `href="x5feed.xml"`
-- [ ] T022 [P] [US1] Update events.html line 24: change `href="x5feed.php"` to `href="x5feed.xml"`
-- [ ] T023 [P] [US1] Update exams.html line 24: change `href="x5feed.php"` to `href="x5feed.xml"`
-- [ ] T024 [P] [US1] Update local-nets.html line 24: change `href="x5feed.php"` to `href="x5feed.xml"`
-- [ ] T025 [P] [US1] Update arrl-news.html line 24: change `href="x5feed.php"` to `href="x5feed.xml"`
-- [ ] T026 [P] [US1] Update ham-nation.html line 24: change `href="x5feed.php"` to `href="x5feed.xml"`
-- [ ] T027 [P] [US1] Update ham-radio-360.html line 24: change `href="x5feed.php"` to `href="x5feed.xml"`
-- [ ] T028 [P] [US1] Update this-week-in-amateur-radio.html line 24: change `href="x5feed.php"` to `href="x5feed.xml"`
-- [ ] T029 [P] [US1] Update digital-communications.html line 24: change `href="x5feed.php"` to `href="x5feed.xml"`
-- [ ] T030 [P] [US1] Update morse-code.html line 24: change `href="x5feed.php"` to `href="x5feed.xml"`
-- [ ] T031 [P] [US1] Update uhf-vhf.html line 24: change `href="x5feed.php"` to `href="x5feed.xml"`
-- [ ] T032 [P] [US1] Update hf.html line 24: change `href="x5feed.php"` to `href="x5feed.xml"`
-- [ ] T033 [P] [US1] Update summits-on-the-air.html line 24: change `href="x5feed.php"` to `href="x5feed.xml"`
-- [ ] T034 [P] [US1] Update solar-propagation.html line 24: change `href="x5feed.php"` to `href="x5feed.xml"`
-- [ ] T035 [P] [US1] Update community-service.html line 24: change `href="x5feed.php"` to `href="x5feed.xml"`
-- [ ] T036 [P] [US1] Update interview-on-community-service.html line 24: change `href="x5feed.php"` to `href="x5feed.xml"`
-- [ ] T037 [US1] Commit RSS feed reference updates with message: "Update RSS feed references from x5feed.php to x5feed.xml"
+- [X] T019 [P] [US1] Update index.html line 33: change `href="x5feed.php"` to `href="x5feed.xml"`
+- [X] T020 [P] [US1] Update contact.html line 24: change `href="x5feed.php"` to `href="x5feed.xml"`
+- [X] T021 [P] [US1] Update about-us.html line 24: change `href="x5feed.php"` to `href="x5feed.xml"`
+- [X] T022 [P] [US1] Update events.html line 24: change `href="x5feed.php"` to `href="x5feed.xml"`
+- [X] T023 [P] [US1] Update exams.html line 24: change `href="x5feed.php"` to `href="x5feed.xml"`
+- [X] T024 [P] [US1] Update local-nets.html line 24: change `href="x5feed.php"` to `href="x5feed.xml"`
+- [X] T025 [P] [US1] Update arrl-news.html line 24: change `href="x5feed.php"` to `href="x5feed.xml"`
+- [X] T026 [P] [US1] Update ham-nation.html line 24: change `href="x5feed.php"` to `href="x5feed.xml"`
+- [X] T027 [P] [US1] Update ham-radio-360.html line 24: change `href="x5feed.php"` to `href="x5feed.xml"`
+- [X] T028 [P] [US1] Update this-week-in-amateur-radio.html line 24: change `href="x5feed.php"` to `href="x5feed.xml"`
+- [X] T029 [P] [US1] Update digital-communications.html line 24: change `href="x5feed.php"` to `href="x5feed.xml"`
+- [X] T030 [P] [US1] Update morse-code.html line 24: change `href="x5feed.php"` to `href="x5feed.xml"`
+- [X] T031 [P] [US1] Update uhf-vhf.html line 24: change `href="x5feed.php"` to `href="x5feed.xml"`
+- [X] T032 [P] [US1] Update hf.html line 24: change `href="x5feed.php"` to `href="x5feed.xml"`
+- [X] T033 [P] [US1] Update summits-on-the-air.html line 24: change `href="x5feed.php"` to `href="x5feed.xml"`
+- [X] T034 [P] [US1] Update solar-propagation.html line 24: change `href="x5feed.php"` to `href="x5feed.xml"`
+- [X] T035 [P] [US1] Update community-service.html line 24: change `href="x5feed.php"` to `href="x5feed.xml"`
+- [X] T036 [P] [US1] Update interview-on-community-service.html line 24: change `href="x5feed.php"` to `href="x5feed.xml"`
+- [X] T037 [US1] Commit RSS feed reference updates with message: "Update RSS feed references from x5feed.php to x5feed.xml"
 
 ### Local Validation for User Story 1
 
