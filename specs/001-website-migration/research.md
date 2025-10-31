@@ -310,6 +310,12 @@ Use **archived website files** from `WebSite X5 - Websites.zip` as reference for
 
 **Note**: The archive represents the final state of the website before migration. No live Raspberry Pi URL available for testing.
 
+**Rollback Procedure**: Since Raspberry Pi is offline, rollback simply means NOT merging the migration branch to main. The migration work stays on the `001-website-migration` branch until full validation passes. If issues are discovered:
+1. Fix issues on the feature branch
+2. Re-test using validation-checklist.md
+3. Only merge to `main` when all 126 checks pass
+4. GitHub Pages will auto-deploy from `main` branch only
+
 ---
 
 ## Summary of Decisions

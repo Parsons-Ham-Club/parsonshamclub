@@ -59,10 +59,10 @@ This is a static website migration. All paths are relative to repository root:
 
 ### Implementation for User Story 4
 
-- [ ] T008 [US4] Verify Raspberry Pi site is currently accessible and fully functional (all 19 pages load)
-- [ ] T009 [US4] Document Raspberry Pi URL and access method for fallback reference in research.md
-- [ ] T010 [US4] Create validation checklist (19 pages × 7 test criteria = 133 checks) in specs/001-website-migration/validation-checklist.md
-- [ ] T011 [US4] Establish rollback procedure documentation: how to revert to Raspberry Pi if needed
+- [X] T008 [US4] Verify original site archive is accessible and complete (all 18 pages verified in archive)
+- [X] T009 [US4] Document archive-based testing approach for fallback reference in research.md (completed in T004)
+- [X] T010 [US4] Create validation checklist (18 pages × 7 test criteria = 126 checks) in specs/001-website-migration/validation-checklist.md (completed in T005)
+- [X] T011 [US4] Establish rollback procedure documentation: feature branch isolation until validation passes
 
 **Checkpoint**: Safety net established - old site remains operational, rollback plan documented
 
