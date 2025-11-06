@@ -20,7 +20,11 @@ body { margin: 0; padding: 0; text-align: left; height: 100%; }
 		#imFooterObjects { margin-left: auto; margin-right: auto; position: relative; height: 160px; width:960px; }
 		#imSideBar { background-image: none; background-color: transparent; overflow: visible; zoom: 1; z-index: 200; }
 		#imSideBarObjects { position: relative; height: 520px; }
-	
+
+		/* FIX: Reduce header height for non-homepage pages and pull content up */
+		body:not(.homepage) #imHeaderObjects { height: 70px; }
+		body:not(.homepage) #imContentGraphics { margin-top: -540px; }
+
 }
 @media (max-width: 959.9px) and (min-width: 720px) {
 		#imPageExtContainer { background-image: none; background-color: rgba(255, 255, 255, 1); }
@@ -35,7 +39,11 @@ body { margin: 0; padding: 0; text-align: left; height: 100%; }
 		#imFooterObjects { margin-left: auto; margin-right: auto; position: relative; height: 130px; width:720px; }
 		#imSideBar { background-image: none; background-color: transparent; overflow: visible; zoom: 1; z-index: 200; }
 		#imSideBarObjects { position: relative; height: 450px; }
-	
+
+		/* FIX: Reduce header height for non-homepage pages and pull content up */
+		body:not(.homepage) #imHeaderObjects { height: 70px; }
+		body:not(.homepage) #imContentGraphics { margin-top: -395px; }
+
 }
 @media (max-width: 719.9px) and (min-width: 480px) {
 		#imPageExtContainer { background-image: none; background-color: rgba(255, 255, 255, 1); }
@@ -50,7 +58,11 @@ body { margin: 0; padding: 0; text-align: left; height: 100%; }
 		#imFooterObjects { margin-left: auto; margin-right: auto; position: relative; height: 125px; width:480px; }
 		#imSideBar { background-image: none; background-color: transparent; overflow: visible; zoom: 1; z-index: 200; }
 		#imSideBarObjects { position: relative; height: 520px; }
-	
+
+		/* FIX: Reduce header height for non-homepage pages and pull content up */
+		body:not(.homepage) #imHeaderObjects { height: 70px; }
+		body:not(.homepage) #imContentGraphics { margin-top: -320px; }
+
 }
 @media (max-width: 479.9px)  {
 		#imPageExtContainer { background-image: none; background-color: rgba(255, 255, 255, 1); }
@@ -65,5 +77,9 @@ body { margin: 0; padding: 0; text-align: left; height: 100%; }
 		#imFooterObjects { margin-left: auto; margin-right: auto; position: relative; height: 100px; width:320px; }
 		#imSideBar { background-image: none; background-color: transparent; overflow: visible; zoom: 1; z-index: 200; }
 		#imSideBarObjects { position: relative; height: 520px; }
-	
+
+		/* FIX: Reduce header height for non-homepage pages and pull content up */
+		body:not(.homepage) #imHeaderObjects { height: 70px; }
+		body:not(.homepage) #imContentGraphics { margin-top: -220px; }
+
 }
