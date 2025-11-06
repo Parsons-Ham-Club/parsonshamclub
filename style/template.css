@@ -21,9 +21,9 @@ body { margin: 0; padding: 0; text-align: left; height: 100%; }
 		#imSideBar { background-image: none; background-color: transparent; overflow: visible; zoom: 1; z-index: 200; }
 		#imSideBarObjects { position: relative; height: 520px; }
 
-		/* FIX: Reduce header height for non-homepage pages and pull content up */
-		body:not(.homepage) #imHeaderObjects { height: 70px; }
-		body:not(.homepage) #imContentGraphics { margin-top: -540px; }
+		/* FIX: Reduce header height for non-homepage pages */
+		body:not(.homepage) #imHeaderObjects { height: 70px !important; }
+		body:not(.homepage) #imHeader { height: 70px !important; overflow: hidden; }
 
 }
 @media (max-width: 959.9px) and (min-width: 720px) {
@@ -40,9 +40,9 @@ body { margin: 0; padding: 0; text-align: left; height: 100%; }
 		#imSideBar { background-image: none; background-color: transparent; overflow: visible; zoom: 1; z-index: 200; }
 		#imSideBarObjects { position: relative; height: 450px; }
 
-		/* FIX: Reduce header height for non-homepage pages and pull content up */
-		body:not(.homepage) #imHeaderObjects { height: 70px; }
-		body:not(.homepage) #imContentGraphics { margin-top: -395px; }
+		/* FIX: Reduce header height for non-homepage pages */
+		body:not(.homepage) #imHeaderObjects { height: 70px !important; }
+		body:not(.homepage) #imHeader { height: 70px !important; overflow: hidden; }
 
 }
 @media (max-width: 719.9px) and (min-width: 480px) {
@@ -59,9 +59,9 @@ body { margin: 0; padding: 0; text-align: left; height: 100%; }
 		#imSideBar { background-image: none; background-color: transparent; overflow: visible; zoom: 1; z-index: 200; }
 		#imSideBarObjects { position: relative; height: 520px; }
 
-		/* FIX: Reduce header height for non-homepage pages and pull content up */
-		body:not(.homepage) #imHeaderObjects { height: 70px; }
-		body:not(.homepage) #imContentGraphics { margin-top: -320px; }
+		/* FIX: Reduce header height for non-homepage pages */
+		body:not(.homepage) #imHeaderObjects { height: 70px !important; }
+		body:not(.homepage) #imHeader { height: 70px !important; overflow: hidden; }
 
 }
 @media (max-width: 479.9px)  {
@@ -78,8 +78,8 @@ body { margin: 0; padding: 0; text-align: left; height: 100%; }
 		#imSideBar { background-image: none; background-color: transparent; overflow: visible; zoom: 1; z-index: 200; }
 		#imSideBarObjects { position: relative; height: 520px; }
 
-		/* FIX: Reduce header height for non-homepage pages and pull content up */
-		body:not(.homepage) #imHeaderObjects { height: 70px; }
-		body:not(.homepage) #imContentGraphics { margin-top: -220px; }
+		/* FIX: Reduce header height for non-homepage pages */
+		body:not(.homepage) #imHeaderObjects { height: 70px !important; }
+		body:not(.homepage) #imHeader { height: 70px !important; overflow: hidden; }
 
 }
