@@ -182,27 +182,27 @@ This is a static website migration. All paths are relative to repository root:
 
 ### Formspree Account Setup for User Story 2
 
-- [ ] T083 [US2] Create Formspree account at https://formspree.io with ae0aq@yahoo.com
-- [ ] T084 [US2] Verify email address (check inbox for Formspree verification email)
-- [ ] T085 [US2] Select Free Plan (50 submissions/month)
-- [ ] T086 [US2] Create new form in Formspree dashboard: "Parsons Ham Club Contact Form"
-- [ ] T087 [US2] Note Form ID from Formspree dashboard (format: xpznABCD)
+- [X] T083 [US2] Create Formspree account at https://formspree.io with ae0aq@yahoo.com
+- [X] T084 [US2] Verify email address (check inbox for Formspree verification email)
+- [X] T085 [US2] Select Free Plan (50 submissions/month)
+- [X] T086 [US2] Create new form in Formspree dashboard: "Parsons Ham Club Contact Form"
+- [X] T087 [US2] Note Form ID from Formspree dashboard (format: xpznABCD) - Form ID: xgvpgkao
 
 ### Formspree Configuration for User Story 2
 
-- [ ] T088 [US2] Configure email recipient: ae0aq@yahoo.com (should be pre-filled from account)
-- [ ] T089 [US2] Configure subject template: "Email from Parsons Ham Club Website"
-- [ ] T090 [US2] Configure success redirect: https://parsons-ham-club.github.io/parsonshamclub/index.html
-- [ ] T091 [US2] Enable reCAPTCHA v2 Invisible for spam protection
-- [ ] T092 [US2] Enable archive submissions in Formspree dashboard
-- [ ] T093 [US2] Add domain whitelist: parsons-ham-club.github.io (prevents form hijacking)
+- [X] T088 [US2] Configure email recipient: ae0aq@yahoo.com (should be pre-filled from account)
+- [X] T089 [US2] Configure subject template: "Email from Parsons Ham Club Website"
+- [X] T090 [US2] Configure success redirect: https://parsons-ham-club.github.io/parsonshamclub/index.html
+- [X] T091 [US2] Enable reCAPTCHA v2 Invisible for spam protection
+- [X] T092 [US2] Enable archive submissions in Formspree dashboard
+- [X] T093 [US2] Add domain whitelist: parsons-ham-club.github.io (prevents form hijacking)
 
 ### HTML Form Update for User Story 2
 
-- [ ] T094 [US2] Update contact.html line 231: change `action="imemail/imEmailForm.php"` to `action="https://formspree.io/f/YOUR_FORM_ID"` (replace YOUR_FORM_ID with actual Form ID from T087)
-- [ ] T095 [US2] Commit form action update with message: "Integrate Formspree for contact form (replace PHP processor)"
-- [ ] T096 [US2] Push changes to main branch
-- [ ] T097 [US2] Wait 1-2 minutes for GitHub Pages rebuild
+- [X] T094 [US2] Update contact.html line 231: change `action="imemail/imEmailForm.php"` to `action="https://formspree.io/f/xgvpgkao"`
+- [X] T095 [US2] Commit form action update with message: "Integrate Formspree for contact form (replace PHP processor)"
+- [X] T096 [US2] Push changes to main branch
+- [X] T097 [US2] Wait 1-2 minutes for GitHub Pages rebuild
 
 ### Formspree Validation Testing for User Story 2
 
