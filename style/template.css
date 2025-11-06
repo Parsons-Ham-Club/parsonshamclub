@@ -23,9 +23,10 @@ body { margin: 0; padding: 0; text-align: left; height: 100%; }
 
 		/* FIX: Reduce header height for non-homepage pages and move content up */
 		body:not(.homepage) #imHeaderObjects { height: 70px !important; }
-		body:not(.homepage) #imHeader { height: 70px !important; overflow: hidden; }
-		body:not(.homepage) #imContentGraphics { position: relative; top: -540px; }
-		body:not(.homepage) #imContent { position: relative; top: -540px; }
+		body:not(.homepage) #imHeader { height: auto !important; min-height: 70px !important; }
+		body:not(.homepage) #imContentGraphics { position: relative; top: -450px; }
+		body:not(.homepage) #imContent { position: relative; top: -450px; }
+		body:not(.homepage) #imFooter { position: relative; top: -450px; }
 
 }
 @media (max-width: 959.9px) and (min-width: 720px) {
@@ -44,9 +45,10 @@ body { margin: 0; padding: 0; text-align: left; height: 100%; }
 
 		/* FIX: Reduce header height for non-homepage pages and move content up */
 		body:not(.homepage) #imHeaderObjects { height: 70px !important; }
-		body:not(.homepage) #imHeader { height: 70px !important; overflow: hidden; }
-		body:not(.homepage) #imContentGraphics { position: relative; top: -395px; }
-		body:not(.homepage) #imContent { position: relative; top: -395px; }
+		body:not(.homepage) #imHeader { height: auto !important; min-height: 70px !important; }
+		body:not(.homepage) #imContentGraphics { position: relative; top: -305px; }
+		body:not(.homepage) #imContent { position: relative; top: -305px; }
+		body:not(.homepage) #imFooter { position: relative; top: -305px; }
 
 }
 @media (max-width: 719.9px) and (min-width: 480px) {
@@ -65,9 +67,10 @@ body { margin: 0; padding: 0; text-align: left; height: 100%; }
 
 		/* FIX: Reduce header height for non-homepage pages and move content up */
 		body:not(.homepage) #imHeaderObjects { height: 70px !important; }
-		body:not(.homepage) #imHeader { height: 70px !important; overflow: hidden; }
-		body:not(.homepage) #imContentGraphics { position: relative; top: -320px; }
-		body:not(.homepage) #imContent { position: relative; top: -320px; }
+		body:not(.homepage) #imHeader { height: auto !important; min-height: 70px !important; }
+		body:not(.homepage) #imContentGraphics { position: relative; top: -230px; }
+		body:not(.homepage) #imContent { position: relative; top: -230px; }
+		body:not(.homepage) #imFooter { position: relative; top: -230px; }
 
 }
 @media (max-width: 479.9px)  {
@@ -86,8 +89,9 @@ body { margin: 0; padding: 0; text-align: left; height: 100%; }
 
 		/* FIX: Reduce header height for non-homepage pages and move content up */
 		body:not(.homepage) #imHeaderObjects { height: 70px !important; }
-		body:not(.homepage) #imHeader { height: 70px !important; overflow: hidden; }
-		body:not(.homepage) #imContentGraphics { position: relative; top: -220px; }
-		body:not(.homepage) #imContent { position: relative; top: -220px; }
+		body:not(.homepage) #imHeader { height: auto !important; min-height: 70px !important; }
+		body:not(.homepage) #imContentGraphics { position: relative; top: -130px; }
+		body:not(.homepage) #imContent { position: relative; top: -130px; }
+		body:not(.homepage) #imFooter { position: relative; top: -130px; }
 
 }
