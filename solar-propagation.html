@@ -26,24 +26,48 @@
 		<link rel="icon" href="favicon.png?2019-3-17-1-638298502370129308" type="image/png" />
 		<link rel="alternate" type="application/rss+xml" title="Summits on the Air" href="x5feed.xml" />
 	
+
+
+
 <style>
-/* Reduce header gap on non-homepage - just show animated text banner */
-#imHeaderObjects {
-    height: 80px !important;
-    min-height: 80px !important;
-    max-height: 80px !important;
+/* FINAL FIX: Completely remove header gap on non-homepage pages */
+body:not(.homepage) #imHeaderBg,
+#imHeaderBg {
+    height: 0px !important;
+    min-height: 0px !important;
+    max-height: 0px !important;
+    display: none !important;
 }
+
+body:not(.homepage) #imHeaderObjects,
+#imHeaderObjects {
+    height: 70px !important;
+    min-height: 70px !important;
+    max-height: 70px !important;
+    padding: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+body:not(.homepage) #imHeader,
+#imHeader {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
 @media (max-width: 1149.9px) {
-    #imHeaderObjects { height: 80px !important; }
+    #imHeaderBg { height: 0px !important; display: none !important; }
+    #imHeaderObjects { height: 70px !important; }
 }
 @media (max-width: 719.9px) {
-    #imHeaderObjects { height: 80px !important; }
+    #imHeaderBg { height: 0px !important; display: none !important; }
+    #imHeaderObjects { height: 70px !important; }
 }
 @media (max-width: 479.9px) {
-    #imHeaderObjects { height: 80px !important; }
+    #imHeaderBg { height: 0px !important; display: none !important; }
+    #imHeaderObjects { height: 70px !important; }
 }
-</style>
-</head>
+</style></head>
 	<body>
 		<div id="imPageExtContainer">
 			<div id="imPageIntContainer">
