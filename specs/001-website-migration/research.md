@@ -318,6 +318,67 @@ Use **archived website files** from `WebSite X5 - Websites.zip` as reference for
 
 ---
 
+## 7. Formspree Contact Form Integration
+
+### Decision
+Use **Formspree** (https://formspree.io) to replace PHP contact form with Form ID: `xgvpgkao`
+
+### Configuration Details
+
+**Form Endpoint**: https://formspree.io/f/xgvpgkao
+
+**Account**:
+- Email: ae0aq@yahoo.com (Bob Hoffman)
+- Plan: Free tier (50 submissions/month)
+- Form Name: "Parsons Ham Club Contact Form"
+
+**Settings**:
+- **Email recipient**: ae0aq@yahoo.com
+- **Subject template**: "Email from Parsons Ham Club Website"
+- **Success redirect**: https://parsons-ham-club.github.io/parsonshamclub/index.html
+- **Spam protection**: reCAPTCHA v2 Invisible enabled
+- **Domain whitelist**: parsons-ham-club.github.io
+- **Archive submissions**: Enabled (viewable in Formspree dashboard)
+
+**HTML Integration** (contact.html line 231):
+```html
+<!-- BEFORE (PHP) -->
+<form id="imObjectForm_3_form" action="imemail/imEmailForm.php" method="post" enctype="multipart/form-data">
+
+<!-- AFTER (Formspree) -->
+<form id="imObjectForm_3_form" action="https://formspree.io/f/xgvpgkao" method="POST">
+```
+
+**Field Mapping**:
+- `imObjectForm_3_2` (email input) → Formspree uses as Reply-To address
+- `imObjectForm_3_3` (subject textarea) → Included in email body
+- `imObjectForm_3_4` (message textarea) → Included in email body
+- `imObjectForm_3_5` (file upload) → Attachment (<10MB supported)
+- `imSpProt` (honeypot) → Spam protection (bots fill it, humans don't)
+
+**Expected Behavior**:
+1. Visitor fills contact form at /contact.html
+2. Clicks "Send" button
+3. Form POSTs to Formspree endpoint
+4. Formspree validates and checks spam protection
+5. Email sent to ae0aq@yahoo.com with subject "Email from Parsons Ham Club Website"
+6. Visitor redirected to homepage (index.html)
+7. Submission archived in Formspree dashboard
+
+**Monitoring**:
+- Bob can log into https://formspree.io to view all submissions
+- Email notifications sent immediately on each submission
+- Monthly quota: 50 submissions (sufficient for typical club traffic of 5-10/month)
+- Upgrade available if needed: $10/month for 1,000 submissions
+
+**Troubleshooting**:
+- If emails not arriving: Check ae0aq@yahoo.com spam folder
+- If form not submitting: Verify Form ID in contact.html matches `xgvpgkao`
+- If redirect not working: Check redirect URL in Formspree settings
+- If quota exceeded: Log into Formspree dashboard to check usage or upgrade plan
+
+---
+
 ## Summary of Decisions
 
 | Research Topic | Decision | Key Benefit |
