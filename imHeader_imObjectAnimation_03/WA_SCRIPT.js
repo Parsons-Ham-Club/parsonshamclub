@@ -111,9 +111,9 @@ Parsons_Ham_Club.stage = [{
                     
                     
                 {
-                    'Oid': '_83982899_124d_4ec4_bc85_81a225759975_5476f813867d7f561163a1c1bf22a0f9',                
+                    'Oid': '_83982899_124d_4ec4_bc85_81a225759975_5476f813867d7f561163a1c1bf22a0f9',
                     'Type': 'box',
-                    'InnerHTML': 'Parsons Amateur Radio Club'
+                    'InnerHTML': 'Parsons Area Amateur Radio Club'
                     ,
                     'Tag': 'div',
                     'Position': 'absolute',
@@ -127,7 +127,7 @@ Parsons_Ham_Club.stage = [{
                 'TextColor': '#DAA520',
                 'Opacity': '1',
                 'FontFamily': 'Arial',
-                'FontSize': '56px',
+                'FontSize': '46px',
                 'LineHeight': '0.8em',
 
                   
