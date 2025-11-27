@@ -1,0 +1,97 @@
+html { position: relative; margin: 0; padding: 0; height: 100%; }
+body { margin: 0; padding: 0; text-align: left; height: 100%; }
+#imPageExtContainer {min-height: 100%; }
+#imPageIntContainer { position: relative;}
+#imPage { position: relative; width: 100%; }
+#imHeaderBg { position: absolute; left: 0; top: 0; width: 100%; }
+#imContent { position: relative; }
+#imFooterBg { position: absolute; left: 0; bottom: 0; width: 100%; }
+#imStickyBarContainer { visibility: hidden; position: fixed; overflow: hidden; }
+@media (min-width: 960px) {
+		#imPageExtContainer { background-image: url('radio-icon.jpg'); background-position: left top; background-repeat: repeat; background-attachment: scroll; background-color: rgba(255, 255, 255, 1); }
+		#imPage { padding-top: 15px; padding-bottom: 0px; min-width: 960px; }
+		#imHeaderBg { height: 140px; background-image: url('radio-icon2.jpg'); background-position: left top; background-repeat: repeat; background-attachment: scroll; background-color: transparent; }
+		#imHeader { background-image: url('9D71B67C29985258F44DF35FBCBA72B1.png'); background-position: center center; background-repeat: no-repeat; background-attachment: scroll; background-color: transparent; }
+		#imHeaderObjects { margin-left: auto; margin-right: auto; position: relative; height: 610px; width:960px; }
+		#imContent { align-self: start; padding: 5px 0 5px 0; }
+		#imContentGraphics { min-height: 520px; background-image: none; background-color: rgba(255, 255, 255, 1); }
+		#imFooterBg { height: 40px; background-image: url('radio-icon2.jpg'); background-position: left top; background-repeat: repeat; background-attachment: scroll; background-color: transparent; }
+		#imFooter { background-image: none; background-color: transparent; }
+		#imFooterObjects { margin-left: auto; margin-right: auto; position: relative; height: 160px; width:960px; }
+		#imSideBar { background-image: none; background-color: transparent; overflow: visible; zoom: 1; z-index: 200; }
+		#imSideBarObjects { position: relative; height: 520px; }
+
+		/* FIX: Reduce header height for non-homepage pages and move content up */
+		body:not(.homepage) #imHeaderObjects { height: 70px !important; }
+		body:not(.homepage) #imHeader { height: auto !important; min-height: 70px !important; }
+		body:not(.homepage) #imContentGraphics { position: relative; top: -450px; }
+		body:not(.homepage) #imContent { position: relative; top: -450px; }
+		body:not(.homepage) #imFooter { position: relative; top: -450px; }
+
+}
+@media (max-width: 959.9px) and (min-width: 720px) {
+		#imPageExtContainer { background-image: none; background-color: rgba(255, 255, 255, 1); }
+		#imPage { padding-top: 0px; padding-bottom: 0px; min-width: 720px; }
+		#imHeaderBg { height: 100px; background-image: none; background-color: rgba(176, 209, 255, 1); }
+		#imHeader { background-image: url('026A99389C3B7D7D8AA8EBE108CC1B89.png'); background-position: left top; background-repeat: no-repeat; background-attachment: scroll; background-color: transparent; }
+		#imHeaderObjects { margin-left: auto; margin-right: auto; position: relative; height: 465px; width:720px; }
+		#imContent { align-self: start; padding: 5px 0 5px 0; }
+		#imContentGraphics { min-height: 450px; background-image: none; background-color: rgba(255, 255, 255, 1); }
+		#imFooterBg { height: 35px; background-image: none; background-color: rgba(176, 209, 255, 1); }
+		#imFooter { background-image: none; background-color: rgba(86, 126, 182, 1); }
+		#imFooterObjects { margin-left: auto; margin-right: auto; position: relative; height: 130px; width:720px; }
+		#imSideBar { background-image: none; background-color: transparent; overflow: visible; zoom: 1; z-index: 200; }
+		#imSideBarObjects { position: relative; height: 450px; }
+
+		/* FIX: Reduce header height for non-homepage pages and move content up */
+		body:not(.homepage) #imHeaderObjects { height: 70px !important; }
+		body:not(.homepage) #imHeader { height: auto !important; min-height: 70px !important; }
+		body:not(.homepage) #imContentGraphics { position: relative; top: -305px; }
+		body:not(.homepage) #imContent { position: relative; top: -305px; }
+		body:not(.homepage) #imFooter { position: relative; top: -305px; }
+
+}
+@media (max-width: 719.9px) and (min-width: 480px) {
+		#imPageExtContainer { background-image: none; background-color: rgba(255, 255, 255, 1); }
+		#imPage { padding-top: 0px; padding-bottom: 0px; min-width: 480px; }
+		#imHeaderBg { height: 100px; background-image: none; background-color: rgba(176, 209, 255, 1); }
+		#imHeader { background-image: url('C99FB828656E7BA2DCAC9DECDF8EC148.png'); background-position: right center; background-repeat: no-repeat; background-attachment: scroll; background-color: transparent; }
+		#imHeaderObjects { margin-left: auto; margin-right: auto; position: relative; height: 390px; width:480px; }
+		#imContent { align-self: start; padding: 5px 0 5px 0; }
+		#imContentGraphics { min-height: 520px; background-image: none; background-color: rgba(255, 255, 255, 1); }
+		#imFooterBg { height: 35px; background-image: none; background-color: rgba(176, 209, 255, 1); }
+		#imFooter { background-image: none; background-color: rgba(86, 126, 182, 1); }
+		#imFooterObjects { margin-left: auto; margin-right: auto; position: relative; height: 125px; width:480px; }
+		#imSideBar { background-image: none; background-color: transparent; overflow: visible; zoom: 1; z-index: 200; }
+		#imSideBarObjects { position: relative; height: 520px; }
+
+		/* FIX: Reduce header height for non-homepage pages and move content up */
+		body:not(.homepage) #imHeaderObjects { height: 70px !important; }
+		body:not(.homepage) #imHeader { height: auto !important; min-height: 70px !important; }
+		body:not(.homepage) #imContentGraphics { position: relative; top: -230px; }
+		body:not(.homepage) #imContent { position: relative; top: -230px; }
+		body:not(.homepage) #imFooter { position: relative; top: -230px; }
+
+}
+@media (max-width: 479.9px)  {
+		#imPageExtContainer { background-image: none; background-color: rgba(255, 255, 255, 1); }
+		#imPage { padding-top: 0px; padding-bottom: 0px; }
+		#imHeaderBg { height: 100px; background-image: none; background-color: rgba(176, 209, 255, 1); }
+		#imHeader { background-image: url('D7813267A5069B944521E12CB4E454DE.png'); background-position: center top; background-repeat: no-repeat; background-attachment: scroll; background-color: transparent; }
+		#imHeaderObjects { margin-left: auto; margin-right: auto; position: relative; height: 290px; width:320px; }
+		#imContent { align-self: start; padding: 5px 0 5px 0; }
+		#imContentGraphics { min-height: 520px; background-image: none; background-color: rgba(255, 255, 255, 1); }
+		#imFooterBg { height: 35px; background-image: none; background-color: rgba(176, 209, 255, 1); }
+		#imFooter { background-image: none; background-color: rgba(86, 126, 182, 1); }
+		#imFooterObjects { margin-left: auto; margin-right: auto; position: relative; height: 100px; width:320px; }
+		#imSideBar { background-image: none; background-color: transparent; overflow: visible; zoom: 1; z-index: 200; }
+		#imSideBarObjects { position: relative; height: 520px; }
+
+		/* FIX: Reduce header height for non-homepage pages and move content up */
+		body:not(.homepage) #imHeaderObjects { height: 70px !important; }
+		body:not(.homepage) #imHeader { height: auto !important; min-height: 70px !important; }
+		body:not(.homepage) #imContentGraphics { position: relative; top: -130px; }
+		body:not(.homepage) #imContent { position: relative; top: -130px; }
+		body:not(.homepage) #imFooter { position: relative; top: -130px; }
+
+}

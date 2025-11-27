@@ -1,0 +1,21 @@
+# Spec-Kit agent folder (may contain credentials/tokens)
+.claude/
+
+# Node.js
+node_modules/
+package-lock.json
+
+# macOS
+.DS_Store
+
+# Editor directories
+.vscode/
+.idea/
+
+# Specify temporary files (but keep constitution)
+.specify/memory/*
+!.specify/memory/constitution.md
+
+# Migration backups and archives
+php-backup-*.tar.gz
+WebSite X5 - Websites.zip
