@@ -1,44 +1,51 @@
 <!--
 SYNC IMPACT REPORT
 ==================
-Version Change: 0.0.0 → 1.0.0
-Change Type: Initial Constitution (MAJOR)
-Rationale: First constitution for existing legacy website migration project
+Version Change: 1.0.0 → 2.0.0
+Change Type: Major Project Direction Change (MAJOR)
+Rationale: Project evolved from migration-only to full website redesign with modern UI
 
-Modified Principles: N/A (initial creation)
+Modified Principles:
+  - Principle I: Changed from "Preserve User Experience" to "Modern User Experience"
+  - Principle V: Changed from "Minimize File Changes" to "Modern Maintainable Codebase"
+
 Added Sections:
-  - Core Principles (7 principles)
-  - Migration Constraints
-  - Development Workflow
-  - Governance
+  - Redesign Guidelines (new section)
 
-Removed Sections: N/A
+Removed Sections:
+  - Migration Constraints (replaced with Redesign Guidelines)
 
 Templates Requiring Updates:
   ✅ plan-template.md - Aligned (Constitution Check section compatible)
-  ✅ spec-template.md - Aligned (user scenarios support UI preservation requirement)
-  ✅ tasks-template.md - Aligned (phase-based approach supports incremental migration)
+  ✅ spec-template.md - Aligned (user scenarios support new UI design)
+  ✅ tasks-template.md - Aligned (phase-based approach supports incremental redesign)
 
 Follow-up TODOs: None
 -->
 
-# Parsons Ham Radio Club Website Migration Constitution
+# Parsons Ham Radio Club Website Constitution
 
 ## Core Principles
 
-### I. Preserve User Experience (NON-NEGOTIABLE)
+### I. Modern User Experience (NON-NEGOTIABLE)
 
-The migrated website MUST maintain identical visual appearance and functionality from the end-user perspective. All UI elements, navigation, content layout, images, galleries, embedded media (YouTube, TuneIn, Google Calendar), and interactive features MUST work exactly as they did before migration.
+The website MUST provide a modern, professional, and welcoming user experience that effectively communicates the club's purpose and attracts new members. The design should follow current web design best practices with clean layouts, clear typography, and intuitive navigation.
 
-**Rationale**: The website serves an active ham radio club with established members who are familiar with the current interface. Any UI changes would cause confusion and resistance. The club leadership is sensitive to visual changes and has not requested any redesign. Backend technology changes are acceptable and necessary, but must be transparent to users.
+**Rationale**: The original WebSite X5-generated design is outdated. A modern redesign will better represent the club, attract new members, and provide a more engaging experience for visitors. The site owner has approved a full visual redesign based on provided mockups.
 
-**Testing Requirement**: Before-and-after visual regression testing required. All 19 pages must be validated for pixel-perfect rendering and functional equivalence.
+**Design Requirements**:
+- Clean, modern aesthetic with consistent color scheme (blue primary, light gradients)
+- Responsive design that works on desktop, tablet, and mobile
+- Clear visual hierarchy with prominent calls-to-action
+- Card-based layouts for feature presentation
+- Modern typography stack for readability
+- Accessible design following WCAG guidelines
 
 ### II. Maintainability First
 
-The migrated website MUST be easily maintainable by a non-professional developer (the site owner, Bob Hoffman, who originally hand-coded the site) using modern tools: VS Code editor, Git version control, and free AI assistants (Gemini/Claude). The codebase MUST use standard HTML/CSS/JavaScript without proprietary dependencies.
+The website MUST be easily maintainable by a non-professional developer (the site owner, Bob Hoffman) using modern tools: VS Code editor, Git version control, and free AI assistants (Gemini/Claude). The codebase MUST use standard HTML/CSS/JavaScript without proprietary dependencies.
 
-**Rationale**: Bob currently maintains the site but wants to move away from self-hosting on a Raspberry Pi. The solution must not increase maintenance burden. He is comfortable with HTML/code but needs a modern workflow without server administration overhead.
+**Rationale**: Bob maintains the site and needs a modern workflow without server administration overhead. The new design must be even easier to maintain than the old WebSite X5 generated code.
 
 **Requirements**:
 - No build tools or compilation steps required
@@ -46,132 +53,128 @@ The migrated website MUST be easily maintainable by a non-professional developer
 - GitHub Pages compatible (static hosting)
 - Free tooling only (no paid services for core functionality)
 - Clear documentation for common tasks
+- Modular CSS that can be reused across pages
+- Semantic HTML structure for easy content updates
 
 ### III. Static-First Architecture
 
-All features MUST be implemented using static HTML/CSS/JavaScript or free third-party services that integrate via client-side code. Server-side PHP dependencies MUST be eliminated or replaced with modern static/serverless alternatives.
+All features MUST be implemented using static HTML/CSS/JavaScript or free third-party services that integrate via client-side code. No server-side dependencies.
 
-**Rationale**: GitHub Pages only supports static hosting. The current site's PHP usage is minimal (contact form, search, RSS generation). Eliminating PHP removes server maintenance while enabling free hosting with better uptime than home Raspberry Pi.
+**Rationale**: GitHub Pages only supports static hosting. Static architecture provides reliability, security, and zero maintenance overhead.
 
-**Approved Replacements**:
+**Approved Services**:
 - Contact forms: Formspree (free tier sufficient)
-- Search: Remove initially, or client-side Lunr.js later
-- RSS feeds: Static XML files
-- Admin panel: Removed (not needed for static site)
+- Icons: Inline SVG or icon fonts (self-hosted)
+- Fonts: System font stack or self-hosted web fonts
+- All JavaScript: Vanilla JS or minimal libraries (self-hosted)
 
 ### IV. Zero Cost Operation
 
-The hosting and core operational costs MUST be $0/year. Optional enhancements (custom domain) may have minimal cost ($12/year) but are not required for initial launch.
+The hosting and core operational costs MUST be $0/year. Optional enhancements (custom domain) may have minimal cost ($12/year) but are not required.
 
-**Rationale**: Current setup has low electricity costs but time cost for maintenance. New setup eliminates server hardware, power consumption, and home internet dependency while providing professional hosting quality.
+**Rationale**: The club is a volunteer organization. Zero-cost hosting enables sustainable long-term operation.
 
 **Free Tier Services**:
 - GitHub Pages: Hosting (included with GitHub account)
 - Formspree: Contact form (50 submissions/month free)
-- All JavaScript libraries: Self-hosted (no CDN costs)
+- All assets: Self-hosted (no CDN costs)
 - SSL/HTTPS: Automatic via GitHub Pages
 
-### V. Minimize File Changes
+### V. Modern Maintainable Codebase
 
-Migration MUST preserve as much of the existing codebase as possible. Changes MUST be limited to:
-1. Removing PHP files and admin panel
-2. Replacing contact form action URL
-3. Updating RSS feed references (.php → .xml)
-4. Removing or replacing search functionality
-5. Creating .gitignore for Git workflow
+The redesigned website MUST use clean, well-organized code that is easy to understand and modify. The codebase should follow modern web standards and be structured for reusability across all site pages.
 
-**Rationale**: The site was generated by WebSite X5 Evolution (commercial WYSIWYG tool) in 2019. The generated HTML/CSS/JS is clean and standards-compliant. Rewriting would introduce risk and testing burden. The 19 HTML pages (~5,000 lines) work perfectly and should be touched minimally.
+**Rationale**: The new design will be applied to all pages over time. A well-structured codebase makes this incremental rollout manageable and reduces maintenance burden.
 
-**Forbidden**: Restructuring HTML, rewriting CSS, replacing JavaScript libraries, changing image formats, altering navigation structure.
+**Requirements**:
+- Semantic HTML5 structure
+- CSS organized into reusable components (header, footer, cards, buttons, etc.)
+- Consistent naming conventions
+- Comments for complex sections
+- No inline styles (all styling in CSS files)
+- Reusable page template structure
 
-### VI. Incremental Deployment
+### VI. Incremental Redesign
 
-Migration MUST be testable locally and deployable incrementally. Each migration phase MUST be independently verifiable before proceeding to next phase.
+The redesign MUST be deployable incrementally, starting with the homepage and extending to other pages over time. Each page redesign MUST be independently verifiable before proceeding.
 
-**Rationale**: This is a live website serving an active club. Downtime must be minimized. The site owner needs confidence each step works before committing to next step.
+**Rationale**: This is a live website serving an active club. Incremental deployment allows testing and refinement while maintaining site functionality.
 
 **Phases**:
-1. Local preparation: Clean files, test locally
-2. GitHub setup: Repository creation, initial upload
-3. Feature replacement: Contact form, RSS updates
-4. Final validation: All pages/features tested
-5. Owner training: VS Code + Git workflow
+1. Homepage redesign (current focus)
+2. Navigation/header/footer standardization
+3. Content pages (Learning, Podcasts, etc.)
+4. Special pages (Events, Contact, About)
+5. Final validation and cleanup
 
 ### VII. Documentation & Knowledge Transfer
 
-All migration steps, replacement decisions, and maintenance procedures MUST be documented for the non-technical site owner. Training materials MUST enable independent site updates using VS Code, Git, and AI assistants.
+All design decisions, component structures, and maintenance procedures MUST be documented for the site owner. Documentation MUST enable independent site updates and future page redesigns.
 
-**Rationale**: The goal is to enable Bob to maintain and improve the site independently after migration. He has coding skills but needs modern workflow training. Documentation must bridge the gap between FTP/Raspberry Pi workflow and Git/GitHub workflow.
+**Rationale**: The goal is to enable Bob to maintain the site and continue the redesign independently. Documentation must explain the new structure clearly.
 
 **Required Documentation**:
-- Migration decisions (why Formspree, why remove search, etc.)
-- Common maintenance tasks (update text, add images, update officers)
-- VS Code + Git workflow guide
-- Using free Gemini for coding assistance
-- Troubleshooting common issues
+- Design system overview (colors, typography, spacing)
+- Component usage guide (cards, buttons, sections)
+- Page template structure
+- Common maintenance tasks
+- How to apply redesign to additional pages
 
-## Migration Constraints
+## Redesign Guidelines
 
-### Technology Constraints
+### Design System
 
-**MUST Keep**:
-- All 19 HTML files (generated by WebSite X5)
-- All CSS files (global + page-specific in /pcss/)
-- All JavaScript files (jQuery, x5engine.js, plugins)
-- All images (174 files, ~17MB - may optimize but keep originals)
-- All third-party embeds (YouTube, TuneIn, Google Calendar)
-- Header slideshow (10 ham shack images)
-- Image galleries (Justified Gallery, Jssor Slider)
+**Colors**:
+- Primary Blue: #0077B6 (buttons, headings, accents)
+- Light Blue: #E8F4F8 (backgrounds, gradients)
+- Dark Text: #1A1A2E (headings)
+- Body Text: #4A4A4A (paragraphs)
+- White: #FFFFFF (cards, backgrounds)
 
-**MUST Remove**:
-- /admin/ directory (856KB, 70+ PHP files)
-- PHP engine files in /res/ (x5engine.php, PHPMailer, etc.)
-- /imemail/ directory (contact form processor)
-- /captcha/ directory (PHP-based)
-- imsearch.php (PHP search)
+**Typography**:
+- Headings: System sans-serif stack (clean, modern)
+- Body: System sans-serif stack (readable)
+- Minimum body size: 16px
 
-**MUST Replace**:
-- Contact form backend: Formspree integration
-- RSS feed generation: Static XML file
-- Search functionality: Remove or client-side Lunr.js
+**Spacing**:
+- Consistent padding/margins using multiples of 8px
+- Section spacing: 64px-80px
+- Card padding: 24px-32px
 
-### Content Constraints
+**Components**:
+- Cards: Rounded corners (8-12px), subtle shadows
+- Buttons: Rounded, clear hover states
+- Icons: Consistent style (outlined or filled)
+- Sections: Alternating backgrounds for visual rhythm
 
-**Site Structure (19 pages)**:
-- Home Page (index.html) - Welcome, intro slideshow
-- Events (events.html) - Google Calendar embed
-- Learning Section (6 pages):
-  - Digital Communications
-  - Morse Code
-  - UHF/VHF
-  - HF
-  - Summits on the Air
-  - Solar Propagation
-- Local Nets (local-nets.html)
-- Exams (exams.html)
-- Podcasts Section (4 pages):
-  - ARRL News
-  - Ham Nation
-  - This Week in Amateur Radio
-  - Ham Radio 360
-- Community Section (2 pages):
-  - Community Service
-  - Interview on Community Service
-- Contact (contact.html) - Contact form
-- About Us (about-us.html)
+### Content Preservation
 
-**External Dependencies (Must Continue Working)**:
-- Google Calendar: `3f0fiqgp4bdhs0ms88lq63u11s@group.calendar.google.com`
-- YouTube embeds: 5 educational videos
-- TuneIn embeds: 4 podcast players
-- Email recipient: `ae0aq@gmail.com` (contact form destination)
+**MUST Preserve**:
+- All existing page destinations (navigation links)
+- Meeting information (First Monday, 7:00 PM, Parsons Arboretum)
+- Contact information
+- Club branding (Parsons Area Amateur Radio Club / PAARC)
+- All external embeds (YouTube, TuneIn, Google Calendar)
 
-### Performance Constraints
+**MAY Update**:
+- Text content for clarity and modern tone
+- Image presentation (galleries, slideshows)
+- Page layouts and visual organization
+- Navigation structure (if improved)
 
-- Page load time: MUST NOT regress from current performance
-- Image optimization: Optional but encouraged (17MB → ~10MB)
-- GitHub Pages limits: 1GB total repo size (current ~17MB is safe)
-- No single file >100MB (largest current file is well under this)
+### File Organization
+
+```text
+/                       # Root directory
+├── index.html          # Homepage (redesign target)
+├── [other pages].html  # Existing pages (future redesign)
+├── css/
+│   ├── modern.css      # New design system styles
+│   └── components.css  # Reusable component styles
+├── images/             # All images
+├── icons/              # SVG icons for new design
+└── style/              # Legacy styles (keep for non-redesigned pages)
+```
 
 ## Development Workflow
 
@@ -180,93 +183,60 @@ All migration steps, replacement decisions, and maintenance procedures MUST be d
 1. Clone repository from GitHub
 2. Open project in VS Code
 3. Use Live Server extension for local preview
-4. Edit HTML/CSS/JS files directly
-5. Test changes in browser
+4. Edit HTML/CSS files directly
+5. Test changes in browser (including mobile viewport)
 6. Commit and push to GitHub
 
 ### Deployment Process
 
 1. Push changes to `main` branch on GitHub
 2. GitHub Pages automatically rebuilds (1-2 minutes)
-3. Verify changes at `https://USERNAME.github.io/parsonshamclub/`
+3. Verify changes at live URL
 4. No manual deployment steps required
 
 ### Testing Requirements
 
-**Pre-Migration Testing** (before GitHub upload):
-- Verify all 19 pages load locally
-- Test contact form with Formspree integration
-- Verify all images display correctly
-- Test responsive design on mobile/tablet/desktop
+**Before Deployment**:
+- Verify page loads and displays correctly
+- Test all navigation links
+- Test responsive design (desktop, tablet, mobile)
+- Verify all buttons and CTAs work
+- Check accessibility (contrast, focus states)
 
-**Post-Migration Validation** (after GitHub Pages deployment):
-- Visual comparison: all 19 pages match original
-- Navigation: all menu links work
-- Galleries: slideshow and image galleries function
-- Embeds: YouTube, TuneIn, Google Calendar load
-- Contact form: sends emails successfully
-- Mobile: responsive design works correctly
-
-### Maintenance Workflow
-
-**Common Tasks for Site Owner**:
-
-1. **Update Text Content**: Edit HTML file → Save → Commit → Push
-2. **Add New Image**: Copy to /images/ → Reference in HTML → Commit → Push
-3. **Update Club Officers**: Edit contact.html footer → Commit → Push
-4. **Add Event to Calendar**: Update Google Calendar directly (no code change)
-5. **Fix Typo**: Use VS Code search (Ctrl+F) → Edit → Commit → Push
-
-**Git Workflow for Bob**:
-```bash
-# Make changes in VS Code
-# Stage changes: Click Source Control icon → + button
-# Commit: Enter message → Click ✓
-# Push: Click "Sync Changes" button
-# Wait 1-2 minutes for GitHub Pages rebuild
-```
+**After Deployment**:
+- Visual verification on live site
+- Test on multiple browsers (Chrome, Firefox, Safari, Edge)
+- Test on actual mobile devices if possible
 
 ## Governance
 
 ### Amendment Process
 
 This constitution may be amended when:
-1. Migration goals change (e.g., budget allocated for paid services)
-2. Technical constraints change (e.g., GitHub Pages adds new features)
-3. Site owner requirements evolve (e.g., needs dynamic features)
+1. Design direction changes
+2. Technical constraints change
+3. Site owner requirements evolve
 
 Amendments require:
 - Documentation of change rationale
-- Impact analysis on existing migration work
-- Update to all dependent templates and documentation
+- Impact analysis on existing work
 - Version increment per semantic versioning
 
 ### Versioning Policy
 
 Constitution versions follow semantic versioning (MAJOR.MINOR.PATCH):
 
-- **MAJOR**: Backward-incompatible changes (e.g., abandoning GitHub Pages for different platform)
-- **MINOR**: New principles or constraints added (e.g., adding security requirements)
+- **MAJOR**: Significant direction changes (e.g., this redesign pivot)
+- **MINOR**: New principles or constraints added
 - **PATCH**: Clarifications, typo fixes, wording improvements
 
 ### Compliance Review
 
-All migration tasks and implementation decisions MUST be validated against this constitution:
+All tasks and implementation decisions MUST be validated against this constitution:
 
-1. **Specification Phase** (/speckit.specify): User scenarios must preserve UI/UX
-2. **Planning Phase** (/speckit.plan): Technical approach must be static-first, zero-cost
-3. **Task Generation** (/speckit.tasks): Tasks must minimize file changes
-4. **Implementation** (/speckit.implement): Code changes must maintain user experience
+1. **Specification Phase**: User scenarios must support modern UX goals
+2. **Planning Phase**: Technical approach must be static-first, zero-cost, maintainable
+3. **Task Generation**: Tasks must follow incremental redesign approach
+4. **Implementation**: Code must follow design system and maintainability requirements
 
-**Violation Handling**:
-- Any violation of NON-NEGOTIABLE principles requires stopping work and revising approach
-- Violations of other principles must be documented with justification in Complexity Tracking table
-- If simpler alternative exists that complies with constitution, it must be chosen
-
-### Authority & Scope
-
-This constitution supersedes all other development practices for the Parsons Ham Radio Club website migration project. When conflicts arise between this constitution and external guidance (tool documentation, best practices, etc.), this constitution takes precedence.
-
-**Guidance Files**: For detailed runtime development guidance, refer to documentation in `specs/` directory after migration planning is complete.
-
-**Version**: 1.0.0 | **Ratified**: 2025-10-30 | **Last Amended**: 2025-10-30
+**Version**: 2.0.0 | **Ratified**: 2025-11-28 | **Last Amended**: 2025-11-28
