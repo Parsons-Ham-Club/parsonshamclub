@@ -7,14 +7,58 @@
    ========================================================================== */
 
 .hero {
-  background: linear-gradient(180deg, var(--color-primary-light) 0%, var(--color-bg-white) 100%);
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, #fff 50%, var(--color-accent-light) 100%);
   padding: var(--space-8) 0 var(--space-12);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated background pattern */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(34, 197, 94, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: float 20s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(10px, 10px) rotate(1deg); }
+  50% { transform: translate(0, 20px) rotate(0deg); }
+  75% { transform: translate(-10px, 10px) rotate(-1deg); }
+}
+
+/* Decorative signal waves */
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 20%;
+  right: -100px;
+  width: 300px;
+  height: 300px;
+  border: 3px solid rgba(34, 197, 94, 0.1);
+  border-radius: 50%;
+  animation: pulse-ring 3s ease-out infinite;
+  pointer-events: none;
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.5); opacity: 1; }
+  100% { transform: scale(1.5); opacity: 0; }
 }
 
 .hero-grid {
   display: flex;
   flex-direction: column;
   gap: var(--space-10);
+  position: relative;
+  z-index: 1;
 }
 
 .hero-content {
@@ -27,6 +71,13 @@
   color: var(--color-text-heading);
   margin-bottom: var(--space-4);
   line-height: var(--line-height-tight);
+}
+
+.hero-title .text-primary {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .hero-description {
@@ -60,7 +111,10 @@
   margin: 0 auto;
   border-radius: var(--radius-xl);
   overflow: hidden;
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-xl), 0 0 40px rgba(34, 197, 94, 0.2);
+  border: 3px solid transparent;
+  background: linear-gradient(var(--color-bg-white), var(--color-bg-white)) padding-box,
+              linear-gradient(135deg, var(--color-primary), var(--color-accent)) border-box;
 }
 
 .carousel-slides {
@@ -156,20 +210,26 @@
    ========================================================================== */
 
 .meeting-card {
-  background: var(--color-bg-white);
-  border: 1px solid var(--color-border);
+  background: linear-gradient(135deg, var(--color-bg-white) 0%, var(--color-primary-light) 100%);
+  border: 2px solid var(--color-primary);
   border-radius: var(--radius-lg);
   padding: var(--space-4) var(--space-6);
   display: flex;
   flex-direction: column;
   gap: var(--space-1);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-md), 0 0 20px rgba(34, 197, 94, 0.15);
+  transition: all 0.3s ease;
+}
+
+.meeting-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg), 0 0 30px rgba(34, 197, 94, 0.25);
 }
 
 .meeting-label {
   font-size: var(--font-size-sm);
-  color: var(--color-primary);
-  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary-dark);
+  font-weight: var(--font-weight-bold);
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }

@@ -7,10 +7,19 @@
    ========================================================================== */
 
 :root {
-  /* Primary Colors */
-  --color-primary: #0077B6;
-  --color-primary-dark: #005f8a;
-  --color-primary-light: #E8F4F8;
+  /* Primary Colors - Vibrant Green (matching logo) */
+  --color-primary: #22c55e;
+  --color-primary-dark: #16a34a;
+  --color-primary-light: #dcfce7;
+
+  /* Accent Colors - Energetic Orange (matching logo) */
+  --color-accent: #f59e0b;
+  --color-accent-dark: #d97706;
+  --color-accent-light: #fef3c7;
+
+  /* Secondary - Deep Blue for contrast */
+  --color-secondary: #1e40af;
+  --color-secondary-light: #dbeafe;
 
   /* Text Colors */
   --color-text-heading: #1A1A2E;
@@ -22,11 +31,13 @@
   --color-bg-light: #F8FAFC;
   --color-bg-gray: #F3F4F6;
 
-  /* Borders & Shadows */
+  /* Borders & Shadows - Enhanced */
   --color-border: #E5E7EB;
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+  --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.2);
+  --shadow-glow: 0 0 30px rgba(34, 197, 94, 0.3);
 
   /* Font Family */
   --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -168,34 +179,58 @@ img {
   border-radius: var(--radius-full);
   font-family: var(--font-family);
   font-size: var(--font-size-base);
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-semibold);
   text-decoration: none;
   border: 2px solid transparent;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
 }
 
 .btn-primary {
-  background-color: var(--color-primary);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
   color: var(--color-bg-white);
   border-color: var(--color-primary);
+  box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4);
 }
 
 .btn-primary:hover {
-  background-color: var(--color-primary-dark);
-  border-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(34, 197, 94, 0.5);
   color: var(--color-bg-white);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
 }
 
 .btn-secondary {
   background-color: var(--color-bg-white);
   color: var(--color-text-heading);
   border-color: var(--color-border);
+  box-shadow: var(--shadow-sm);
 }
 
 .btn-secondary:hover {
-  border-color: var(--color-primary);
-  color: var(--color-primary);
+  border-color: var(--color-accent);
+  color: var(--color-accent-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Accent button variant */
+.btn-accent {
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-dark) 100%);
+  color: var(--color-bg-white);
+  border-color: var(--color-accent);
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+}
+
+.btn-accent:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.5);
+  color: var(--color-bg-white);
 }
 
 /* ==========================================================================
@@ -208,22 +243,56 @@ img {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: var(--space-6);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.feature-card:hover,
+.activity-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-primary);
+}
+
+.feature-card::before,
+.activity-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.feature-card:hover::before,
+.activity-card:hover::before {
+  opacity: 1;
 }
 
 .card-icon {
-  width: 48px;
-  height: 48px;
-  background: var(--color-primary-light);
-  border-radius: var(--radius-md);
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-accent-light) 100%);
+  border-radius: var(--radius-lg);
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: var(--space-4);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover .card-icon,
+.activity-card:hover .card-icon {
+  transform: scale(1.1);
 }
 
 .card-icon svg {
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   color: var(--color-primary);
 }
 
@@ -266,6 +335,19 @@ img {
   color: var(--color-text-heading);
   text-align: center;
   margin-bottom: var(--space-4);
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  border-radius: var(--radius-full);
+  margin: var(--space-4) auto 0;
 }
 
 .section-description {
@@ -295,12 +377,15 @@ img {
    ========================================================================== */
 
 .header {
-  background-color: var(--color-bg-white);
-  border-bottom: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(229, 231, 235, 0.8);
   padding: var(--space-4) 0;
   position: sticky;
   top: 0;
   z-index: 100;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
 }
 
 .header .container {
@@ -354,12 +439,25 @@ img {
   border-radius: var(--radius-md);
   transition: all 0.2s ease;
   cursor: pointer;
+  position: relative;
 }
 
 .nav-link:hover,
 .nav-link.active {
   color: var(--color-primary);
   background-color: var(--color-primary-light);
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  border-radius: var(--radius-full);
 }
 
 /* Dropdown Navigation */
@@ -492,8 +590,19 @@ img {
    ========================================================================== */
 
 .footer {
-  background-color: var(--color-bg-gray);
+  background: linear-gradient(180deg, var(--color-bg-gray) 0%, var(--color-bg-light) 100%);
   padding: var(--space-12) 0 var(--space-6);
+  position: relative;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent), var(--color-primary));
 }
 
 .footer-grid {
