@@ -8,31 +8,17 @@
 
 .hero {
   background: linear-gradient(180deg, var(--color-primary-light) 0%, var(--color-bg-white) 100%);
-  padding: var(--space-16) 0;
-  text-align: center;
+  padding: var(--space-8) 0 var(--space-12);
 }
 
-.hero .container {
+.hero-grid {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: var(--space-10);
 }
 
-.hero-icon {
-  width: 80px;
-  height: 80px;
-  background: var(--color-primary-light);
-  border-radius: var(--radius-xl);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: var(--space-6);
-}
-
-.hero-icon svg {
-  width: 48px;
-  height: 48px;
-  color: var(--color-primary);
+.hero-content {
+  text-align: center;
 }
 
 .hero-title {
@@ -57,6 +43,112 @@
   gap: var(--space-4);
   justify-content: center;
   margin-bottom: var(--space-8);
+}
+
+/* ==========================================================================
+   Hero Carousel
+   ========================================================================== */
+
+.hero-carousel {
+  width: 100%;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.carousel-slides {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: var(--color-bg-gray);
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+  transition: background-color 0.2s, transform 0.2s;
+  z-index: 10;
+}
+
+.carousel-btn:hover {
+  background: var(--color-bg-white);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-btn svg {
+  width: 20px;
+  height: 20px;
+  color: var(--color-text-heading);
+}
+
+.carousel-prev {
+  left: var(--space-3);
+}
+
+.carousel-next {
+  right: var(--space-3);
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: var(--space-4);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: var(--space-2);
+  z-index: 10;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.carousel-dot:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.carousel-dot.active {
+  background: var(--color-bg-white);
+  transform: scale(1.2);
 }
 
 /* ==========================================================================
@@ -188,7 +280,36 @@
 /* Tablet (768px and up) */
 @media (min-width: 768px) {
   .hero {
-    padding: var(--space-20) 0;
+    padding: var(--space-10) 0 var(--space-16);
+  }
+
+  .hero-grid {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-12);
+  }
+
+  .hero-content {
+    flex: 1;
+    text-align: left;
+  }
+
+  .hero-description {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .hero-buttons {
+    justify-content: flex-start;
+  }
+
+  .hero-carousel {
+    flex: 1;
+    max-width: 50%;
+  }
+
+  .carousel-container {
+    max-width: 100%;
   }
 
   .hero-title {
@@ -214,13 +335,7 @@
 
 /* Desktop (1024px and up) */
 @media (min-width: 1024px) {
-  .hero-icon {
-    width: 96px;
-    height: 96px;
-  }
-
-  .hero-icon svg {
-    width: 56px;
-    height: 56px;
+  .hero-grid {
+    gap: var(--space-16);
   }
 }
