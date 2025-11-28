@@ -8,7 +8,6 @@
   <title>About Amateur Radio - Parsons Area Amateur Radio Club</title>
   <link rel="icon" href="favicon.png" type="image/png">
   <link rel="stylesheet" href="css/modern.css">
-  <link rel="stylesheet" href="pluginAppObj/pluginAppObj_03/jssor.slider.css">
   <style>
     /* Slideshow container styles */
     .slideshow-section {
@@ -31,51 +30,118 @@
       color: var(--color-primary);
     }
 
-    /* Slideshow wrapper */
-    #pluginAppObj_03 {
+    /* Simple Slideshow */
+    .slideshow-container {
       max-width: 938px;
       margin: 0 auto;
-    }
-
-    #pluginAppObj_03_container {
       position: relative;
-      width: 100%;
-      max-width: 938px;
-      height: 0;
-      padding-bottom: 75%; /* Maintain aspect ratio */
-      margin: 0 auto;
-      background: var(--color-bg-gray);
+      background: #000;
       border-radius: var(--radius-lg);
       overflow: hidden;
     }
 
-    #pluginAppObj_03_container [data-u="slides"] {
-      position: absolute;
-      top: 0;
-      left: 0;
+    .slide {
+      display: none;
       width: 100%;
-      height: 100%;
     }
 
-    .slide-img {
+    .slide.active {
+      display: block;
+    }
+
+    .slide img {
       width: 100%;
       height: auto;
+      display: block;
     }
 
-    /* Bullet navigator */
-    .jssorb01 {
+    /* Navigation buttons */
+    .slideshow-nav {
       position: absolute;
-      bottom: 16px;
-      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 16px 20px;
+      cursor: pointer;
+      font-size: 24px;
+      transition: background 0.3s;
+      z-index: 10;
     }
 
-    .jssorb01 div {
-      background: rgba(255, 255, 255, 0.5);
+    .slideshow-nav:hover {
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    .slideshow-nav.prev {
+      left: 0;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    }
+
+    .slideshow-nav.next {
+      right: 0;
+      border-radius: var(--radius-md) 0 0 var(--radius-md);
+    }
+
+    /* Slide counter */
+    .slide-counter {
+      text-align: center;
+      padding: var(--space-4) 0;
+      color: var(--color-text-body);
+      font-size: var(--font-size-sm);
+    }
+
+    /* Dot navigation */
+    .dot-nav {
+      text-align: center;
+      padding: var(--space-4) 0;
+    }
+
+    .dot {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      margin: 0 4px;
+      background: var(--color-border);
       border-radius: 50%;
+      cursor: pointer;
+      transition: background 0.3s;
     }
 
-    .jssorb01 div.av {
+    .dot.active,
+    .dot:hover {
       background: var(--color-primary);
+    }
+
+    /* Auto-play controls */
+    .slideshow-controls {
+      text-align: center;
+      margin-top: var(--space-4);
+    }
+
+    .slideshow-controls button {
+      background: var(--color-bg-gray);
+      color: var(--color-text-body);
+      border: 1px solid var(--color-border);
+      padding: var(--space-2) var(--space-4);
+      margin: 0 var(--space-2);
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      font-size: var(--font-size-sm);
+      transition: all 0.3s;
+    }
+
+    .slideshow-controls button:hover {
+      background: var(--color-primary);
+      color: white;
+      border-color: var(--color-primary);
+    }
+
+    .slideshow-controls button.active {
+      background: var(--color-primary);
+      color: white;
+      border-color: var(--color-primary);
     }
   </style>
 </head>
@@ -188,54 +254,58 @@
           <span class="arrow">↓</span>
         </div>
 
-        <!-- Jssor Slider -->
-        <div id="pluginAppObj_03">
-          <div id="pluginAppObj_03_container">
-            <!-- Slides Container -->
-            <div data-u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 938px; height: 704px;">
-              <div><img class="slide-img" data-u="image" alt="Slide 1" data-src2="pluginAppObj/pluginAppObj_03/Slide1.JPG" /></div>
-              <div><img class="slide-img" data-u="image" alt="Slide 2" data-src2="pluginAppObj/pluginAppObj_03/Slide2.JPG" /></div>
-              <div><img class="slide-img" data-u="image" alt="Slide 3" data-src2="pluginAppObj/pluginAppObj_03/Slide3.JPG" /></div>
-              <div><img class="slide-img" data-u="image" alt="Slide 4" data-src2="pluginAppObj/pluginAppObj_03/Slide4.JPG" /></div>
-              <div><img class="slide-img" data-u="image" alt="Slide 5" data-src2="pluginAppObj/pluginAppObj_03/Slide5.JPG" /></div>
-              <div><img class="slide-img" data-u="image" alt="Slide 6" data-src2="pluginAppObj/pluginAppObj_03/Slide6.JPG" /></div>
-              <div><img class="slide-img" data-u="image" alt="Slide 7" data-src2="pluginAppObj/pluginAppObj_03/Slide7.JPG" /></div>
-              <div><img class="slide-img" data-u="image" alt="Slide 8" data-src2="pluginAppObj/pluginAppObj_03/Slide8.JPG" /></div>
-              <div><img class="slide-img" data-u="image" alt="Slide 9" data-src2="pluginAppObj/pluginAppObj_03/Slide9.JPG" /></div>
-              <div><img class="slide-img" data-u="image" alt="Slide 10" data-src2="pluginAppObj/pluginAppObj_03/Slide10.JPG" /></div>
-              <div><img class="slide-img" data-u="image" alt="Slide 11" data-src2="pluginAppObj/pluginAppObj_03/Slide11.JPG" /></div>
-              <div><img class="slide-img" data-u="image" alt="Slide 12" data-src2="pluginAppObj/pluginAppObj_03/Slide12.JPG" /></div>
-              <div><img class="slide-img" data-u="image" alt="Slide 13" data-src2="pluginAppObj/pluginAppObj_03/Slide13.JPG" /></div>
-              <div><img class="slide-img" data-u="image" alt="Slide 14" data-src2="pluginAppObj/pluginAppObj_03/Slide14.JPG" /></div>
-              <div><img class="slide-img" data-u="image" alt="Slide 15" data-src2="pluginAppObj/pluginAppObj_03/Slide15.JPG" /></div>
-              <div><img class="slide-img" data-u="image" alt="Slide 16" data-src2="pluginAppObj/pluginAppObj_03/Slide16.JPG" /></div>
-              <div><img class="slide-img" data-u="image" alt="Slide 17" data-src2="pluginAppObj/pluginAppObj_03/Slide17.JPG" /></div>
-              <div><img class="slide-img" data-u="image" alt="Slide 18" data-src2="pluginAppObj/pluginAppObj_03/Slide18.JPG" /></div>
-              <div><img class="slide-img" data-u="image" alt="Slide 19" data-src2="pluginAppObj/pluginAppObj_03/Slide19.JPG" /></div>
-              <div><img class="slide-img" data-u="image" alt="Slide 20" data-src2="pluginAppObj/pluginAppObj_03/Slide20.JPG" /></div>
-              <div><img class="slide-img" data-u="image" alt="Slide 21" data-src2="pluginAppObj/pluginAppObj_03/Slide21.JPG" /></div>
-              <div><img class="slide-img" data-u="image" alt="Slide 22" data-src2="pluginAppObj/pluginAppObj_03/Slide22.JPG" /></div>
-              <div><img class="slide-img" data-u="image" alt="Slide 23" data-src2="pluginAppObj/pluginAppObj_03/Slide23.JPG" /></div>
-              <div><img class="slide-img" data-u="image" alt="Slide 24" data-src2="pluginAppObj/pluginAppObj_03/Slide24.JPG" /></div>
-              <div><img class="slide-img" data-u="image" alt="Slide 25" data-src2="pluginAppObj/pluginAppObj_03/Slide25.JPG" /></div>
-              <div><img class="slide-img" data-u="image" alt="Slide 26" data-src2="pluginAppObj/pluginAppObj_03/Slide26.JPG" /></div>
-              <div><img class="slide-img" data-u="image" alt="Slide 27" data-src2="pluginAppObj/pluginAppObj_03/Slide27.JPG" /></div>
-              <div><img class="slide-img" data-u="image" alt="Slide 28" data-src2="pluginAppObj/pluginAppObj_03/Slide28.JPG" /></div>
-              <div><img class="slide-img" data-u="image" alt="Slide 29" data-src2="pluginAppObj/pluginAppObj_03/Slide29.JPG" /></div>
-              <div><img class="slide-img" data-u="image" alt="Slide 30" data-src2="pluginAppObj/pluginAppObj_03/Slide30.JPG" /></div>
-              <div><img class="slide-img" data-u="image" alt="Slide 31" data-src2="pluginAppObj/pluginAppObj_03/Slide31.JPG" /></div>
-              <div><img class="slide-img" data-u="image" alt="Slide 32" data-src2="pluginAppObj/pluginAppObj_03/Slide32.JPG" /></div>
-              <div><img class="slide-img" data-u="image" alt="Slide 33" data-src2="pluginAppObj/pluginAppObj_03/Slide33.JPG" /></div>
-              <div><img class="slide-img" data-u="image" alt="Slide 34" data-src2="pluginAppObj/pluginAppObj_03/Slide34.JPG" /></div>
-              <div><img class="slide-img" data-u="image" alt="Slide 35" data-src2="pluginAppObj/pluginAppObj_03/Slide35.JPG" /></div>
-              <div><img class="slide-img" data-u="image" alt="Slide 36" data-src2="pluginAppObj/pluginAppObj_03/Slide36.JPG" /></div>
-              <div><img class="slide-img" data-u="image" alt="Slide 37" data-src2="pluginAppObj/pluginAppObj_03/Slide37.JPG" /></div>
-            </div>
-            <!-- Bullet navigator -->
-            <div data-u="navigator" class="jssorb01" style="position: absolute; bottom: 16px; right: 10px;">
-              <div data-u="prototype" style="position: absolute; width: 12px; height: 12px;"></div>
-            </div>
-          </div>
+        <!-- Simple Slideshow -->
+        <div class="slideshow-container" id="slideshow">
+          <div class="slide active"><img src="pluginAppObj/pluginAppObj_03/Slide1.JPG" alt="Slide 1"></div>
+          <div class="slide"><img src="pluginAppObj/pluginAppObj_03/Slide2.JPG" alt="Slide 2"></div>
+          <div class="slide"><img src="pluginAppObj/pluginAppObj_03/Slide3.JPG" alt="Slide 3"></div>
+          <div class="slide"><img src="pluginAppObj/pluginAppObj_03/Slide4.JPG" alt="Slide 4"></div>
+          <div class="slide"><img src="pluginAppObj/pluginAppObj_03/Slide5.JPG" alt="Slide 5"></div>
+          <div class="slide"><img src="pluginAppObj/pluginAppObj_03/Slide6.JPG" alt="Slide 6"></div>
+          <div class="slide"><img src="pluginAppObj/pluginAppObj_03/Slide7.JPG" alt="Slide 7"></div>
+          <div class="slide"><img src="pluginAppObj/pluginAppObj_03/Slide8.JPG" alt="Slide 8"></div>
+          <div class="slide"><img src="pluginAppObj/pluginAppObj_03/Slide9.JPG" alt="Slide 9"></div>
+          <div class="slide"><img src="pluginAppObj/pluginAppObj_03/Slide10.JPG" alt="Slide 10"></div>
+          <div class="slide"><img src="pluginAppObj/pluginAppObj_03/Slide11.JPG" alt="Slide 11"></div>
+          <div class="slide"><img src="pluginAppObj/pluginAppObj_03/Slide12.JPG" alt="Slide 12"></div>
+          <div class="slide"><img src="pluginAppObj/pluginAppObj_03/Slide13.JPG" alt="Slide 13"></div>
+          <div class="slide"><img src="pluginAppObj/pluginAppObj_03/Slide14.JPG" alt="Slide 14"></div>
+          <div class="slide"><img src="pluginAppObj/pluginAppObj_03/Slide15.JPG" alt="Slide 15"></div>
+          <div class="slide"><img src="pluginAppObj/pluginAppObj_03/Slide16.JPG" alt="Slide 16"></div>
+          <div class="slide"><img src="pluginAppObj/pluginAppObj_03/Slide17.JPG" alt="Slide 17"></div>
+          <div class="slide"><img src="pluginAppObj/pluginAppObj_03/Slide18.JPG" alt="Slide 18"></div>
+          <div class="slide"><img src="pluginAppObj/pluginAppObj_03/Slide19.JPG" alt="Slide 19"></div>
+          <div class="slide"><img src="pluginAppObj/pluginAppObj_03/Slide20.JPG" alt="Slide 20"></div>
+          <div class="slide"><img src="pluginAppObj/pluginAppObj_03/Slide21.JPG" alt="Slide 21"></div>
+          <div class="slide"><img src="pluginAppObj/pluginAppObj_03/Slide22.JPG" alt="Slide 22"></div>
+          <div class="slide"><img src="pluginAppObj/pluginAppObj_03/Slide23.JPG" alt="Slide 23"></div>
+          <div class="slide"><img src="pluginAppObj/pluginAppObj_03/Slide24.JPG" alt="Slide 24"></div>
+          <div class="slide"><img src="pluginAppObj/pluginAppObj_03/Slide25.JPG" alt="Slide 25"></div>
+          <div class="slide"><img src="pluginAppObj/pluginAppObj_03/Slide26.JPG" alt="Slide 26"></div>
+          <div class="slide"><img src="pluginAppObj/pluginAppObj_03/Slide27.JPG" alt="Slide 27"></div>
+          <div class="slide"><img src="pluginAppObj/pluginAppObj_03/Slide28.JPG" alt="Slide 28"></div>
+          <div class="slide"><img src="pluginAppObj/pluginAppObj_03/Slide29.JPG" alt="Slide 29"></div>
+          <div class="slide"><img src="pluginAppObj/pluginAppObj_03/Slide30.JPG" alt="Slide 30"></div>
+          <div class="slide"><img src="pluginAppObj/pluginAppObj_03/Slide31.JPG" alt="Slide 31"></div>
+          <div class="slide"><img src="pluginAppObj/pluginAppObj_03/Slide32.JPG" alt="Slide 32"></div>
+          <div class="slide"><img src="pluginAppObj/pluginAppObj_03/Slide33.JPG" alt="Slide 33"></div>
+          <div class="slide"><img src="pluginAppObj/pluginAppObj_03/Slide34.JPG" alt="Slide 34"></div>
+          <div class="slide"><img src="pluginAppObj/pluginAppObj_03/Slide35.JPG" alt="Slide 35"></div>
+          <div class="slide"><img src="pluginAppObj/pluginAppObj_03/Slide36.JPG" alt="Slide 36"></div>
+          <div class="slide"><img src="pluginAppObj/pluginAppObj_03/Slide37.JPG" alt="Slide 37"></div>
+
+          <button class="slideshow-nav prev" onclick="changeSlide(-1)">&#10094;</button>
+          <button class="slideshow-nav next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+
+        <div class="slide-counter">
+          <span id="currentSlide">1</span> / <span id="totalSlides">37</span>
+        </div>
+
+        <div class="slideshow-controls">
+          <button id="playBtn" onclick="toggleAutoPlay()">▶ Auto Play</button>
+          <button onclick="goToSlide(1)">⏮ First</button>
+          <button onclick="goToSlide(37)">⏭ Last</button>
         </div>
       </div>
     </section>
@@ -281,7 +351,6 @@
   <!-- Mobile Navigation JavaScript -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      // Mobile Navigation
       const hamburger = document.querySelector('.hamburger');
       const navMobile = document.querySelector('.nav-mobile');
       const dropdowns = document.querySelectorAll('.nav-mobile .nav-dropdown');
@@ -312,56 +381,64 @@
     });
   </script>
 
-  <!-- Jssor Slider Script -->
-  <script src="appsresources/jssor.slider.min.js"></script>
+  <!-- Slideshow JavaScript -->
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var trs = [];
+    var currentIndex = 0;
+    var slides = document.querySelectorAll('.slide');
+    var totalSlides = slides.length;
+    var autoPlayInterval = null;
+    var isPlaying = false;
 
-      // Load slide images
-      document.querySelectorAll('#pluginAppObj_03_container .slide-img').forEach(function(img) {
-        if (img.getAttribute('data-src2')) {
-          img.setAttribute('src', img.getAttribute('data-src2'));
-        }
+    function showSlide(index) {
+      if (index >= totalSlides) index = 0;
+      if (index < 0) index = totalSlides - 1;
+      currentIndex = index;
+
+      slides.forEach(function(slide) {
+        slide.classList.remove('active');
       });
+      slides[currentIndex].classList.add('active');
 
-      // Transition effects
-      trs.push({$Duration:1200,$Delay:20,$Cols:8,$Rows:4,$Clip:15,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$FlyDirection:9,$Formation:$JssorSlideshowFormations$.$FormationStraightStairs,$Assembly:260,$Easing:{$Left:$JssorEasing$.$EaseInWave,$Top:$JssorEasing$.$EaseInWave,$Clip:$JssorEasing$.$EaseOutQuad},$ScaleHorizontal:0.2,$ScaleVertical:0.1,$Round:{$Left:1.3,$Top:2.5}});
-      trs.push({$Duration:1200,$Delay:20,$Cols:8,$Rows:4,$Clip:15,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$FlyDirection:9,$Formation:$JssorSlideshowFormations$.$FormationZigZag,$Assembly:260,$Easing:{$Left:$JssorEasing$.$EaseInWave,$Top:$JssorEasing$.$EaseInWave,$Clip:$JssorEasing$.$EaseOutQuad},$ScaleHorizontal:0.2,$ScaleVertical:0.1,$Round:{$Left:1.3,$Top:2.5}});
-      trs.push({$Duration:1000,$Delay:30,$Cols:8,$Rows:4,$Clip:15,$SlideOut:true,$Formation:$JssorSlideshowFormations$.$FormationStraightStairs,$Assembly:2049,$Easing:$JssorEasing$.$EaseOutQuad});
+      document.getElementById('currentSlide').textContent = currentIndex + 1;
+    }
 
-      var options = {
-        $SlideshowOptions: {
-          $Class: $JssorSlideshowRunner$,
-          $Transitions: trs,
-          $TransitionsOrder: 0,
-          $ShowLink: 2,
-          $ContentMode: false
-        },
-        $AutoPlay: 0,
-        $AutoPlayInterval: 3000,
-        $FillMode: 1,
-        $BulletNavigatorOptions: {
-          $Class: $JssorBulletNavigator$,
-          $ChanceToShow: 2,
-          $AutoCenter: 1
-        }
-      };
+    function changeSlide(direction) {
+      showSlide(currentIndex + direction);
+    }
 
-      var jssor_slider = new $JssorSlider$('pluginAppObj_03_container', options);
+    function goToSlide(num) {
+      showSlide(num - 1);
+    }
 
-      function ScaleSlider() {
-        var containerWidth = document.getElementById('pluginAppObj_03').offsetWidth;
-        if (containerWidth) {
-          jssor_slider.$ScaleWidth(containerWidth);
-        }
+    function toggleAutoPlay() {
+      var btn = document.getElementById('playBtn');
+      if (isPlaying) {
+        clearInterval(autoPlayInterval);
+        btn.textContent = '▶ Auto Play';
+        btn.classList.remove('active');
+        isPlaying = false;
+      } else {
+        autoPlayInterval = setInterval(function() {
+          changeSlide(1);
+        }, 4000);
+        btn.textContent = '⏸ Pause';
+        btn.classList.add('active');
+        isPlaying = true;
       }
+    }
 
-      ScaleSlider();
-      window.addEventListener('resize', function() {
-        ScaleSlider();
-      });
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'ArrowLeft') changeSlide(-1);
+      if (e.key === 'ArrowRight') changeSlide(1);
+      if (e.key === ' ') {
+        e.preventDefault();
+        toggleAutoPlay();
+      }
     });
+
+    // Update total slides count
+    document.getElementById('totalSlides').textContent = totalSlides;
   </script>
 </body>
 </html>
