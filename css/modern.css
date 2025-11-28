@@ -27,13 +27,13 @@
   --color-text-body: #d4d4d4;
   --color-text-muted: #a3a3a3;
 
-  /* Background Colors - Dark */
-  --color-bg-white: #0a0a0a;
-  --color-bg-light: #0f0f0f;
-  --color-bg-gray: #171717;
+  /* Background Colors - Dark (lightened for contrast) */
+  --color-bg-white: #141414;
+  --color-bg-light: #1a1a1a;
+  --color-bg-gray: #222222;
 
   /* Borders & Shadows - Enhanced for dark theme */
-  --color-border: #2a2a2a;
+  --color-border: #333333;
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
   --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
   --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.5);
@@ -241,7 +241,7 @@ img {
 
 .feature-card,
 .activity-card {
-  background: var(--color-bg-white);
+  background: #363636;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: var(--space-6);

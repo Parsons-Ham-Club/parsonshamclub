@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="greenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4ade80"/>
+      <stop offset="100%" style="stop-color:#16a34a"/>
+    </linearGradient>
+    <linearGradient id="orangeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbbf24"/>
+      <stop offset="100%" style="stop-color:#d97706"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Antenna mast (triangle) -->
+  <polygon points="100,70 85,180 115,180" fill="url(#orangeGradient)"/>
+
+  <!-- Antenna top (circle) -->
+  <circle cx="100" cy="65" r="12" fill="url(#orangeGradient)"/>
+
+  <!-- Left radio waves -->
+  <path d="M 75 45 A 45 45 0 0 0 75 115" fill="none" stroke="url(#greenGradient)" stroke-width="12" stroke-linecap="round"/>
+  <path d="M 55 30 A 65 65 0 0 0 55 130" fill="none" stroke="url(#greenGradient)" stroke-width="12" stroke-linecap="round"/>
+  <path d="M 35 15 A 85 85 0 0 0 35 145" fill="none" stroke="url(#greenGradient)" stroke-width="12" stroke-linecap="round"/>
+
+  <!-- Right radio waves -->
+  <path d="M 125 45 A 45 45 0 0 1 125 115" fill="none" stroke="url(#greenGradient)" stroke-width="12" stroke-linecap="round"/>
+  <path d="M 145 30 A 65 65 0 0 1 145 130" fill="none" stroke="url(#greenGradient)" stroke-width="12" stroke-linecap="round"/>
+  <path d="M 165 15 A 85 85 0 0 1 165 145" fill="none" stroke="url(#greenGradient)" stroke-width="12" stroke-linecap="round"/>
+</svg>

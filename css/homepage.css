@@ -63,6 +63,12 @@
 
 .hero-content {
   text-align: center;
+  background-image: url('../images/background1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: var(--space-8);
+  border-radius: var(--radius-xl);
 }
 
 .hero-title {
@@ -205,7 +211,7 @@
    ========================================================================== */
 
 .meeting-card {
-  background: var(--color-bg-gray);
+  background: #363636;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: var(--space-4) var(--space-6);
@@ -343,11 +349,20 @@
     flex-direction: row;
     align-items: center;
     gap: var(--space-12);
+    background-image: url('../images/background1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: var(--space-8);
+    border-radius: var(--radius-xl);
   }
 
   .hero-content {
     flex: 1;
     text-align: left;
+    background-image: none;
+    padding: 0;
+    border-radius: 0;
   }
 
   .hero-description {
