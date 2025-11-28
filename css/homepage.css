@@ -7,7 +7,7 @@
    ========================================================================== */
 
 .hero {
-  background: linear-gradient(135deg, var(--color-primary-light) 0%, #fff 50%, var(--color-accent-light) 100%);
+  background: linear-gradient(180deg, var(--color-bg-white) 0%, var(--color-bg-gray) 100%);
   padding: var(--space-8) 0 var(--space-12);
   position: relative;
   overflow: hidden;
@@ -21,7 +21,7 @@
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(34, 197, 94, 0.05) 1px, transparent 1px);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
   background-size: 50px 50px;
   animation: float 20s ease-in-out infinite;
   pointer-events: none;
@@ -42,7 +42,7 @@
   right: -100px;
   width: 300px;
   height: 300px;
-  border: 3px solid rgba(34, 197, 94, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.05);
   border-radius: 50%;
   animation: pulse-ring 3s ease-out infinite;
   pointer-events: none;
@@ -74,10 +74,7 @@
 }
 
 .hero-title .text-primary {
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--color-primary);
 }
 
 .hero-description {
@@ -111,10 +108,8 @@
   margin: 0 auto;
   border-radius: var(--radius-xl);
   overflow: hidden;
-  box-shadow: var(--shadow-xl), 0 0 40px rgba(34, 197, 94, 0.2);
-  border: 3px solid transparent;
-  background: linear-gradient(var(--color-bg-white), var(--color-bg-white)) padding-box,
-              linear-gradient(135deg, var(--color-primary), var(--color-accent)) border-box;
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--color-border);
 }
 
 .carousel-slides {
@@ -210,25 +205,26 @@
    ========================================================================== */
 
 .meeting-card {
-  background: linear-gradient(135deg, var(--color-bg-white) 0%, var(--color-primary-light) 100%);
-  border: 2px solid var(--color-primary);
+  background: var(--color-bg-gray);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: var(--space-4) var(--space-6);
   display: flex;
   flex-direction: column;
   gap: var(--space-1);
-  box-shadow: var(--shadow-md), 0 0 20px rgba(34, 197, 94, 0.15);
+  box-shadow: var(--shadow-md);
   transition: all 0.3s ease;
 }
 
 .meeting-card:hover {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-lg), 0 0 30px rgba(34, 197, 94, 0.25);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-accent);
 }
 
 .meeting-label {
   font-size: var(--font-size-sm);
-  color: var(--color-primary-dark);
+  color: var(--color-accent);
   font-weight: var(--font-weight-bold);
   text-transform: uppercase;
   letter-spacing: 0.05em;
