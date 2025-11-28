@@ -1,0 +1,111 @@
+<!-- ============================================================================
+   HEADER TEMPLATE - Parsons Amateur Radio Club Website Framework
+
+   Copy this entire section into your HTML page after the opening <body> tag.
+
+   INSTRUCTIONS:
+   1. Copy everything from <!-- Header --> to </header>
+   2. Update the "active" class on the nav-link that matches the current page
+   3. For dropdown items, add "active" class to the parent dropdown if a child is active
+   ============================================================================ -->
+
+<!-- Header -->
+<header class="header">
+  <div class="container">
+    <a href="index.html" class="logo">
+      <img src="images/Logo.svg" alt="PAARC Logo" class="logo-img">
+      <span class="logo-text">PAARC</span>
+    </a>
+    <nav class="nav">
+      <button class="hamburger" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="events.html" class="nav-link">Events</a></li>
+        <li class="nav-dropdown">
+          <span class="nav-link">Learning</span>
+          <ul class="dropdown-menu">
+            <li><a href="about-amateur-radio.html">About Amateur Radio</a></li>
+            <li><a href="digital-communications.html">Digital Communications</a></li>
+            <li><a href="morse-code.html">Morse Code</a></li>
+            <li><a href="uhf-vhf.html">UHF/VHF</a></li>
+            <li><a href="hf.html">HF</a></li>
+            <li><a href="summits-on-the-air.html">Summits on the Air</a></li>
+            <li><a href="solar-propagation.html">Solar Propagation</a></li>
+          </ul>
+        </li>
+        <li><a href="local-nets.html" class="nav-link">Local Nets</a></li>
+        <li><a href="exams.html" class="nav-link">Exams</a></li>
+        <li class="nav-dropdown">
+          <span class="nav-link">Podcasts</span>
+          <ul class="dropdown-menu">
+            <li><a href="arrl-news.html">ARRL News</a></li>
+            <li><a href="ham-nation.html">Ham Nation</a></li>
+            <li><a href="this-week-in-amateur-radio.html">This Week in Amateur Radio</a></li>
+            <li><a href="ham-radio-360.html">Ham Radio 360</a></li>
+          </ul>
+        </li>
+        <li class="nav-dropdown">
+          <span class="nav-link">Community</span>
+          <ul class="dropdown-menu">
+            <li><a href="community-service.html">Community Service</a></li>
+            <li><a href="interview-on-community-service.html">Interview on Community Service</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="about-us.html" class="nav-link">About Us</a></li>
+      </ul>
+    </nav>
+    <!-- Mobile Navigation -->
+    <nav class="nav-mobile">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="events.html" class="nav-link">Events</a>
+      <div class="nav-dropdown">
+        <span class="nav-link">Learning</span>
+        <ul class="dropdown-menu">
+          <li><a href="about-amateur-radio.html">About Amateur Radio</a></li>
+          <li><a href="digital-communications.html">Digital Communications</a></li>
+          <li><a href="morse-code.html">Morse Code</a></li>
+          <li><a href="uhf-vhf.html">UHF/VHF</a></li>
+          <li><a href="hf.html">HF</a></li>
+          <li><a href="summits-on-the-air.html">Summits on the Air</a></li>
+          <li><a href="solar-propagation.html">Solar Propagation</a></li>
+        </ul>
+      </div>
+      <a href="local-nets.html" class="nav-link">Local Nets</a>
+      <a href="exams.html" class="nav-link">Exams</a>
+      <div class="nav-dropdown">
+        <span class="nav-link">Podcasts</span>
+        <ul class="dropdown-menu">
+          <li><a href="arrl-news.html">ARRL News</a></li>
+          <li><a href="ham-nation.html">Ham Nation</a></li>
+          <li><a href="this-week-in-amateur-radio.html">This Week in Amateur Radio</a></li>
+          <li><a href="ham-radio-360.html">Ham Radio 360</a></li>
+        </ul>
+      </div>
+      <div class="nav-dropdown">
+        <span class="nav-link">Community</span>
+        <ul class="dropdown-menu">
+          <li><a href="community-service.html">Community Service</a></li>
+          <li><a href="interview-on-community-service.html">Interview on Community Service</a></li>
+        </ul>
+      </div>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="about-us.html" class="nav-link">About Us</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============================================================================
+   ACTIVE STATE EXAMPLES:
+
+   For top-level pages (Home, Events, Local Nets, Exams, Contact, About Us):
+   - Add "active" class to the nav-link: <a href="events.html" class="nav-link active">
+
+   For dropdown pages (Learning, Podcasts, Community sections):
+   - Add "active" class to the parent dropdown's nav-link: <span class="nav-link active">Learning</span>
+   - This highlights the dropdown to show the user is in that section
+   ============================================================================ -->

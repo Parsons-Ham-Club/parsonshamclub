@@ -1,0 +1,52 @@
+<!-- ============================================================================
+   NAVIGATION SCRIPT - Parsons Amateur Radio Club Website Framework
+
+   Copy this script section before the closing </body> tag, after the footer.
+
+   INSTRUCTIONS:
+   1. Copy the entire <script>...</script> block
+   2. Place it right before </body>
+   3. No modifications needed - script works for all pages
+
+   FEATURES:
+   - Mobile hamburger menu toggle
+   - Mobile dropdown menu toggle
+   - Close menu when clicking outside
+   ============================================================================ -->
+
+<!-- Mobile Navigation JavaScript -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Mobile Navigation
+    const hamburger = document.querySelector('.hamburger');
+    const navMobile = document.querySelector('.nav-mobile');
+    const dropdowns = document.querySelectorAll('.nav-mobile .nav-dropdown');
+
+    // Toggle mobile menu
+    if (hamburger && navMobile) {
+      hamburger.addEventListener('click', function() {
+        this.classList.toggle('active');
+        navMobile.classList.toggle('active');
+      });
+    }
+
+    // Toggle dropdowns on mobile
+    dropdowns.forEach(function(dropdown) {
+      const link = dropdown.querySelector('.nav-link');
+      if (link) {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          dropdown.classList.toggle('active');
+        });
+      }
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.header') && hamburger && navMobile) {
+        hamburger.classList.remove('active');
+        navMobile.classList.remove('active');
+      }
+    });
+  });
+</script>

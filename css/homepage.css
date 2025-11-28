@@ -107,6 +107,11 @@
   width: 100%;
 }
 
+/* Hide the below-grid carousel by default (mobile/tablet) */
+.hero-carousel-below {
+  display: none;
+}
+
 .carousel-container {
   position: relative;
   width: 100%;
@@ -407,6 +412,36 @@
 /* Desktop (1024px and up) */
 @media (min-width: 1024px) {
   .hero-grid {
-    gap: var(--space-16);
+    flex-direction: row;
+    gap: var(--space-12);
+  }
+
+  .hero-content {
+    flex: 0 0 50%;
+    max-width: 50%;
+    text-align: left;
+  }
+
+  .hero-description {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .hero-buttons {
+    justify-content: flex-start;
+  }
+
+  /* Hide the inline carousel on desktop */
+  .hero-carousel-inline {
+    display: none;
+  }
+
+  /* Show and style the below-grid carousel on desktop */
+  .hero-carousel-below {
+    display: block;
+    max-width: 600px;
+    margin: var(--space-8) auto 0;
+    position: relative;
+    z-index: 1;
   }
 }

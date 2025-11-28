@@ -1,469 +1,367 @@
-<!DOCTYPE html><!-- HTML5 -->
-<html prefix="og: http://ogp.me/ns#" lang="en-GB" dir="ltr">
-	<head>
-		<title>About Amateur Radio - Parsons Area Amateur Radio Club</title>
-		<meta charset="utf-8" />
-		<!--[if IE]><meta http-equiv="ImageToolbar" content="False" /><![endif]-->
-		<meta name="author" content="Bob Hoffman" />
-		<meta name="generator" content="Incomedia WebSite X5 Evo 2019.3.17 - www.websitex5.com" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		
-		<link rel="stylesheet" href="style/reset.css?2019-3-17-1" media="screen,print" />
-		<link rel="stylesheet" href="style/print.css?2019-3-17-1" media="print" />
-		<link rel="stylesheet" href="style/style.css?2019-3-17-1" media="screen,print" />
-		<link rel="stylesheet" href="style/template.css?2019-3-17-1" media="screen" />
-		<link rel="stylesheet" href="pcss/digital-communications.css?2019-3-17-1-638298502370089391" media="screen,print" />
-		<link rel="stylesheet" href="pluginAppObj/pluginAppObj_03/jssor.slider.css" media="screen, print" />
-		<script src="res/jquery.js?2019-3-17-1"></script>
-		<script src="res/x5engine.js?2019-3-17-1" data-files-version="2019-3-17-1"></script>
-		<script type="text/javascript" src="wa-animations/jquery-1.7.min.js"></script>
-		<script src="appsresources/jssor.slider.min.js"></script>
-		<script>
-			window.onload = function(){ checkBrowserCompatibility('Your browser does not support the features necessary to display this website.','Your browser may not support the features necessary to display this website.','[1]Update your browser[/1] or [2]continue without updating[/2].','http://outdatedbrowser.com/'); };
-			x5engine.utils.currentPagePath = 'about-amateur-radio.html';
-		</script>
-		<link rel="icon" href="favicon.png?2019-3-17-1-638298502369909885" type="image/png" />
-		<link rel="alternate" type="application/rss+xml" title="Summits on the Air" href="x5feed.xml" />
-	
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about amateur radio with our slide presentation - Parsons Area Amateur Radio Club">
+  <meta name="author" content="Parsons Area Amateur Radio Club">
+  <title>About Amateur Radio - Parsons Area Amateur Radio Club</title>
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="css/modern.css">
+  <link rel="stylesheet" href="pluginAppObj/pluginAppObj_03/jssor.slider.css">
+  <style>
+    /* Slideshow container styles */
+    .slideshow-section {
+      padding: var(--space-8) 0 var(--space-16);
+    }
 
+    .slideshow-intro {
+      text-align: center;
+      margin-bottom: var(--space-8);
+    }
 
+    .slideshow-intro p {
+      font-size: var(--font-size-xl);
+      color: var(--color-text-body);
+      margin-bottom: var(--space-2);
+    }
 
-<style>
-/* FINAL FIX: Completely remove header gap on non-homepage pages */
-body:not(.homepage) #imHeaderBg,
-#imHeaderBg {
-    height: 0px !important;
-    min-height: 0px !important;
-    max-height: 0px !important;
-    display: none !important;
-}
+    .slideshow-intro .arrow {
+      font-size: var(--font-size-2xl);
+      color: var(--color-primary);
+    }
 
-body:not(.homepage) #imHeaderObjects,
-#imHeaderObjects {
-    height: 70px !important;
-    min-height: 70px !important;
-    max-height: 70px !important;
-    padding: 0 !important;
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-}
+    /* Slideshow wrapper */
+    #pluginAppObj_03 {
+      max-width: 938px;
+      margin: 0 auto;
+    }
 
-body:not(.homepage) #imHeader,
-#imHeader {
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-}
+    #pluginAppObj_03_container {
+      position: relative;
+      width: 100%;
+      max-width: 938px;
+      height: 0;
+      padding-bottom: 75%; /* Maintain aspect ratio */
+      margin: 0 auto;
+      background: var(--color-bg-gray);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
 
-@media (max-width: 1149.9px) {
-    #imHeaderBg { height: 0px !important; display: none !important; }
-    #imHeaderObjects { height: 70px !important; }
-}
-@media (max-width: 719.9px) {
-    #imHeaderBg { height: 0px !important; display: none !important; }
-    #imHeaderObjects { height: 70px !important; }
-}
-@media (max-width: 479.9px) {
-    #imHeaderBg { height: 0px !important; display: none !important; }
-    #imHeaderObjects { height: 70px !important; }
-}
+    #pluginAppObj_03_container [data-u="slides"] {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
 
-/* Center slideshow and intro text at 938px width */
-#imContent {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    .slide-img {
+      width: 100%;
+      height: auto;
+    }
 
-#imPageRow_5,
-#imPageRow_6 {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
+    /* Bullet navigator */
+    .jssorb01 {
+      position: absolute;
+      bottom: 16px;
+      right: 10px;
+    }
 
-#imCell_5,
-#imCell_3 {
-    width: 938px;
-    max-width: 938px;
-}
+    .jssorb01 div {
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+    }
 
-#imTextObject_05 {
-    text-align: center;
-}
+    .jssorb01 div.av {
+      background: var(--color-primary);
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="images/Logo.svg" alt="PAARC Logo" class="logo-img">
+        <span class="logo-text">PAARC</span>
+      </a>
+      <nav class="nav">
+        <button class="hamburger" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="events.html" class="nav-link">Events</a></li>
+          <li class="nav-dropdown">
+            <span class="nav-link active">Learning</span>
+            <ul class="dropdown-menu">
+              <li><a href="about-amateur-radio.html">About Amateur Radio</a></li>
+              <li><a href="digital-communications.html">Digital Communications</a></li>
+              <li><a href="morse-code.html">Morse Code</a></li>
+              <li><a href="uhf-vhf.html">UHF/VHF</a></li>
+              <li><a href="hf.html">HF</a></li>
+              <li><a href="summits-on-the-air.html">Summits on the Air</a></li>
+              <li><a href="solar-propagation.html">Solar Propagation</a></li>
+            </ul>
+          </li>
+          <li><a href="local-nets.html" class="nav-link">Local Nets</a></li>
+          <li><a href="exams.html" class="nav-link">Exams</a></li>
+          <li class="nav-dropdown">
+            <span class="nav-link">Podcasts</span>
+            <ul class="dropdown-menu">
+              <li><a href="arrl-news.html">ARRL News</a></li>
+              <li><a href="ham-nation.html">Ham Nation</a></li>
+              <li><a href="this-week-in-amateur-radio.html">This Week in Amateur Radio</a></li>
+              <li><a href="ham-radio-360.html">Ham Radio 360</a></li>
+            </ul>
+          </li>
+          <li class="nav-dropdown">
+            <span class="nav-link">Community</span>
+            <ul class="dropdown-menu">
+              <li><a href="community-service.html">Community Service</a></li>
+              <li><a href="interview-on-community-service.html">Interview on Community Service</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="about-us.html" class="nav-link">About Us</a></li>
+        </ul>
+      </nav>
+      <!-- Mobile Navigation -->
+      <nav class="nav-mobile">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="events.html" class="nav-link">Events</a>
+        <div class="nav-dropdown">
+          <span class="nav-link active">Learning</span>
+          <ul class="dropdown-menu">
+            <li><a href="about-amateur-radio.html">About Amateur Radio</a></li>
+            <li><a href="digital-communications.html">Digital Communications</a></li>
+            <li><a href="morse-code.html">Morse Code</a></li>
+            <li><a href="uhf-vhf.html">UHF/VHF</a></li>
+            <li><a href="hf.html">HF</a></li>
+            <li><a href="summits-on-the-air.html">Summits on the Air</a></li>
+            <li><a href="solar-propagation.html">Solar Propagation</a></li>
+          </ul>
+        </div>
+        <a href="local-nets.html" class="nav-link">Local Nets</a>
+        <a href="exams.html" class="nav-link">Exams</a>
+        <div class="nav-dropdown">
+          <span class="nav-link">Podcasts</span>
+          <ul class="dropdown-menu">
+            <li><a href="arrl-news.html">ARRL News</a></li>
+            <li><a href="ham-nation.html">Ham Nation</a></li>
+            <li><a href="this-week-in-amateur-radio.html">This Week in Amateur Radio</a></li>
+            <li><a href="ham-radio-360.html">Ham Radio 360</a></li>
+          </ul>
+        </div>
+        <div class="nav-dropdown">
+          <span class="nav-link">Community</span>
+          <ul class="dropdown-menu">
+            <li><a href="community-service.html">Community Service</a></li>
+            <li><a href="interview-on-community-service.html">Interview on Community Service</a></li>
+          </ul>
+        </div>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="about-us.html" class="nav-link">About Us</a>
+      </nav>
+    </div>
+  </header>
 
-#pluginAppObj_03 {
-    width: 938px;
-    margin: 0 auto;
-}
+  <!-- Main Content -->
+  <main>
+    <section class="section section-white">
+      <div class="container">
+        <h1 class="section-title">About Amateur Radio</h1>
+        <p class="section-description">
+          Discover what amateur radio is all about through our informative slide presentation.
+        </p>
+      </div>
+    </section>
 
-#pluginAppObj_03_container {
-    width: 938px !important;
-    height: 704px !important;
-}
-</style></head>
-	<body>
-		<div id="imPageExtContainer">
-			<div id="imPageIntContainer">
-				<div id="imHeaderBg"></div>
-				<div id="imFooterBg"></div>
-				<div id="imPage">
-					<header id="imHeader">
-						<h1 class="imHidden">About Amateur Radio - Parsons Area Amateur Radio Club</h1>
-						<div id="imHeaderObjects"><div id="imHeader_imObjectAnimation_03_wrapper" class="template-object-wrapper"><div id="imHeader_imObjectAnimation_03"><script>
-function load_imHeader_imObjectAnimation_03() {
-   var container_width = $("#imHeader_imObjectAnimation_03").innerWidth();
-   var desired_width = 800;
-   var scale_ratio = 1;
-   if (desired_width > container_width) {
-       scale_ratio = Math.floor((container_width / desired_width) * 1000) / 1000;
-   }
-   css_style =  '#imHeader_imObjectAnimation_03_stage .sceneContainer {';
-   css_style += '-webkit-transform : scale(' + scale_ratio + ');';
-   css_style += '-moz-transform    : scale(' + scale_ratio + ');';
-   css_style += '-ms-transform     : scale(' + scale_ratio + ');';
-   css_style += '-o-transform      : scale(' + scale_ratio + ');';
-   css_style += 'transform         : scale(' + scale_ratio + ');';
-   css_style += 'transform-origin  : 0 0;';
-   css_style += '}'
-   css_style += '#imHeader_imObjectAnimation_03_stage {';
-   css_style += 'width: ' + (800 * scale_ratio)+'px !important;';
-   css_style += 'height:' + (70 * scale_ratio)+'px !important;';
-   css_style += 'position: static !important;';
-   css_style += '}';
-   $('.imHeader_imObjectAnimation_03-container-style').remove();
-   $('<style class="imHeader_imObjectAnimation_03-container-style">' + css_style + '</style>').appendTo($("#imHeader_imObjectAnimation_03"));
-}
-x5engine.boot.push(load_imHeader_imObjectAnimation_03);
-var doit;
-window.onresize = function() {
-	clearTimeout(doit);
-	doit = setTimeout(load_imHeader_imObjectAnimation_03, 10);
-};
-</script>
-<div id="imHeader_imObjectAnimation_03_stage" class="wascript" style="margin: 0 auto; width:800px; height:70px;"><script charset="utf-8" src="imHeader_imObjectAnimation_03/WA_SCRIPT.js"></script></div></div></div><div id="imHeader_imMenuObject_04_wrapper" class="template-object-wrapper"><!-- UNSEARCHABLE --><div id="imHeader_imMenuObject_04"><div id="imHeader_imMenuObject_04_container"><div class="hamburger-button hamburger-component"><div><div><div class="hamburger-bar"></div><div class="hamburger-bar"></div><div class="hamburger-bar"></div></div></div></div><div class="hamburger-menu-background-container hamburger-component">
-	<div class="hamburger-menu-background menu-mobile menu-mobile-animated hidden">
-		<div class="hamburger-menu-close-button"><span>&times;</span></div>
-	</div>
-</div>
-<ul class="menu-mobile-animated hidden">
-	<li class="imMnMnFirst imPage" data-link-paths=",/index.html,/">
-<div class="label-wrapper">
-<div class="label-inner-wrapper">
-		<a class="label" href="index.html">
-Home Page		</a>
-</div>
-</div>
-	</li><li class="imMnMnMiddle imPage" data-link-paths=",/events.html">
-<div class="label-wrapper">
-<div class="label-inner-wrapper">
-		<a class="label" href="events.html">
-Events		</a>
-</div>
-</div>
-	</li><li class="imMnMnMiddle imLevel"><div class="label-wrapper"><div class="label-inner-wrapper"><span class="label">Learning</span></div></div><ul data-original-position="open-bottom" class="open-bottom" style="" >
-	<li class="imMnMnFirst imPage" data-link-paths=",/about-amateur-radio.html">
-<div class="label-wrapper">
-<div class="label-inner-wrapper">
-		<a class="label" href="about-amateur-radio.html">
-About Amateur Radio		</a>
-</div>
-</div>
-	</li>
-	<li class="imMnMnMiddle imPage" data-link-paths=",/digital-communications.html">
-<div class="label-wrapper">
-<div class="label-inner-wrapper">
-		<a class="label" href="digital-communications.html">
-Digital Communications		</a>
-</div>
-</div>
-	</li><li class="imMnMnMiddle imPage" data-link-paths=",/morse-code.html">
-<div class="label-wrapper">
-<div class="label-inner-wrapper">
-		<a class="label" href="morse-code.html">
-Morse Code		</a>
-</div>
-</div>
-	</li><li class="imMnMnMiddle imPage" data-link-paths=",/uhf-vhf.html">
-<div class="label-wrapper">
-<div class="label-inner-wrapper">
-		<a class="label" href="uhf-vhf.html">
-UHF/VHF		</a>
-</div>
-</div>
-	</li><li class="imMnMnMiddle imPage" data-link-paths=",/hf.html">
-<div class="label-wrapper">
-<div class="label-inner-wrapper">
-		<a class="label" href="hf.html">
-HF		</a>
-</div>
-</div>
-	</li><li class="imMnMnMiddle imPage" data-link-paths=",/summits-on-the-air.html">
-<div class="label-wrapper">
-<div class="label-inner-wrapper">
-		<a class="label" href="summits-on-the-air.html">
-Summits on the Air		</a>
-</div>
-</div>
-	</li><li class="imMnMnLast imPage" data-link-paths=",/solar-propagation.html">
-<div class="label-wrapper">
-<div class="label-inner-wrapper">
-		<a class="label" href="solar-propagation.html">
-Solar Propagation		</a>
-</div>
-</div>
-	</li></ul></li><li class="imMnMnMiddle imPage" data-link-paths=",/local-nets.html">
-<div class="label-wrapper">
-<div class="label-inner-wrapper">
-		<a class="label" href="local-nets.html">
-Local Nets		</a>
-</div>
-</div>
-	</li><li class="imMnMnMiddle imPage" data-link-paths=",/exams.html">
-<div class="label-wrapper">
-<div class="label-inner-wrapper">
-		<a class="label" href="exams.html">
-Exams		</a>
-</div>
-</div>
-	</li><li class="imMnMnMiddle imLevel"><div class="label-wrapper"><div class="label-inner-wrapper"><span class="label">Podcasts</span></div></div><ul data-original-position="open-bottom" class="open-bottom" style="" >
-	<li class="imMnMnFirst imPage" data-link-paths=",/arrl-news.html">
-<div class="label-wrapper">
-<div class="label-inner-wrapper">
-		<a class="label" href="arrl-news.html">
-ARRL News		</a>
-</div>
-</div>
-	</li><li class="imMnMnMiddle imPage" data-link-paths=",/ham-nation.html">
-<div class="label-wrapper">
-<div class="label-inner-wrapper">
-		<a class="label" href="ham-nation.html">
-Ham Nation		</a>
-</div>
-</div>
-	</li><li class="imMnMnMiddle imPage" data-link-paths=",/this-week-in-amateur-radio.html">
-<div class="label-wrapper">
-<div class="label-inner-wrapper">
-		<a class="label" href="this-week-in-amateur-radio.html">
-This Week in Amateur Radio		</a>
-</div>
-</div>
-	</li><li class="imMnMnLast imPage" data-link-paths=",/ham-radio-360.html">
-<div class="label-wrapper">
-<div class="label-inner-wrapper">
-		<a class="label" href="ham-radio-360.html">
-Ham Radio 360		</a>
-</div>
-</div>
-	</li></ul></li><li class="imMnMnMiddle imLevel"><div class="label-wrapper"><div class="label-inner-wrapper"><span class="label">Community</span></div></div><ul data-original-position="open-bottom" class="open-bottom" style="" >
-	<li class="imMnMnFirst imPage" data-link-paths=",/community-service.html">
-<div class="label-wrapper">
-<div class="label-inner-wrapper">
-		<a class="label" href="community-service.html">
-Community Service		</a>
-</div>
-</div>
-	</li><li class="imMnMnLast imPage" data-link-paths=",/interview-on-community-service.html">
-<div class="label-wrapper">
-<div class="label-inner-wrapper">
-		<a class="label" href="interview-on-community-service.html">
-Interview on Community Service		</a>
-</div>
-</div>
-	</li></ul></li><li class="imMnMnMiddle imPage" data-link-paths=",/contact.html">
-<div class="label-wrapper">
-<div class="label-inner-wrapper">
-		<a class="label" href="contact.html">
-Contact		</a>
-</div>
-</div>
-	</li><li class="imMnMnLast imPage" data-link-paths=",/about-us.html">
-<div class="label-wrapper">
-<div class="label-inner-wrapper">
-		<a class="label" href="about-us.html">
-About Us		</a>
-</div>
-</div>
-	</li></ul></div></div><!-- UNSEARCHABLE END --><script>
-var imHeader_imMenuObject_04_settings = {
-	'menuId': 'imHeader_imMenuObject_04',
-	'responsiveMenuEffect': 'slide',
-	'animationDuration': 1000,
-}
-x5engine.boot.push(function(){x5engine.initMenu(imHeader_imMenuObject_04_settings)});
-$(function () {$('#imHeader_imMenuObject_04_container ul li').not('.imMnMnSeparator').each(function () {    var $this = $(this), timeout = 0;    $this.on('mouseenter', function () {        if($(this).parents('#imHeader_imMenuObject_04_container-menu-opened').length > 0) return;         clearTimeout(timeout);        setTimeout(function () { $this.children('ul, .multiple-column').stop(false, false).fadeIn(); }, 250);    }).on('mouseleave', function () {        if($(this).parents('#imHeader_imMenuObject_04_container-menu-opened').length > 0) return;         timeout = setTimeout(function () { $this.children('ul, .multiple-column').stop(false, false).fadeOut(); }, 250);    });});});
+    <section class="slideshow-section section-gray">
+      <div class="container">
+        <div class="slideshow-intro">
+          <p>Take a few minutes to view our slide program:</p>
+          <span class="arrow">↓</span>
+        </div>
 
-</script>
-</div></div>
-					</header>
-					<div id="imStickyBarContainer">
-						<div id="imStickyBarGraphics"></div>
-						<div id="imStickyBar">
-							<div id="imStickyBarObjects"></div>
-						</div>
-					</div>
-					<a class="imHidden" href="#imGoToCont" title="Skip the main menu">Go to content</a>
-					<div id="imSideBar">
-						<div id="imSideBarObjects"></div>
-					</div>
-					<div id="imContentGraphics"></div>
-					<main id="imContent">
-						<a id="imGoToCont"></a>
-						<header>
-							<h2 id="imPgTitle">About Amateur Radio</h2>
-							<div id="imBreadcrumb">Learning</div>
-						</header>
-						<div id="imPageRow_5" class="imPageRow">
-						
-						</div>
-						<div id="imCell_5" class=""  data-responsive-sequence-number="5"> <div id="imCellStyleGraphics_5"></div><div id="imCellStyleBorders_5"></div><div id="imTextObject_05">
-							<div data-index="0"  class="text-tab-content grid-prop current-tab "  id="imTextObject_05_tab0" style="opacity: 1; ">
-								<div class="text-inner">
-									<div class="imTACenter"><span class="fs28">Take a few minutes to view our slide program:</span></div><div class="imTACenter"><span class="fs28"><b>↓</b></span></div>
-								</div>
-							</div>
-						
-						</div>
-						</div><div id="imPageRow_6" class="imPageRow">
-						
-						</div>
-						<div id="imCell_3" class=""  data-responsive-sequence-number="6"> <div id="imCellStyleGraphics_3"></div><div id="imCellStyleBorders_3"></div><!-- Jssor Slider v.13 --><div id="pluginAppObj_03">
-						      
-						      <div id="pluginAppObj_03_container" style="position: relative; top: 0px; left: 0px; width: 938px; height: 704px;">
-						         <!-- Slides Container -->
-						         <div data-u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 938px; height: 704px;">
-						         <div><img class="slide-img" data-u="image" alt="" data-src2="pluginAppObj/pluginAppObj_03/Slide1.JPG" style="width: 938px;" /></div>
-						<div><img class="slide-img" data-u="image" alt="" data-src2="pluginAppObj/pluginAppObj_03/Slide2.JPG" style="width: 938px;" /></div>
-						<div><img class="slide-img" data-u="image" alt="" data-src2="pluginAppObj/pluginAppObj_03/Slide3.JPG" style="width: 938px;" /></div>
-						<div><img class="slide-img" data-u="image" alt="" data-src2="pluginAppObj/pluginAppObj_03/Slide4.JPG" style="width: 938px;" /></div>
-						<div><img class="slide-img" data-u="image" alt="" data-src2="pluginAppObj/pluginAppObj_03/Slide5.JPG" style="width: 938px;" /></div>
-						<div><img class="slide-img" data-u="image" alt="" data-src2="pluginAppObj/pluginAppObj_03/Slide6.JPG" style="width: 938px;" /></div>
-						<div><img class="slide-img" data-u="image" alt="" data-src2="pluginAppObj/pluginAppObj_03/Slide7.JPG" style="width: 938px;" /></div>
-						<div><img class="slide-img" data-u="image" alt="" data-src2="pluginAppObj/pluginAppObj_03/Slide8.JPG" style="width: 938px;" /></div>
-						<div><img class="slide-img" data-u="image" alt="" data-src2="pluginAppObj/pluginAppObj_03/Slide9.JPG" style="width: 938px;" /></div>
-						<div><img class="slide-img" data-u="image" alt="" data-src2="pluginAppObj/pluginAppObj_03/Slide10.JPG" style="width: 938px;" /></div>
-						<div><img class="slide-img" data-u="image" alt="" data-src2="pluginAppObj/pluginAppObj_03/Slide11.JPG" style="width: 938px;" /></div>
-						<div><img class="slide-img" data-u="image" alt="" data-src2="pluginAppObj/pluginAppObj_03/Slide12.JPG" style="width: 938px;" /></div>
-						<div><img class="slide-img" data-u="image" alt="" data-src2="pluginAppObj/pluginAppObj_03/Slide13.JPG" style="width: 938px;" /></div>
-						<div><img class="slide-img" data-u="image" alt="" data-src2="pluginAppObj/pluginAppObj_03/Slide14.JPG" style="width: 938px;" /></div>
-						<div><img class="slide-img" data-u="image" alt="" data-src2="pluginAppObj/pluginAppObj_03/Slide15.JPG" style="width: 938px;" /></div>
-						<div><img class="slide-img" data-u="image" alt="" data-src2="pluginAppObj/pluginAppObj_03/Slide16.JPG" style="width: 938px;" /></div>
-						<div><img class="slide-img" data-u="image" alt="" data-src2="pluginAppObj/pluginAppObj_03/Slide17.JPG" style="width: 938px;" /></div>
-						<div><img class="slide-img" data-u="image" alt="" data-src2="pluginAppObj/pluginAppObj_03/Slide18.JPG" style="width: 938px;" /></div>
-						<div><img class="slide-img" data-u="image" alt="" data-src2="pluginAppObj/pluginAppObj_03/Slide19.JPG" style="width: 938px;" /></div>
-						<div><img class="slide-img" data-u="image" alt="" data-src2="pluginAppObj/pluginAppObj_03/Slide20.JPG" style="width: 938px;" /></div>
-						<div><img class="slide-img" data-u="image" alt="" data-src2="pluginAppObj/pluginAppObj_03/Slide21.JPG" style="width: 938px;" /></div>
-						<div><img class="slide-img" data-u="image" alt="" data-src2="pluginAppObj/pluginAppObj_03/Slide22.JPG" style="width: 938px;" /></div>
-						<div><img class="slide-img" data-u="image" alt="" data-src2="pluginAppObj/pluginAppObj_03/Slide23.JPG" style="width: 938px;" /></div>
-						<div><img class="slide-img" data-u="image" alt="" data-src2="pluginAppObj/pluginAppObj_03/Slide24.JPG" style="width: 938px;" /></div>
-						<div><img class="slide-img" data-u="image" alt="" data-src2="pluginAppObj/pluginAppObj_03/Slide25.JPG" style="width: 938px;" /></div>
-						<div><img class="slide-img" data-u="image" alt="" data-src2="pluginAppObj/pluginAppObj_03/Slide26.JPG" style="width: 938px;" /></div>
-						<div><img class="slide-img" data-u="image" alt="" data-src2="pluginAppObj/pluginAppObj_03/Slide27.JPG" style="width: 938px;" /></div>
-						<div><img class="slide-img" data-u="image" alt="" data-src2="pluginAppObj/pluginAppObj_03/Slide28.JPG" style="width: 938px;" /></div>
-						<div><img class="slide-img" data-u="image" alt="" data-src2="pluginAppObj/pluginAppObj_03/Slide29.JPG" style="width: 938px;" /></div>
-						<div><img class="slide-img" data-u="image" alt="" data-src2="pluginAppObj/pluginAppObj_03/Slide30.JPG" style="width: 938px;" /></div>
-						<div><img class="slide-img" data-u="image" alt="" data-src2="pluginAppObj/pluginAppObj_03/Slide31.JPG" style="width: 938px;" /></div>
-						<div><img class="slide-img" data-u="image" alt="" data-src2="pluginAppObj/pluginAppObj_03/Slide32.JPG" style="width: 938px;" /></div>
-						<div><img class="slide-img" data-u="image" alt="" data-src2="pluginAppObj/pluginAppObj_03/Slide33.JPG" style="width: 938px;" /></div>
-						<div><img class="slide-img" data-u="image" alt="" data-src2="pluginAppObj/pluginAppObj_03/Slide34.JPG" style="width: 938px;" /></div>
-						<div><img class="slide-img" data-u="image" alt="" data-src2="pluginAppObj/pluginAppObj_03/Slide35.JPG" style="width: 938px;" /></div>
-						<div><img class="slide-img" data-u="image" alt="" data-src2="pluginAppObj/pluginAppObj_03/Slide36.JPG" style="width: 938px;" /></div>
-						<div><img class="slide-img" data-u="image" alt="" data-src2="pluginAppObj/pluginAppObj_03/Slide37.JPG" style="width: 938px;" /></div>
-						
-						         </div>
-						         <!-- bullet navigator container -->
-						<div data-u="navigator" class="jssorb01" style="position: absolute; bottom: 16px; right: 10px;">
-						<!-- bullet navigator item prototype -->
-						<div data-u="prototype" style="POSITION: absolute; WIDTH: 12px; HEIGHT: 12px;"></div>
-						</div>
-						<!-- Bullet Navigator Skin End -->
-						
-						      </div>
-						      <script>
-						         x5engine.boot.push(function(){
-						            var trs = [];
-						            $('#pluginAppObj_03_container .slide-img').each(function(){
-						  if ('data-src2' == 'data-src') {
-						      $(this).attr('src', $(this).attr('data-src'));
-						  }
-						});trs.push({$Duration:1200,$Delay:20,$Cols:8,$Rows:4,$Clip:15,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$FlyDirection:9,$Formation:$JssorSlideshowFormations$.$FormationStraightStairs,$Assembly:260,$Easing:{$Left:$JssorEasing$.$EaseInWave,$Top:$JssorEasing$.$EaseInWave,$Clip:$JssorEasing$.$EaseOutQuad},$ScaleHorizontal:0.2,$ScaleVertical:0.1,$Round:{$Left:1.3,$Top:2.5}});
-						trs.push({$Duration:1200,$Delay:20,$Cols:8,$Rows:4,$Clip:15,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$FlyDirection:9,$Formation:$JssorSlideshowFormations$.$FormationZigZag,$Assembly:260,$Easing:{$Left:$JssorEasing$.$EaseInWave,$Top:$JssorEasing$.$EaseInWave,$Clip:$JssorEasing$.$EaseOutQuad},$ScaleHorizontal:0.2,$ScaleVertical:0.1,$Round:{$Left:1.3,$Top:2.5}});
-						trs.push({$Duration:1200,$Delay:80,$Cols:8,$Rows:4,$Clip:15,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$FlyDirection:9,$Easing:{$Left:$JssorEasing$.$EaseInWave,$Top:$JssorEasing$.$EaseInWave,$Clip:$JssorEasing$.$EaseOutQuad},$ScaleHorizontal:0.2,$ScaleVertical:0.1,$Round:{$Left:1.3,$Top:2.5}});
-						trs.push({$Duration:1500,$Delay:20,$Cols:8,$Rows:4,$Clip:15,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$FlyDirection:9,$Formation:$JssorSlideshowFormations$.$FormationStraightStairs,$Assembly:260,$Easing:{$Left:$JssorEasing$.$EaseInWave,$Top:$JssorEasing$.$EaseInWave,$Clip:$JssorEasing$.$EaseOutQuad},$ScaleHorizontal:0.2,$ScaleVertical:0.1,$Round:{$Left:0.8,$Top:2.5}});
-						trs.push({$Duration:1000,$Delay:30,$Cols:8,$Rows:4,$Clip:15,$SlideOut:true,$Formation:$JssorSlideshowFormations$.$FormationStraightStairs,$Assembly:2049,$Easing:$JssorEasing$.$EaseOutQuad});
-						trs.push({$Duration:1000,$Delay:40,$Cols:12,$SlideOut:true,$FlyDirection:2,$Formation:$JssorSlideshowFormations$.$FormationStraight,$Assembly:260,$Easing:{$Left:$JssorEasing$.$EaseInOutExpo,$Opacity:$JssorEasing$.$EaseInOutQuad},$ScaleHorizontal:0.2,$Opacity:2,$Outside:true,$Round:{$Top:0.5}});
-						trs.push({$Duration:600,$Delay:50,$Cols:8,$Rows:4,$FlyDirection:5,$Formation:$JssorSlideshowFormations$.$FormationZigZag,$Assembly:1028,$ChessMode:{$Column:3,$Row:12},$Easing:{$Left:$JssorEasing$.$EaseInCubic,$Top:$JssorEasing$.$EaseInCubic,$Opacity:$JssorEasing$.$EaseOutQuad},$Opacity:2});
-						trs.push({$Duration:600,$Delay:50,$Cols:8,$Rows:4,$SlideOut:true,$FlyDirection:2,$Easing:{$Left:$JssorEasing$.$EaseInCubic,$Opacity:$JssorEasing$.$EaseOutQuad},$Opacity:2});
-						
-						            var options = {
-						               $SlideshowOptions: {
-						                  $Class: $JssorSlideshowRunner$,
-						                  $Transitions: trs,
-						                  $TransitionsOrder: 0,
-						                  $ShowLink: 2,
-						                  $ContentMode: false
-						               },
-						               $AutoPlay: 0,
-						               $AutoPlayInterval: 3000,
-						               $FillMode: 1,
-						               $BulletNavigatorOptions: {
-							$Class: $JssorBulletNavigator$,
-							$ChanceToShow: 2
-						,	$AutoCenter: 1
-						}
-						
-						            };
-						            var jssor_slider_pluginAppObj_03 = new $JssorSlider$('pluginAppObj_03_container', options);
-						
-						            function ScaleSlider(id) {
-						                var objectWidth = $('#' + id).width();
-						                if (objectWidth) {
-						                    eval("jssor_slider_" + id + ".$ScaleWidth(objectWidth)");
-						                }
-						                else {
-						                    window.setTimeout(ScaleSlider, 30);
-						                }
-						            }
-						          
-						            ScaleSlider('pluginAppObj_03');
-						          
-						            		var pluginAppObj_03_resizeTo = null,
-								pluginAppObj_03_width = 0;
-								x5engine.utils.onElementResize(document.getElementById('pluginAppObj_03'), function (rect, target) {
-									if (pluginAppObj_03_width == rect.width) {
-										return;
-									}
-									pluginAppObj_03_width = rect.width;
-									if (!!pluginAppObj_03_resizeTo) {
-										clearTimeout(pluginAppObj_03_resizeTo);
-									}
-									pluginAppObj_03_resizeTo = setTimeout(function() {
-										$('#pluginAppObj_03').css('overflow', 'hidden');
-										ScaleSlider('pluginAppObj_03');
-									}, 50);
-								});
-						
-						
-						        });
-						      </script>
-						   </div></div>
-					</main>
-					<footer id="imFooter">
-						<div id="imFooterObjects"><div id="imFooter_imObjectTitle_02_wrapper" class="template-object-wrapper"><div id="imFooter_imObjectTitle_02"><span id ="imFooter_imObjectTitle_02_text" >Ham radio - the original social network</span></div></div><div id="imFooter_imTextObject_03_wrapper" class="template-object-wrapper"><div id="imFooter_imTextObject_03">
-	<div data-index="0"  class="text-tab-content grid-prop current-tab "  id="imFooter_imTextObject_03_tab0" style="opacity: 1; ">
-		<div class="text-inner">
-			<div class="imTACenter"><span class="fs10lh1-5 ff1"><b>Want a presentation and demo for your class, civic organization or another group?</b></span></div><div class="imTACenter"><b class="imTALeft fs10lh1-5 ff1">Contact us: &nbsp;(620) 820-2066 or ae0aq@yahoo.com</b></div>
-		</div>
-	</div>
+        <!-- Jssor Slider -->
+        <div id="pluginAppObj_03">
+          <div id="pluginAppObj_03_container">
+            <!-- Slides Container -->
+            <div data-u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 938px; height: 704px;">
+              <div><img class="slide-img" data-u="image" alt="Slide 1" data-src2="pluginAppObj/pluginAppObj_03/Slide1.JPG" /></div>
+              <div><img class="slide-img" data-u="image" alt="Slide 2" data-src2="pluginAppObj/pluginAppObj_03/Slide2.JPG" /></div>
+              <div><img class="slide-img" data-u="image" alt="Slide 3" data-src2="pluginAppObj/pluginAppObj_03/Slide3.JPG" /></div>
+              <div><img class="slide-img" data-u="image" alt="Slide 4" data-src2="pluginAppObj/pluginAppObj_03/Slide4.JPG" /></div>
+              <div><img class="slide-img" data-u="image" alt="Slide 5" data-src2="pluginAppObj/pluginAppObj_03/Slide5.JPG" /></div>
+              <div><img class="slide-img" data-u="image" alt="Slide 6" data-src2="pluginAppObj/pluginAppObj_03/Slide6.JPG" /></div>
+              <div><img class="slide-img" data-u="image" alt="Slide 7" data-src2="pluginAppObj/pluginAppObj_03/Slide7.JPG" /></div>
+              <div><img class="slide-img" data-u="image" alt="Slide 8" data-src2="pluginAppObj/pluginAppObj_03/Slide8.JPG" /></div>
+              <div><img class="slide-img" data-u="image" alt="Slide 9" data-src2="pluginAppObj/pluginAppObj_03/Slide9.JPG" /></div>
+              <div><img class="slide-img" data-u="image" alt="Slide 10" data-src2="pluginAppObj/pluginAppObj_03/Slide10.JPG" /></div>
+              <div><img class="slide-img" data-u="image" alt="Slide 11" data-src2="pluginAppObj/pluginAppObj_03/Slide11.JPG" /></div>
+              <div><img class="slide-img" data-u="image" alt="Slide 12" data-src2="pluginAppObj/pluginAppObj_03/Slide12.JPG" /></div>
+              <div><img class="slide-img" data-u="image" alt="Slide 13" data-src2="pluginAppObj/pluginAppObj_03/Slide13.JPG" /></div>
+              <div><img class="slide-img" data-u="image" alt="Slide 14" data-src2="pluginAppObj/pluginAppObj_03/Slide14.JPG" /></div>
+              <div><img class="slide-img" data-u="image" alt="Slide 15" data-src2="pluginAppObj/pluginAppObj_03/Slide15.JPG" /></div>
+              <div><img class="slide-img" data-u="image" alt="Slide 16" data-src2="pluginAppObj/pluginAppObj_03/Slide16.JPG" /></div>
+              <div><img class="slide-img" data-u="image" alt="Slide 17" data-src2="pluginAppObj/pluginAppObj_03/Slide17.JPG" /></div>
+              <div><img class="slide-img" data-u="image" alt="Slide 18" data-src2="pluginAppObj/pluginAppObj_03/Slide18.JPG" /></div>
+              <div><img class="slide-img" data-u="image" alt="Slide 19" data-src2="pluginAppObj/pluginAppObj_03/Slide19.JPG" /></div>
+              <div><img class="slide-img" data-u="image" alt="Slide 20" data-src2="pluginAppObj/pluginAppObj_03/Slide20.JPG" /></div>
+              <div><img class="slide-img" data-u="image" alt="Slide 21" data-src2="pluginAppObj/pluginAppObj_03/Slide21.JPG" /></div>
+              <div><img class="slide-img" data-u="image" alt="Slide 22" data-src2="pluginAppObj/pluginAppObj_03/Slide22.JPG" /></div>
+              <div><img class="slide-img" data-u="image" alt="Slide 23" data-src2="pluginAppObj/pluginAppObj_03/Slide23.JPG" /></div>
+              <div><img class="slide-img" data-u="image" alt="Slide 24" data-src2="pluginAppObj/pluginAppObj_03/Slide24.JPG" /></div>
+              <div><img class="slide-img" data-u="image" alt="Slide 25" data-src2="pluginAppObj/pluginAppObj_03/Slide25.JPG" /></div>
+              <div><img class="slide-img" data-u="image" alt="Slide 26" data-src2="pluginAppObj/pluginAppObj_03/Slide26.JPG" /></div>
+              <div><img class="slide-img" data-u="image" alt="Slide 27" data-src2="pluginAppObj/pluginAppObj_03/Slide27.JPG" /></div>
+              <div><img class="slide-img" data-u="image" alt="Slide 28" data-src2="pluginAppObj/pluginAppObj_03/Slide28.JPG" /></div>
+              <div><img class="slide-img" data-u="image" alt="Slide 29" data-src2="pluginAppObj/pluginAppObj_03/Slide29.JPG" /></div>
+              <div><img class="slide-img" data-u="image" alt="Slide 30" data-src2="pluginAppObj/pluginAppObj_03/Slide30.JPG" /></div>
+              <div><img class="slide-img" data-u="image" alt="Slide 31" data-src2="pluginAppObj/pluginAppObj_03/Slide31.JPG" /></div>
+              <div><img class="slide-img" data-u="image" alt="Slide 32" data-src2="pluginAppObj/pluginAppObj_03/Slide32.JPG" /></div>
+              <div><img class="slide-img" data-u="image" alt="Slide 33" data-src2="pluginAppObj/pluginAppObj_03/Slide33.JPG" /></div>
+              <div><img class="slide-img" data-u="image" alt="Slide 34" data-src2="pluginAppObj/pluginAppObj_03/Slide34.JPG" /></div>
+              <div><img class="slide-img" data-u="image" alt="Slide 35" data-src2="pluginAppObj/pluginAppObj_03/Slide35.JPG" /></div>
+              <div><img class="slide-img" data-u="image" alt="Slide 36" data-src2="pluginAppObj/pluginAppObj_03/Slide36.JPG" /></div>
+              <div><img class="slide-img" data-u="image" alt="Slide 37" data-src2="pluginAppObj/pluginAppObj_03/Slide37.JPG" /></div>
+            </div>
+            <!-- Bullet navigator -->
+            <div data-u="navigator" class="jssorb01" style="position: absolute; bottom: 16px; right: 10px;">
+              <div data-u="prototype" style="position: absolute; width: 12px; height: 12px;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-</div>
-</div><div id="imFooter_imObjectImage_04_wrapper" class="template-object-wrapper"><div id="imFooter_imObjectImage_04"><div id="imFooter_imObjectImage_04_container"><img src="images/10-fm.gif" title="" alt="" />
-</div></div></div></div>
-					</footer>
-				</div>
-				<span class="imHidden"><a href="#imGoToCont" title="Read this page again">Back to content</a></span>
-			</div>
-		</div>
-		
-		<noscript class="imNoScript"><div class="alert alert-red">To use this website you must enable JavaScript.</div></noscript>
-	</body>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="images/Logo.svg" alt="PAARC Logo" class="footer-logo-img">
+            <span class="logo-text">Parsons Amateur Radio Club</span>
+          </div>
+          <p class="footer-tagline">
+            Connecting amateur radio enthusiasts in the Parsons area and beyond.
+            Join us to explore the fascinating world of ham radio.
+          </p>
+        </div>
+        <div class="footer-links">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="about-amateur-radio.html">Learning Resources</a></li>
+            <li><a href="exams.html">Exam Information</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4 class="footer-heading">Community</h4>
+          <ul>
+            <li><a href="local-nets.html">Local Nets</a></li>
+            <li><a href="arrl-news.html">Podcasts</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Parsons Area Amateur Radio Club. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Navigation JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Mobile Navigation
+      const hamburger = document.querySelector('.hamburger');
+      const navMobile = document.querySelector('.nav-mobile');
+      const dropdowns = document.querySelectorAll('.nav-mobile .nav-dropdown');
+
+      if (hamburger && navMobile) {
+        hamburger.addEventListener('click', function() {
+          this.classList.toggle('active');
+          navMobile.classList.toggle('active');
+        });
+      }
+
+      dropdowns.forEach(function(dropdown) {
+        const link = dropdown.querySelector('.nav-link');
+        if (link) {
+          link.addEventListener('click', function(e) {
+            e.preventDefault();
+            dropdown.classList.toggle('active');
+          });
+        }
+      });
+
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('.header') && hamburger && navMobile) {
+          hamburger.classList.remove('active');
+          navMobile.classList.remove('active');
+        }
+      });
+    });
+  </script>
+
+  <!-- Jssor Slider Script -->
+  <script src="appsresources/jssor.slider.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var trs = [];
+
+      // Load slide images
+      document.querySelectorAll('#pluginAppObj_03_container .slide-img').forEach(function(img) {
+        if (img.getAttribute('data-src2')) {
+          img.setAttribute('src', img.getAttribute('data-src2'));
+        }
+      });
+
+      // Transition effects
+      trs.push({$Duration:1200,$Delay:20,$Cols:8,$Rows:4,$Clip:15,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$FlyDirection:9,$Formation:$JssorSlideshowFormations$.$FormationStraightStairs,$Assembly:260,$Easing:{$Left:$JssorEasing$.$EaseInWave,$Top:$JssorEasing$.$EaseInWave,$Clip:$JssorEasing$.$EaseOutQuad},$ScaleHorizontal:0.2,$ScaleVertical:0.1,$Round:{$Left:1.3,$Top:2.5}});
+      trs.push({$Duration:1200,$Delay:20,$Cols:8,$Rows:4,$Clip:15,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$FlyDirection:9,$Formation:$JssorSlideshowFormations$.$FormationZigZag,$Assembly:260,$Easing:{$Left:$JssorEasing$.$EaseInWave,$Top:$JssorEasing$.$EaseInWave,$Clip:$JssorEasing$.$EaseOutQuad},$ScaleHorizontal:0.2,$ScaleVertical:0.1,$Round:{$Left:1.3,$Top:2.5}});
+      trs.push({$Duration:1000,$Delay:30,$Cols:8,$Rows:4,$Clip:15,$SlideOut:true,$Formation:$JssorSlideshowFormations$.$FormationStraightStairs,$Assembly:2049,$Easing:$JssorEasing$.$EaseOutQuad});
+
+      var options = {
+        $SlideshowOptions: {
+          $Class: $JssorSlideshowRunner$,
+          $Transitions: trs,
+          $TransitionsOrder: 0,
+          $ShowLink: 2,
+          $ContentMode: false
+        },
+        $AutoPlay: 0,
+        $AutoPlayInterval: 3000,
+        $FillMode: 1,
+        $BulletNavigatorOptions: {
+          $Class: $JssorBulletNavigator$,
+          $ChanceToShow: 2,
+          $AutoCenter: 1
+        }
+      };
+
+      var jssor_slider = new $JssorSlider$('pluginAppObj_03_container', options);
+
+      function ScaleSlider() {
+        var containerWidth = document.getElementById('pluginAppObj_03').offsetWidth;
+        if (containerWidth) {
+          jssor_slider.$ScaleWidth(containerWidth);
+        }
+      }
+
+      ScaleSlider();
+      window.addEventListener('resize', function() {
+        ScaleSlider();
+      });
+    });
+  </script>
+</body>
 </html>
