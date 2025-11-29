@@ -313,7 +313,7 @@
 
 /* Individual slide - flexbox two-column layout */
 .alt-carousel-slide {
-  display: none;
+  display: flex;
   flex-direction: row;
   gap: 0;
   align-items: stretch;
@@ -322,12 +322,18 @@
   overflow: hidden;
   box-shadow: var(--shadow-xl);
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: opacity 2s ease-in-out, visibility 2s ease-in-out;
 }
 
 .alt-carousel-slide.active {
-  display: flex;
   opacity: 1;
+  visibility: visible;
+  position: relative;
 }
 
 /* Reversed layout for odd slides (image on right) */
@@ -335,9 +341,9 @@
   flex-direction: row-reverse;
 }
 
-/* Image container with 16:9 aspect ratio */
+/* Image container with 16:9 aspect ratio - 65% width */
 .alt-carousel-image {
-  flex: 1;
+  flex: 0 0 65%;
   min-width: 0;
   aspect-ratio: 16 / 9;
   overflow: hidden;
@@ -348,12 +354,13 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
   display: block;
 }
 
-/* Content area - high contrast for readability */
+/* Content area - high contrast for readability - 35% width */
 .alt-carousel-content {
-  flex: 1;
+  flex: 0 0 35%;
   min-width: 0;
   padding: var(--space-6) var(--space-10);
   background: #000000;
