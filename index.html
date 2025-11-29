@@ -130,7 +130,7 @@
             </div>
             <div class="alt-carousel-content">
               <h3 class="alt-carousel-title">Mobile Operations</h3>
-              <p class="alt-carousel-description">Our club trailer provides portable radio capabilities for Field Day events and emergency communications, allowing us to set up operations anywhere they're needed.</p>
+              <p class="alt-carousel-description">This club trailer provides portable radio capabilities for Field Day events and emergency communications throughout southeast Kansas allowing us to set up operations anywhere they're needed.</p>
             </div>
           </div>
         </div>
@@ -446,16 +446,16 @@
         if (altPrevBtn) altPrevBtn.addEventListener('click', prevAltSlide);
         if (altNextBtn) altNextBtn.addEventListener('click', nextAltSlide);
 
-        // Auto-advance slides every 5 seconds
+        // Auto-advance slides every 6 seconds
         if (altSlides.length > 1) {
-          altAutoplayInterval = setInterval(nextAltSlide, 5000);
+          altAutoplayInterval = setInterval(nextAltSlide, 6000);
 
           // Pause autoplay on hover
           altCarousel.addEventListener('mouseenter', function() {
             clearInterval(altAutoplayInterval);
           });
           altCarousel.addEventListener('mouseleave', function() {
-            altAutoplayInterval = setInterval(nextAltSlide, 5000);
+            altAutoplayInterval = setInterval(nextAltSlide, 6000);
           });
         }
 
