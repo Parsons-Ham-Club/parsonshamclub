@@ -8,6 +8,50 @@
   <title>Exams - Parsons Area Amateur Radio Club</title>
   <link rel="icon" href="favicon.png" type="image/png">
   <link rel="stylesheet" href="css/modern.css">
+  <style>
+    .two-col-grid {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-8);
+      align-items: center;
+    }
+
+    .two-col-grid .col-text {
+      flex: 1;
+    }
+
+    .two-col-grid .col-image {
+      flex: 1;
+    }
+
+    .two-col-grid .col-image img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .two-col-grid.reverse {
+      flex-direction: column;
+    }
+
+    @media (min-width: 768px) {
+      .two-col-grid {
+        flex-direction: row;
+        gap: var(--space-12);
+        align-items: center;
+      }
+
+      .two-col-grid.reverse {
+        flex-direction: row-reverse;
+      }
+
+      .two-col-grid .col-image img {
+        max-width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
   <!-- Header -->
@@ -113,54 +157,70 @@
 
     <section class="section section-gray">
       <div class="container">
-        <div class="page-description" style="max-width: 900px; margin: 0 auto;">
-          <div style="text-align: center; margin-bottom: 2rem;">
-            <img src="images/pixabay-3699428.jpg" alt="Ham Radio License Exam" style="max-width: 600px; width: 100%; height: auto; border-radius: var(--radius-lg);">
+        <div class="two-col-grid">
+          <div class="col-image">
+            <img src="images/Books.jpg" alt="FCC Licensing Study Materials">
           </div>
-          <p style="font-weight: var(--font-weight-semibold); font-size: var(--font-size-lg); margin-bottom: 1.5rem;">What sorts of things do I need to learn to get my ham license?</p>
-
-          <p>In the United States, amateur radio licensing is governed by the Federal Communications Commission (FCC) under strict federal regulations. Licenses to operate amateur stations for personal use are granted to individuals of any age once they demonstrate an understanding of both pertinent FCC regulations and knowledge of radio station operation and safety considerations.</p>
-
-          <p>Applicants as young as five years old have passed examinations and were granted licenses. December 2012 marked one hundred years of amateur radio operator and station licensing by the United States government.</p>
-
-          <p>Operator licenses are divided into different classes, each of which corresponds to an increasing degree of knowledge and corresponding privileges. Over the years, the details of the classes have changed significantly, leading to the current system of three open classes and three grandfathered (but closed to new applicants) classes.</p>
+          <div class="col-text">
+            <h2 class="page-title">What Do I Need to Learn?</h2>
+            <p>In the United States, amateur radio licensing is governed by the Federal Communications Commission (FCC) under strict federal regulations. Licenses to operate amateur stations for personal use are granted to individuals of any age once they demonstrate an understanding of both pertinent FCC regulations and knowledge of radio station operation and safety considerations.</p>
+            <p>Applicants as young as five years old have passed examinations and were granted licenses. December 2012 marked one hundred years of amateur radio operator and station licensing by the United States government.</p>
+            <p>Operator licenses are divided into different classes, each of which corresponds to an increasing degree of knowledge and corresponding privileges. Over the years, the details of the classes have changed significantly, leading to the current system of three open classes and three grandfathered (but closed to new applicants) classes.</p>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="section section-white">
       <div class="container">
-        <div class="page-description" style="max-width: 900px; margin: 0 auto;">
-          <div style="text-align: center; margin-bottom: 2rem;">
-            <img src="images/pixabay-1622517.png" alt="Exam Sessions" style="max-width: 600px; width: 100%; height: auto; border-radius: var(--radius-lg);">
+        <div class="two-col-grid reverse">
+          <div class="col-image">
+            <img src="images/Test.jpg" alt="FCC Amateur Radio License Exam">
           </div>
-
-          <p>Exams for Technician, General, or Extra Class can be given at the Parsons Ham Club first Monday evening meeting of each month. Please contact us ahead of time to assure that ARRL authorized VEs (volunteer examiners) will be present to proctor the exam. Additional times can likely be available if necessary. The Parsons Ham Club charges a small exam session fee of <strong>$10</strong>, to cover the costs of running the exam sessions. The FCC regulations state that within a single exam session, for a single exam fee, you can keep taking exams until you either fail one or pass all the way up to Extra.</p>
+          <div class="col-text">
+            <h2 class="page-title">Exam Sessions</h2>
+            <p>Exams for Technician, General, or Extra Class can be given at the Parsons Ham Club first Monday evening meeting of each month. Please contact us ahead of time to assure that ARRL authorized VEs (volunteer examiners) will be present to proctor the exam. Additional times can likely be available if necessary.</p>
+            <p>The Parsons Ham Club charges a small exam session fee of <strong>$10</strong>, to cover the costs of running the exam sessions. The FCC regulations state that within a single exam session, for a single exam fee, you can keep taking exams until you either fail one or pass all the way up to Extra.</p>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="section section-gray">
       <div class="container">
-        <div class="page-description" style="max-width: 900px; margin: 0 auto;">
-          <div style="text-align: center; margin-bottom: 2rem;">
-            <img src="images/pixabay-1026473.jpg" alt="Study Resources" style="max-width: 600px; width: 100%; height: auto; border-radius: var(--radius-lg);">
+        <div class="two-col-grid">
+          <div class="col-image">
+            <img src="images/Resources.jpg" alt="Studying for Amateur Radio Exam">
           </div>
-
-          <p style="font-weight: var(--font-weight-semibold); margin-bottom: 1.5rem;">Many online resources are available to help you prepare for your license exams, some free and some paid. Here are but a few:</p>
-
-          <ul style="margin-left: 2rem; margin-bottom: 2rem;">
-            <li style="margin-bottom: 0.75rem;"><a href="http://www.arrl.org/shop/What-s-New" target="_blank" style="color: var(--color-primary); text-decoration: underline;">http://www.arrl.org/shop/What-s-New</a></li>
-            <li style="margin-bottom: 0.75rem;"><a href="http://aa9pw.com/radio/" target="_blank" style="color: var(--color-primary); text-decoration: underline;">http://aa9pw.com/radio/</a></li>
-            <li style="margin-bottom: 0.75rem;"><a href="https://hamexam.org/" target="_blank" style="color: var(--color-primary); text-decoration: underline;">https://hamexam.org/</a></li>
-            <li style="margin-bottom: 0.75rem;"><a href="https://www.eham.net/exams/" target="_blank" style="color: var(--color-primary); text-decoration: underline;">https://www.eham.net/exams/</a></li>
-            <li style="margin-bottom: 0.75rem;"><a href="https://www.hamradiolicenseexam.com/" target="_blank" style="color: var(--color-primary); text-decoration: underline;">https://www.hamradiolicenseexam.com/</a></li>
-          </ul>
-
-          <div style="text-align: center; margin-top: 3rem;">
-            <img src="images/pixabay-3195427.jpg" alt="Need Help" style="max-width: 600px; width: 100%; height: auto; border-radius: var(--radius-lg);">
+          <div class="col-text">
+            <h2 class="page-title">Study Resources</h2>
+            <p style="margin-bottom: 1rem;">Many online resources are available to help you prepare for your license exams, some free and some paid. Here are but a few:</p>
+            <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem;">
+              <li style="margin-bottom: 0.5rem;"><a href="http://hamstudy.org" target="_blank" style="color: var(--color-primary); text-decoration: underline;">hamstudy.org</a></li>
+              <li style="margin-bottom: 0.5rem;"><a href="http://www.arrl.org/shop/What-s-New" target="_blank" style="color: var(--color-primary); text-decoration: underline;">arrl.org</a></li>
+              <li style="margin-bottom: 0.5rem;"><a href="http://aa9pw.com/radio/" target="_blank" style="color: var(--color-primary); text-decoration: underline;">aa9pw.com</a></li>
+              <li style="margin-bottom: 0.5rem;"><a href="https://hamexam.org/" target="_blank" style="color: var(--color-primary); text-decoration: underline;">hamexam.org</a></li>
+              <li style="margin-bottom: 0.5rem;"><a href="https://www.eham.net/exams/" target="_blank" style="color: var(--color-primary); text-decoration: underline;">eham.net</a></li>
+              <li style="margin-bottom: 0.5rem;"><a href="https://www.hamradiolicenseexam.com/" target="_blank" style="color: var(--color-primary); text-decoration: underline;">hamradiolicenseexam.com</a></li>
+            </ul>
           </div>
-          <p style="text-align: center; font-weight: var(--font-weight-semibold); margin-top: 1.5rem;">Needing some personal assistance? We can help. Give us a call!</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white">
+      <div class="container">
+        <div class="two-col-grid reverse">
+          <div class="col-image">
+            <img src="images/Instructor.jpg" alt="Amateur Radio Exam Prep Class">
+          </div>
+          <div class="col-text">
+            <h2 class="page-title">Need Personal Assistance?</h2>
+            <p>Our club members are happy to help you prepare for your exam. Whether you need study tips, practice sessions, or just someone to answer your questions, we're here to support you on your journey to becoming a licensed amateur radio operator.</p>
+            <p style="margin-top: 1.5rem;">
+              <a href="contact.html" class="btn btn-primary">Contact Us →</a>
+            </p>
+          </div>
         </div>
       </div>
     </section>
