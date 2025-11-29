@@ -83,7 +83,7 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero Section with Parallax -->
   <section class="hero">
     <div class="container">
       <div class="hero-grid">
@@ -108,53 +108,35 @@
           </div>
         </div>
 
-        <!-- Right Column - Image Carousel (tablet only, moves outside on desktop) -->
-        <div class="hero-carousel hero-carousel-inline">
-          <div class="carousel-container">
-            <div class="carousel-slides">
-              <img src="images/Katy Days photo.jpg" alt="PAARC at Katy Days festival" class="carousel-slide active">
-              <img src="images/Screenshot Trailer.png" alt="PAARC trailer setup" class="carousel-slide">
-            </div>
-            <button class="carousel-btn carousel-prev" aria-label="Previous slide">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="15 18 9 12 15 6"/>
-              </svg>
-            </button>
-            <button class="carousel-btn carousel-next" aria-label="Next slide">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="9 18 15 12 9 6"/>
-              </svg>
-            </button>
-            <div class="carousel-dots">
-              <button class="carousel-dot active" aria-label="Slide 1"></button>
-              <button class="carousel-dot" aria-label="Slide 2"></button>
-            </div>
-          </div>
-        </div>
       </div>
 
-      <!-- Carousel below hero-grid (desktop only) -->
-      <div class="hero-carousel hero-carousel-below">
-        <div class="carousel-container">
-          <div class="carousel-slides">
-            <img src="images/Katy Days photo.jpg" alt="PAARC at Katy Days festival" class="carousel-slide active">
-            <img src="images/Screenshot Trailer.png" alt="PAARC trailer setup" class="carousel-slide">
+      <!-- Alternating Carousel - Two-column image/description layout -->
+      <div class="alt-carousel" role="region" aria-label="Club activities carousel">
+        <div class="alt-carousel-track">
+          <!-- Slide 1: Image Left (even index) -->
+          <div class="alt-carousel-slide active" data-slide-index="0">
+            <div class="alt-carousel-image">
+              <img src="images/Katy Days photo.jpg" alt="PAARC members demonstrating amateur radio equipment at the Katy Days festival">
+            </div>
+            <div class="alt-carousel-content">
+              <h3 class="alt-carousel-title">Katy Days Festival</h3>
+              <p class="alt-carousel-description">Club members demonstrate amateur radio equipment at the annual Katy Days festival in Parsons, introducing the community to the exciting world of ham radio and emergency communications.</p>
+            </div>
           </div>
-          <button class="carousel-btn carousel-prev" aria-label="Previous slide">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="15 18 9 12 15 6"/>
-            </svg>
-          </button>
-          <button class="carousel-btn carousel-next" aria-label="Next slide">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="9 18 15 12 9 6"/>
-            </svg>
-          </button>
-          <div class="carousel-dots">
-            <button class="carousel-dot active" aria-label="Slide 1"></button>
-            <button class="carousel-dot" aria-label="Slide 2"></button>
+          <!-- Slide 2: Image Right (odd index) -->
+          <div class="alt-carousel-slide image-right" data-slide-index="1">
+            <div class="alt-carousel-image">
+              <img src="images/Screenshot Trailer.png" alt="PAARC mobile communications trailer setup for field operations">
+            </div>
+            <div class="alt-carousel-content">
+              <h3 class="alt-carousel-title">Mobile Operations</h3>
+              <p class="alt-carousel-description">Our club trailer provides portable radio capabilities for Field Day events and emergency communications, allowing us to set up operations anywhere they're needed.</p>
+            </div>
           </div>
         </div>
+        <!-- Navigation arrows -->
+        <button class="alt-carousel-prev" aria-label="Previous slide">&#10094;</button>
+        <button class="alt-carousel-next" aria-label="Next slide">&#10095;</button>
       </div>
     </div>
   </section>
@@ -420,64 +402,65 @@
         }
       });
 
-      // Hero Carousel
-      const slides = document.querySelectorAll('.carousel-slide');
-      const dots = document.querySelectorAll('.carousel-dot');
-      const prevBtn = document.querySelector('.carousel-prev');
-      const nextBtn = document.querySelector('.carousel-next');
-      let currentSlide = 0;
-      let autoplayInterval;
+      // ============================================================
+      // Alternating Carousel - Two-column image/description layout
+      // ============================================================
+      const altCarousel = document.querySelector('.alt-carousel');
+      if (altCarousel) {
+        const altSlides = altCarousel.querySelectorAll('.alt-carousel-slide');
+        const altPrevBtn = altCarousel.querySelector('.alt-carousel-prev');
+        const altNextBtn = altCarousel.querySelector('.alt-carousel-next');
 
-      function showSlide(index) {
-        // Wrap around
-        if (index >= slides.length) index = 0;
-        if (index < 0) index = slides.length - 1;
+        let altCurrentSlide = 0;
+        let altAutoplayInterval;
 
-        // Update slides
-        slides.forEach(function(slide, i) {
-          slide.classList.toggle('active', i === index);
-        });
+        function showAltSlide(index) {
+          // Wrap around
+          if (index >= altSlides.length) index = 0;
+          if (index < 0) index = altSlides.length - 1;
 
-        // Update dots
-        dots.forEach(function(dot, i) {
-          dot.classList.toggle('active', i === index);
-        });
-
-        currentSlide = index;
-      }
-
-      function nextSlide() {
-        showSlide(currentSlide + 1);
-      }
-
-      function prevSlide() {
-        showSlide(currentSlide - 1);
-      }
-
-      // Event listeners
-      if (prevBtn) prevBtn.addEventListener('click', prevSlide);
-      if (nextBtn) nextBtn.addEventListener('click', nextSlide);
-
-      dots.forEach(function(dot, index) {
-        dot.addEventListener('click', function() {
-          showSlide(index);
-        });
-      });
-
-      // Auto-advance slides every 5 seconds (only if more than one slide)
-      if (slides.length > 1) {
-        autoplayInterval = setInterval(nextSlide, 5000);
-
-        // Pause autoplay on hover
-        const carousel = document.querySelector('.carousel-container');
-        if (carousel) {
-          carousel.addEventListener('mouseenter', function() {
-            clearInterval(autoplayInterval);
+          // Update slides - add/remove active class and image-right for alternation
+          altSlides.forEach(function(slide, i) {
+            slide.classList.remove('active');
+            // Alternate image position: even index = left, odd index = right
+            if (i % 2 === 1) {
+              slide.classList.add('image-right');
+            } else {
+              slide.classList.remove('image-right');
+            }
           });
-          carousel.addEventListener('mouseleave', function() {
-            autoplayInterval = setInterval(nextSlide, 5000);
+
+          altSlides[index].classList.add('active');
+          altCurrentSlide = index;
+        }
+
+        function nextAltSlide() {
+          showAltSlide(altCurrentSlide + 1);
+        }
+
+        function prevAltSlide() {
+          showAltSlide(altCurrentSlide - 1);
+        }
+
+        // Event listeners for navigation buttons
+        if (altPrevBtn) altPrevBtn.addEventListener('click', prevAltSlide);
+        if (altNextBtn) altNextBtn.addEventListener('click', nextAltSlide);
+
+        // Auto-advance slides every 5 seconds
+        if (altSlides.length > 1) {
+          altAutoplayInterval = setInterval(nextAltSlide, 5000);
+
+          // Pause autoplay on hover
+          altCarousel.addEventListener('mouseenter', function() {
+            clearInterval(altAutoplayInterval);
+          });
+          altCarousel.addEventListener('mouseleave', function() {
+            altAutoplayInterval = setInterval(nextAltSlide, 5000);
           });
         }
+
+        // Initialize first slide
+        showAltSlide(0);
       }
     });
   </script>

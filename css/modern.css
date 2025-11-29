@@ -247,6 +247,7 @@ img {
   padding: var(--space-6);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
+  text-align: center;
 }
 
 .feature-card:hover,
@@ -284,7 +285,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: var(--space-4);
+  margin: 0 auto var(--space-4);
   transition: transform 0.3s ease;
 }
 
