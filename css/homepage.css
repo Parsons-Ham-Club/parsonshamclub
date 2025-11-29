@@ -81,118 +81,6 @@
 }
 
 /* ==========================================================================
-   Hero Carousel
-   ========================================================================== */
-
-.hero-carousel {
-  width: 100%;
-}
-
-/* Hide the below-grid carousel by default (mobile/tablet) */
-.hero-carousel-below {
-  display: none;
-}
-
-.carousel-container {
-  position: relative;
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-  border-radius: var(--radius-xl);
-  overflow: hidden;
-  box-shadow: var(--shadow-xl);
-  border: 1px solid var(--color-border);
-}
-
-.carousel-slides {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  background: var(--color-bg-gray);
-}
-
-.carousel-slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.carousel-slide.active {
-  opacity: 1;
-}
-
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
-  background: rgba(255, 255, 255, 0.9);
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: var(--shadow-md);
-  transition: background-color 0.2s, transform 0.2s;
-  z-index: 10;
-}
-
-.carousel-btn:hover {
-  background: var(--color-bg-white);
-  transform: translateY(-50%) scale(1.1);
-}
-
-.carousel-btn svg {
-  width: 20px;
-  height: 20px;
-  color: var(--color-text-heading);
-}
-
-.carousel-prev {
-  left: var(--space-3);
-}
-
-.carousel-next {
-  right: var(--space-3);
-}
-
-.carousel-dots {
-  position: absolute;
-  bottom: var(--space-4);
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: var(--space-2);
-  z-index: 10;
-}
-
-.carousel-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.5);
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.2s, transform 0.2s;
-}
-
-.carousel-dot:hover {
-  background: rgba(255, 255, 255, 0.8);
-}
-
-.carousel-dot.active {
-  background: var(--color-bg-white);
-  transform: scale(1.2);
-}
-
-/* ==========================================================================
    Meeting Card (Hero)
    ========================================================================== */
 
@@ -353,15 +241,6 @@
     justify-content: flex-start;
   }
 
-  .hero-carousel {
-    flex: 1;
-    max-width: 50%;
-  }
-
-  .carousel-container {
-    max-width: 100%;
-  }
-
   .hero-title {
     font-size: var(--font-size-5xl);
   }
@@ -403,28 +282,6 @@
 
   .hero-buttons {
     justify-content: flex-start;
-  }
-
-  /* Hide the inline carousel on desktop */
-  .hero-carousel-inline {
-    display: none;
-  }
-
-  /* Show and style the below-grid carousel on desktop */
-  .hero-carousel-below {
-    display: block;
-    max-width: 100%;
-    margin: var(--space-8) 0 0;
-    position: relative;
-    z-index: 1;
-  }
-
-  .hero-carousel-below .carousel-container {
-    max-width: 100%;
-  }
-
-  .hero-carousel-below .carousel-slides {
-    aspect-ratio: 16 / 9;
   }
 }
 

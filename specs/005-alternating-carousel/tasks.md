@@ -131,9 +131,9 @@
 - [x] T035 [P] Add ARIA attributes to carousel container in index.html
 - [x] T036 [P] Add aria-labels to navigation buttons in index.html
 - [x] T037 [P] Ensure all images have descriptive alt text in index.html
-- [ ] T038 Remove or hide old carousel HTML in index.html
-- [ ] T039 Remove old carousel JavaScript code in index.html
-- [ ] T040 Clean up unused carousel CSS from css/homepage.css
+- [x] T038 Remove or hide old carousel HTML in index.html
+- [x] T039 Remove old carousel JavaScript code in index.html
+- [x] T040 Clean up unused carousel CSS from css/homepage.css
 - [ ] T041 Test full carousel on desktop Chrome, Firefox, Edge
 - [ ] T042 Test full carousel on mobile viewport
 - [ ] T043 Verify 16:9 aspect ratio maintained across all viewports
