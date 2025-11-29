@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Best ham radio podcasts for 2025 - educational content, technical discussions, and community stories - Parsons Area Amateur Radio Club">
+  <meta name="author" content="Parsons Area Amateur Radio Club">
+  <title>Podcasts - Parsons Area Amateur Radio Club</title>
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="css/modern.css">
+  <style>
+    .podcast-section {
+      margin-bottom: var(--space-8);
+    }
+
+    .podcast-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .podcast-header {
+      display: flex;
+      align-items: center;
+      gap: var(--space-4);
+      margin-bottom: var(--space-4);
+    }
+
+    .podcast-header h2 {
+      margin: 0;
+      font-size: var(--font-size-2xl);
+      color: var(--color-text-heading);
+    }
+
+    .podcast-description {
+      color: var(--color-text-muted);
+      margin-bottom: var(--space-6);
+    }
+
+    .episode-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+    }
+
+    .episode-card {
+      background: var(--color-bg-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: var(--space-4);
+      display: flex;
+      align-items: center;
+      gap: var(--space-4);
+      transition: all 0.2s ease;
+    }
+
+    .episode-card:hover {
+      border-color: var(--color-primary);
+      box-shadow: var(--shadow-md);
+    }
+
+    .episode-icon {
+      flex-shrink: 0;
+      width: 48px;
+      height: 48px;
+      background: var(--color-primary);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .episode-icon svg {
+      width: 24px;
+      height: 24px;
+      color: white;
+    }
+
+    .episode-content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .episode-title {
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-text-heading);
+      margin-bottom: var(--space-1);
+    }
+
+    .episode-meta {
+      font-size: var(--font-size-sm);
+      color: var(--color-text-muted);
+    }
+
+    .episode-link {
+      flex-shrink: 0;
+      color: var(--color-primary);
+      font-weight: var(--font-weight-medium);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: var(--space-1);
+    }
+
+    .episode-link:hover {
+      text-decoration: underline;
+    }
+
+    .podcast-subscribe {
+      margin-top: var(--space-4);
+      text-align: center;
+    }
+
+    .podcast-subscribe a {
+      color: var(--color-primary);
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="images/Logo.svg" alt="PAARC Logo" class="logo-img">
+        <span class="logo-text">PAARC</span>
+      </a>
+      <nav class="nav">
+        <button class="hamburger" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="events.html" class="nav-link">Events</a></li>
+          <li class="nav-dropdown">
+            <span class="nav-link">Learning</span>
+            <ul class="dropdown-menu">
+              <li><a href="about-amateur-radio.html">About Amateur Radio</a></li>
+              <li><a href="digital-communications.html">Digital Communications</a></li>
+              <li><a href="morse-code.html">Morse Code</a></li>
+              <li><a href="uhf-vhf.html">UHF/VHF</a></li>
+              <li><a href="hf.html">HF</a></li>
+              <li><a href="summits-on-the-air.html">Summits on the Air</a></li>
+              <li><a href="solar-propagation.html">Solar Propagation</a></li>
+            </ul>
+          </li>
+          <li><a href="local-nets.html" class="nav-link">Local Nets</a></li>
+          <li><a href="exams.html" class="nav-link">Exams</a></li>
+          <li class="nav-dropdown">
+            <span class="nav-link">Community</span>
+            <ul class="dropdown-menu">
+              <li><a href="community-service.html">Community Service</a></li>
+              <li><a href="interview-on-community-service.html">Interview on Community Service</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="about-us.html" class="nav-link">About Us</a></li>
+        </ul>
+      </nav>
+      <!-- Mobile Navigation -->
+      <nav class="nav-mobile">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="events.html" class="nav-link">Events</a>
+        <div class="nav-dropdown">
+          <span class="nav-link">Learning</span>
+          <ul class="dropdown-menu">
+            <li><a href="about-amateur-radio.html">About Amateur Radio</a></li>
+            <li><a href="digital-communications.html">Digital Communications</a></li>
+            <li><a href="morse-code.html">Morse Code</a></li>
+            <li><a href="uhf-vhf.html">UHF/VHF</a></li>
+            <li><a href="hf.html">HF</a></li>
+            <li><a href="summits-on-the-air.html">Summits on the Air</a></li>
+            <li><a href="solar-propagation.html">Solar Propagation</a></li>
+          </ul>
+        </div>
+        <a href="local-nets.html" class="nav-link">Local Nets</a>
+        <a href="exams.html" class="nav-link">Exams</a>
+        <div class="nav-dropdown">
+          <span class="nav-link">Community</span>
+          <ul class="dropdown-menu">
+            <li><a href="community-service.html">Community Service</a></li>
+            <li><a href="interview-on-community-service.html">Interview on Community Service</a></li>
+          </ul>
+        </div>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="about-us.html" class="nav-link">About Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <section class="section section-white">
+      <div class="container">
+        <h1 class="section-title">Best Ham Radio Podcasts (2025)</h1>
+        <p class="section-description">
+          The following is a list of some of the best ham radio podcasts to listen to in 2025, offering a mix of educational content, technical discussions, and personal stories from the ham radio community.
+        </p>
+      </div>
+    </section>
+
+    <!-- Ham Radio Crash Course -->
+    <section class="section section-gray">
+      <div class="container">
+        <div class="podcast-section">
+          <div class="podcast-header">
+            <h2>Ham Radio Crash Course</h2>
+          </div>
+          <p class="podcast-description">Hosted by Josh Nass KI6NAZ, this podcast covers suburban life, ham radio tips, practice exam questions, and longer topics. With nearly 400K subscribers, HRCC is one of the most popular ham radio channels.</p>
+          <div class="card-grid card-grid-2">
+            <div class="episode-list">
+              <a href="https://www.youtube.com/@HamRadioCrashCourse" target="_blank" rel="noopener" class="episode-card">
+                <div class="episode-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </div>
+                <div class="episode-content">
+                  <div class="episode-title">YouTube Channel</div>
+                  <div class="episode-meta">Watch all episodes on YouTube</div>
+                </div>
+                <span class="episode-link">Visit →</span>
+              </a>
+              <a href="https://hamradiocrashcourse.com/podcast" target="_blank" rel="noopener" class="episode-card">
+                <div class="episode-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </div>
+                <div class="episode-content">
+                  <div class="episode-title">Official Website</div>
+                  <div class="episode-meta">Subscribe to the podcast feed</div>
+                </div>
+                <span class="episode-link">Visit →</span>
+              </a>
+              <a href="https://podcasts.apple.com/us/podcast/ham-radio-crash-course-podcast/id1400794852" target="_blank" rel="noopener" class="episode-card">
+                <div class="episode-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </div>
+                <div class="episode-content">
+                  <div class="episode-title">Apple Podcasts</div>
+                  <div class="episode-meta">Listen on Apple Podcasts</div>
+                </div>
+                <span class="episode-link">Listen →</span>
+              </a>
+              <a href="https://hamradiocrashcourse.podbean.com/" target="_blank" rel="noopener" class="episode-card">
+                <div class="episode-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </div>
+                <div class="episode-content">
+                  <div class="episode-title">Podbean</div>
+                  <div class="episode-meta">Stream episodes on Podbean</div>
+                </div>
+                <span class="episode-link">Listen →</span>
+              </a>
+            </div>
+            <div class="embed-container">
+              <iframe src="https://www.youtube.com/embed/KpGwMilEfSA" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARRL Audio News -->
+    <section class="section section-white">
+      <div class="container">
+        <div class="podcast-section">
+          <div class="podcast-header">
+            <h2>ARRL Audio News</h2>
+          </div>
+          <p class="podcast-description">A weekly podcast of current news and events in amateur radio, prepared by ARRL The National Association for Amateur Radio. Each 10-15 minute episode can be aired over repeaters (no music included).</p>
+          <div class="card-grid card-grid-2">
+            <div class="episode-list">
+              <a href="https://www.arrl.org/arrl-audio-news" target="_blank" rel="noopener" class="episode-card">
+                <div class="episode-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </div>
+                <div class="episode-content">
+                  <div class="episode-title">ARRL Official Website</div>
+                  <div class="episode-meta">Download weekly audio episodes</div>
+                </div>
+                <span class="episode-link">Listen →</span>
+              </a>
+              <a href="https://podcasts.apple.com/us/podcast/arrl-audio-news/id78370505" target="_blank" rel="noopener" class="episode-card">
+                <div class="episode-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </div>
+                <div class="episode-content">
+                  <div class="episode-title">Apple Podcasts</div>
+                  <div class="episode-meta">Subscribe on Apple Podcasts</div>
+                </div>
+                <span class="episode-link">Listen →</span>
+              </a>
+              <a href="https://open.spotify.com/show/3rPvxnEZNP8Rn27RYvD4nG" target="_blank" rel="noopener" class="episode-card">
+                <div class="episode-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </div>
+                <div class="episode-content">
+                  <div class="episode-title">Spotify</div>
+                  <div class="episode-meta">Stream on Spotify</div>
+                </div>
+                <span class="episode-link">Listen →</span>
+              </a>
+              <a href="https://www.iheart.com/podcast/256-arrl-audio-news-31073883/" target="_blank" rel="noopener" class="episode-card">
+                <div class="episode-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </div>
+                <div class="episode-content">
+                  <div class="episode-title">iHeart Radio</div>
+                  <div class="episode-meta">Listen on iHeart</div>
+                </div>
+                <span class="episode-link">Listen →</span>
+              </a>
+            </div>
+            <div class="embed-container">
+              <iframe src="https://open.spotify.com/embed/show/3rPvxnEZNP8Rn27RYvD4nG?utm_source=generator&theme=0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Amateur Radio Newsline -->
+    <section class="section section-gray">
+      <div class="container">
+        <div class="podcast-section">
+          <div class="podcast-header">
+            <h2>Amateur Radio Newsline</h2>
+          </div>
+          <p class="podcast-description">Continuing the legacy of founders Jim Hendershot WA6VQP and Bill Pasternak WA6ITF, a volunteer team of international voices provides a professional-quality roundup of happenings in the amateur radio community.</p>
+          <div class="card-grid card-grid-2">
+            <div class="episode-list">
+              <a href="https://www.arnewsline.org/" target="_blank" rel="noopener" class="episode-card">
+                <div class="episode-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </div>
+                <div class="episode-content">
+                  <div class="episode-title">Official Website</div>
+                  <div class="episode-meta">Download weekly audio episodes</div>
+                </div>
+                <span class="episode-link">Listen →</span>
+              </a>
+              <a href="https://podcasts.apple.com/us/podcast/amateur-radio-newsline/id546373540" target="_blank" rel="noopener" class="episode-card">
+                <div class="episode-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </div>
+                <div class="episode-content">
+                  <div class="episode-title">Apple Podcasts</div>
+                  <div class="episode-meta">Subscribe on Apple Podcasts</div>
+                </div>
+                <span class="episode-link">Listen →</span>
+              </a>
+              <a href="https://www.youtube.com/@AmateurRadioNewsline" target="_blank" rel="noopener" class="episode-card">
+                <div class="episode-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </div>
+                <div class="episode-content">
+                  <div class="episode-title">YouTube Channel</div>
+                  <div class="episode-meta">Watch video news reports</div>
+                </div>
+                <span class="episode-link">Watch →</span>
+              </a>
+            </div>
+            <div class="embed-container">
+              <iframe src="https://www.youtube.com/embed/videoseries?list=PLFvkPUg1rBTy3FhCQ0s3c_JuSYT-_dXX2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ICQ Amateur Radio Podcast -->
+    <section class="section section-white">
+      <div class="container">
+        <div class="podcast-section">
+          <div class="podcast-header">
+            <h2>ICQ Amateur Radio Podcast</h2>
+          </div>
+          <p class="podcast-description">The premier podcast for amateur radio users. This free fortnightly show reviews current news, discusses technical features, and explores the hobby with hosts Martin Butler M1MRB and team.</p>
+          <div class="card-grid card-grid-2">
+            <div class="episode-list">
+              <a href="https://www.icqpodcast.com/" target="_blank" rel="noopener" class="episode-card">
+                <div class="episode-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </div>
+                <div class="episode-content">
+                  <div class="episode-title">Official Website</div>
+                  <div class="episode-meta">Download episodes directly</div>
+                </div>
+                <span class="episode-link">Listen →</span>
+              </a>
+              <a href="https://podcasts.apple.com/us/podcast/icqpodcasts-amateur-ham-radio-podcast/id284922000" target="_blank" rel="noopener" class="episode-card">
+                <div class="episode-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </div>
+                <div class="episode-content">
+                  <div class="episode-title">Apple Podcasts</div>
+                  <div class="episode-meta">Subscribe on Apple Podcasts</div>
+                </div>
+                <span class="episode-link">Listen →</span>
+              </a>
+              <a href="https://open.spotify.com/show/3EiWSq3kk34cNhTsJvSPL0" target="_blank" rel="noopener" class="episode-card">
+                <div class="episode-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </div>
+                <div class="episode-content">
+                  <div class="episode-title">Spotify</div>
+                  <div class="episode-meta">Stream on Spotify</div>
+                </div>
+                <span class="episode-link">Listen →</span>
+              </a>
+              <a href="https://www.youtube.com/@icqpodcast" target="_blank" rel="noopener" class="episode-card">
+                <div class="episode-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </div>
+                <div class="episode-content">
+                  <div class="episode-title">YouTube Channel</div>
+                  <div class="episode-meta">Watch video episodes</div>
+                </div>
+                <span class="episode-link">Watch →</span>
+              </a>
+            </div>
+            <div class="embed-container">
+              <iframe src="https://open.spotify.com/embed/show/3EiWSq3kk34cNhTsJvSPL0?utm_source=generator&theme=0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ham Radio 360 -->
+    <section class="section section-gray">
+      <div class="container">
+        <div class="podcast-section">
+          <div class="podcast-header">
+            <h2>Ham Radio 360</h2>
+          </div>
+          <p class="podcast-description">Created by Cale Nelson K4CDN for the "New Guy," this podcast (2014-2018) produced 90+ shows with over 750,000 downloads. Topics range from setting up your first station to DX, antennas, and product reviews. The archive remains as a contribution to the hobby.</p>
+          <div class="card-grid card-grid-2">
+            <div class="episode-list">
+              <a href="http://hamradio360.com/" target="_blank" rel="noopener" class="episode-card">
+                <div class="episode-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </div>
+                <div class="episode-content">
+                  <div class="episode-title">Official Website</div>
+                  <div class="episode-meta">Browse the podcast archive</div>
+                </div>
+                <span class="episode-link">Visit →</span>
+              </a>
+              <a href="https://podcasts.apple.com/us/podcast/ham-radio-360/id890522869" target="_blank" rel="noopener" class="episode-card">
+                <div class="episode-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </div>
+                <div class="episode-content">
+                  <div class="episode-title">Apple Podcasts</div>
+                  <div class="episode-meta">Listen to archived episodes</div>
+                </div>
+                <span class="episode-link">Listen →</span>
+              </a>
+              <a href="https://www.iheart.com/podcast/263-ham-radio-360-27614411/" target="_blank" rel="noopener" class="episode-card">
+                <div class="episode-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </div>
+                <div class="episode-content">
+                  <div class="episode-title">iHeart Radio</div>
+                  <div class="episode-meta">Stream on iHeart</div>
+                </div>
+                <span class="episode-link">Listen →</span>
+              </a>
+              <a href="https://www.audible.com/podcast/Ham-Radio-360/B08JJM478J" target="_blank" rel="noopener" class="episode-card">
+                <div class="episode-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </div>
+                <div class="episode-content">
+                  <div class="episode-title">Audible</div>
+                  <div class="episode-meta">Listen on Audible</div>
+                </div>
+                <span class="episode-link">Listen →</span>
+              </a>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: center; background: var(--color-bg-gray); border-radius: var(--radius-lg); padding: var(--space-8); text-align: center;">
+              <div>
+                <p style="font-size: var(--font-size-lg); font-weight: var(--font-weight-semibold); color: var(--color-text-heading); margin-bottom: var(--space-2);">Archive Collection</p>
+                <p style="color: var(--color-text-muted);">90+ episodes available on podcast platforms</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SolderSmoke Podcast -->
+    <section class="section section-white">
+      <div class="container">
+        <div class="podcast-section">
+          <div class="podcast-header">
+            <h2>SolderSmoke Podcast</h2>
+          </div>
+          <p class="podcast-description">For 20 years, Bill Meara N2CQR and Pete N6QW have discussed workbench radio projects. Topics range from LTSpice to WSPR to QRSS to DSB, with a Mailbag segment bringing listener feedback and a sense of community.</p>
+          <div class="card-grid card-grid-2">
+            <div class="episode-list">
+              <a href="https://www.soldersmoke.com/" target="_blank" rel="noopener" class="episode-card">
+                <div class="episode-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </div>
+                <div class="episode-content">
+                  <div class="episode-title">Official Website</div>
+                  <div class="episode-meta">Download episodes and resources</div>
+                </div>
+                <span class="episode-link">Visit →</span>
+              </a>
+              <a href="https://podcasts.apple.com/us/podcast/soldersmoke-podcasts/id160184385" target="_blank" rel="noopener" class="episode-card">
+                <div class="episode-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </div>
+                <div class="episode-content">
+                  <div class="episode-title">Apple Podcasts</div>
+                  <div class="episode-meta">Subscribe on Apple Podcasts</div>
+                </div>
+                <span class="episode-link">Listen →</span>
+              </a>
+              <a href="https://soldersmoke.blogspot.com/" target="_blank" rel="noopener" class="episode-card">
+                <div class="episode-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </div>
+                <div class="episode-content">
+                  <div class="episode-title">SolderSmoke Blog</div>
+                  <div class="episode-meta">Read articles and updates</div>
+                </div>
+                <span class="episode-link">Read →</span>
+              </a>
+              <a href="https://player.fm/series/soldersmoke-podcasts" target="_blank" rel="noopener" class="episode-card">
+                <div class="episode-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </div>
+                <div class="episode-content">
+                  <div class="episode-title">Player FM</div>
+                  <div class="episode-meta">Stream episodes online</div>
+                </div>
+                <span class="episode-link">Listen →</span>
+              </a>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: center; background: var(--color-bg-gray); border-radius: var(--radius-lg); padding: var(--space-8); text-align: center;">
+              <div>
+                <p style="font-size: var(--font-size-lg); font-weight: var(--font-weight-semibold); color: var(--color-text-heading); margin-bottom: var(--space-2);">131 Episodes</p>
+                <p style="color: var(--color-text-muted);">20 years of homebrew radio content</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-gray">
+      <div class="container">
+        <p style="text-align: center; color: var(--color-text-body); font-size: var(--font-size-lg);">
+          These podcasts provide valuable insights and entertainment for ham radio enthusiasts, whether you're a seasoned operator or a novice looking to explore the hobby.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="images/Logo.svg" alt="PAARC Logo" class="footer-logo-img">
+            <span class="logo-text">Parsons Amateur Radio Club</span>
+          </div>
+          <p class="footer-tagline">
+            Connecting amateur radio enthusiasts in the Parsons area and beyond.
+            Join us to explore the fascinating world of ham radio.
+          </p>
+        </div>
+        <div class="footer-links">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="about-amateur-radio.html">Learning Resources</a></li>
+            <li><a href="exams.html">Exam Information</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4 class="footer-heading">Community</h4>
+          <ul>
+            <li><a href="local-nets.html">Local Nets</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Parsons Area Amateur Radio Club. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Navigation JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const hamburger = document.querySelector('.hamburger');
+      const navMobile = document.querySelector('.nav-mobile');
+      const dropdowns = document.querySelectorAll('.nav-mobile .nav-dropdown');
+
+      if (hamburger && navMobile) {
+        hamburger.addEventListener('click', function() {
+          this.classList.toggle('active');
+          navMobile.classList.toggle('active');
+        });
+      }
+
+      dropdowns.forEach(function(dropdown) {
+        const link = dropdown.querySelector('.nav-link');
+        if (link) {
+          link.addEventListener('click', function(e) {
+            e.preventDefault();
+            dropdown.classList.toggle('active');
+          });
+        }
+      });
+
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('.header') && hamburger && navMobile) {
+          hamburger.classList.remove('active');
+          navMobile.classList.remove('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
