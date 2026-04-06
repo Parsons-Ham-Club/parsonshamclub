@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Past activity photos - Parsons Area Amateur Radio Club">
+  <meta name="author" content="Parsons Area Amateur Radio Club">
+  <title>Past Activity Photos - Parsons Area Amateur Radio Club</title>
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="css/modern.css">
+  <style>
+    .photo-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: var(--space-4);
+    }
+
+    .photo-gallery-item {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      background: #000;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .photo-gallery-item:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .photo-gallery-item img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .photo-gallery-item p {
+      color: #ffffff;
+      padding: var(--space-2) var(--space-3);
+      font-size: var(--font-size-sm);
+      margin: 0;
+      text-align: center;
+    }
+
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .lightbox.active {
+      display: flex;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      object-fit: contain;
+      border-radius: var(--radius-lg);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: #fff;
+      font-size: 2rem;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+
+    @media (max-width: 767px) {
+      .photo-gallery {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      }
+
+      .photo-gallery-item img {
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="images/Logo.svg" alt="PAARC Logo" class="logo-img">
+        <span class="logo-text">PAARC</span>
+      </a>
+      <nav class="nav">
+        <button class="hamburger" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="events.html" class="nav-link">Events Calendar</a></li>
+          <li><a href="past-activity-photos.html" class="nav-link active">Past Activity Photos</a></li>
+          <li class="nav-dropdown">
+            <span class="nav-link">Learning</span>
+            <ul class="dropdown-menu">
+              <li><a href="about-amateur-radio.html">About Amateur Radio</a></li>
+              <li><a href="digital-communications.html">Digital Communications</a></li>
+              <li><a href="morse-code.html">Morse Code</a></li>
+              <li><a href="uhf-vhf.html">UHF/VHF</a></li>
+              <li><a href="hf.html">HF</a></li>
+              <li><a href="summits-on-the-air.html">Summits on the Air</a></li>
+              <li><a href="solar-propagation.html">Solar Propagation</a></li>
+            </ul>
+          </li>
+          <li><a href="local-nets.html" class="nav-link">Local Nets</a></li>
+          <li><a href="exams.html" class="nav-link">Exams</a></li>
+          <li class="nav-dropdown">
+            <span class="nav-link">Community</span>
+            <ul class="dropdown-menu">
+              <li><a href="community-service.html">Community Service</a></li>
+              <li><a href="interview-on-community-service.html">Interview on Community Service</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="about-us.html" class="nav-link">About Us</a></li>
+        </ul>
+      </nav>
+      <!-- Mobile Navigation -->
+      <nav class="nav-mobile">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="events.html" class="nav-link">Events Calendar</a>
+        <a href="past-activity-photos.html" class="nav-link active">Past Activity Photos</a>
+        <div class="nav-dropdown">
+          <span class="nav-link">Learning</span>
+          <ul class="dropdown-menu">
+            <li><a href="about-amateur-radio.html">About Amateur Radio</a></li>
+            <li><a href="digital-communications.html">Digital Communications</a></li>
+            <li><a href="morse-code.html">Morse Code</a></li>
+            <li><a href="uhf-vhf.html">UHF/VHF</a></li>
+            <li><a href="hf.html">HF</a></li>
+            <li><a href="summits-on-the-air.html">Summits on the Air</a></li>
+            <li><a href="solar-propagation.html">Solar Propagation</a></li>
+          </ul>
+        </div>
+        <a href="local-nets.html" class="nav-link">Local Nets</a>
+        <a href="exams.html" class="nav-link">Exams</a>
+        <div class="nav-dropdown">
+          <span class="nav-link">Community</span>
+          <ul class="dropdown-menu">
+            <li><a href="community-service.html">Community Service</a></li>
+            <li><a href="interview-on-community-service.html">Interview on Community Service</a></li>
+          </ul>
+        </div>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="about-us.html" class="nav-link">About Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <section class="section section-white">
+      <div class="container">
+        <h1 class="section-title">Past Activity Photos</h1>
+        <p class="section-description">
+          Photos from past PAARC activities and events.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section-gray">
+      <div class="container">
+        <div class="photo-gallery">
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/2020 PAARC at Katy Days.jpg" alt="2020 PAARC at Katy Days">
+            <p>2020 PAARC at Katy Days</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/field day 2006 - Copy.jpg" alt="Field Day 2006">
+            <p>Field Day 2006</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/Field Day 2008 Mike Reed,Jordan, Ross, Bill - Copy.jpg" alt="Field Day 2008 - Mike Reed, Jordan, Ross, Bill">
+            <p>Field Day 2008 - Mike Reed, Jordan, Ross, Bill</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/Field Day 2008 Rick Tucker and Ross Benavides - Copy.jpg" alt="Field Day 2008 - Rick Tucker and Ross Benavides">
+            <p>Field Day 2008 - Rick Tucker and Ross Benavides</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/Field Day 2024 Bill C.jpg" alt="Field Day 2024 - Bill C.">
+            <p>Field Day 2024 - Bill C.</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/Bill at Field Day - Copy.jpg" alt="Bill at Field Day">
+            <p>Bill at Field Day</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/IMAG0029 Lee working ssb field day.jpg" alt="Lee working SSB at Field Day">
+            <p>Lee working SSB at Field Day</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/100_1100.jpg" alt="PAARC activity photo">
+            <p>PAARC Activity</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/100_2225.jpg" alt="PAARC activity photo">
+            <p>PAARC Activity</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/100_2233.jpg" alt="PAARC activity photo">
+            <p>PAARC Activity</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/100_2236.jpg" alt="PAARC activity photo">
+            <p>PAARC Activity</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/100_2239.jpg" alt="PAARC activity photo">
+            <p>PAARC Activity</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/20220528_103538.jpg" alt="PAARC activity - May 2022">
+            <p>May 2022</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/20220528_103606.jpg" alt="PAARC activity - May 2022">
+            <p>May 2022</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/20220528_103627.jpg" alt="PAARC activity - May 2022">
+            <p>May 2022</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/20220528_103647.jpg" alt="PAARC activity - May 2022">
+            <p>May 2022</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/20220528_103818.jpg" alt="PAARC activity - May 2022">
+            <p>May 2022</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/20220528_104151.jpg" alt="PAARC activity - May 2022">
+            <p>May 2022</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/20220611_101155.jpg" alt="PAARC activity - June 2022">
+            <p>June 2022</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/20220611_101325.jpg" alt="PAARC activity - June 2022">
+            <p>June 2022</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/20220611_120543.jpg" alt="PAARC activity - June 2022">
+            <p>June 2022</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/20220611_120556.jpg" alt="PAARC activity - June 2022">
+            <p>June 2022</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/20221008_113606.jpg" alt="PAARC activity - October 2022">
+            <p>October 2022</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/20221008_113641.jpg" alt="PAARC activity - October 2022">
+            <p>October 2022</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/20221008_121547.jpg" alt="PAARC activity - October 2022">
+            <p>October 2022</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/20221008_121601.jpg" alt="PAARC activity - October 2022">
+            <p>October 2022</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/20221008_121621.jpg" alt="PAARC activity - October 2022">
+            <p>October 2022</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/20221229_111310 - Copy.jpg" alt="PAARC activity - December 2022">
+            <p>December 2022</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/20230506_112815.jpg" alt="PAARC activity - May 2023">
+            <p>May 2023</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/20230624_092532.jpg" alt="PAARC activity - June 2023">
+            <p>June 2023</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/20230624_092536.jpg" alt="PAARC activity - June 2023">
+            <p>June 2023</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/20230624_092702.jpg" alt="PAARC activity - June 2023">
+            <p>June 2023</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/20230624_092705.jpg" alt="PAARC activity - June 2023">
+            <p>June 2023</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/20230624_142800.jpg" alt="PAARC activity - June 2023">
+            <p>June 2023</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/20230624_142819.jpg" alt="PAARC activity - June 2023">
+            <p>June 2023</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/20230624_144303.jpg" alt="PAARC activity - June 2023">
+            <p>June 2023</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/20240516_105941.jpg" alt="PAARC activity - May 2024">
+            <p>May 2024</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/FB_IMG_1512571893554.jpg" alt="PAARC activity photo">
+            <p>PAARC Activity</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/FB_IMG_1558969531567.jpg" alt="PAARC activity photo">
+            <p>PAARC Activity</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/FB_IMG_1719198558416.jpg" alt="PAARC activity photo">
+            <p>PAARC Activity</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/IMG_20131223_080102_947.jpg" alt="PAARC activity - December 2013">
+            <p>December 2013</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/IMG_20190107_195637719 - Copy.jpg" alt="PAARC activity - January 2019">
+            <p>January 2019</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/IMG_20190107_203427844 - Copy.jpg" alt="PAARC activity - January 2019">
+            <p>January 2019</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/IMG_20190107_203521199 - Copy.jpg" alt="PAARC activity - January 2019">
+            <p>January 2019</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/IMG_20190524_130441378 - Copy.jpg" alt="PAARC activity - May 2019">
+            <p>May 2019</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/IMG_20190524_130516045 - Copy.jpg" alt="PAARC activity - May 2019">
+            <p>May 2019</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/IMG_20190525_150324177 - Copy.jpg" alt="PAARC activity - May 2019">
+            <p>May 2019</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/IMG_20190525_150519471 - Copy.jpg" alt="PAARC activity - May 2019">
+            <p>May 2019</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/IMG_20190525_150526528 - Copy.jpg" alt="PAARC activity - May 2019">
+            <p>May 2019</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/IMG_20190806_200651475 - Copy.jpg" alt="PAARC activity - August 2019">
+            <p>August 2019</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/IMG_20190905_125614 - Copy.jpg" alt="PAARC activity - September 2019">
+            <p>September 2019</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/IMG_20210710_091528286.jpg" alt="PAARC activity - July 2021">
+            <p>July 2021</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/IMG_20210710_103648541_HDR.jpg" alt="PAARC activity - July 2021">
+            <p>July 2021</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/IMG_20210710_103723933.jpg" alt="PAARC activity - July 2021">
+            <p>July 2021</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/IMG_20210710_103745117.jpg" alt="PAARC activity - July 2021">
+            <p>July 2021</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/IMG_20210710_103806502.jpg" alt="PAARC activity - July 2021">
+            <p>July 2021</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/IMG_20210710_103825810_HDR.jpg" alt="PAARC activity - July 2021">
+            <p>July 2021</p>
+          </div>
+          <div class="photo-gallery-item" onclick="openLightbox(this)">
+            <img src="images/past-activities/IMG_20210710_103840691.jpg" alt="PAARC activity - July 2021">
+            <p>July 2021</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="images/Logo.svg" alt="PAARC Logo" class="footer-logo-img">
+            <span class="logo-text">Parsons Amateur Radio Club</span>
+          </div>
+          <p class="footer-tagline">
+            Connecting amateur radio enthusiasts in the Parsons area and beyond.
+            Join us to explore the fascinating world of ham radio.
+          </p>
+        </div>
+        <div class="footer-links">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul>
+            <li><a href="events.html">Events Calendar</a></li>
+            <li><a href="about-amateur-radio.html">Learning Resources</a></li>
+            <li><a href="exams.html">Exam Information</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4 class="footer-heading">Community</h4>
+          <ul>
+            <li><a href="local-nets.html">Local Nets</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Parsons Area Amateur Radio Club. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Navigation JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const hamburger = document.querySelector('.hamburger');
+      const navMobile = document.querySelector('.nav-mobile');
+      const dropdowns = document.querySelectorAll('.nav-mobile .nav-dropdown');
+
+      if (hamburger && navMobile) {
+        hamburger.addEventListener('click', function() {
+          this.classList.toggle('active');
+          navMobile.classList.toggle('active');
+        });
+      }
+
+      dropdowns.forEach(function(dropdown) {
+        const link = dropdown.querySelector('.nav-link');
+        if (link) {
+          link.addEventListener('click', function(e) {
+            e.preventDefault();
+            dropdown.classList.toggle('active');
+          });
+        }
+      });
+
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('.header') && hamburger && navMobile) {
+          hamburger.classList.remove('active');
+          navMobile.classList.remove('active');
+        }
+      });
+    });
+
+    // Detect portrait images and show them fully instead of cropping
+    document.querySelectorAll('.photo-gallery-item img').forEach(function(img) {
+      img.addEventListener('load', function() {
+        if (this.naturalHeight > this.naturalWidth) {
+          this.style.objectFit = 'contain';
+          this.style.background = '#000';
+        }
+      });
+      // Handle already-cached images
+      if (img.complete && img.naturalHeight > img.naturalWidth) {
+        img.style.objectFit = 'contain';
+        img.style.background = '#000';
+      }
+    });
+
+    function openLightbox(item) {
+      var img = item.querySelector('img');
+      var lightbox = document.getElementById('lightbox');
+      var lightboxImg = document.getElementById('lightbox-img');
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightbox.classList.add('active');
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+    }
+  </script>
+</body>
+</html>
