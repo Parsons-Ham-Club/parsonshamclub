@@ -201,41 +201,27 @@
 
     <section class="section section-gray">
       <div class="container">
+        <!-- Photo and Info side by side -->
         <div class="contact-grid">
-          <div class="contact-form">
-            <h2 style="font-size: var(--font-size-2xl); margin-bottom: var(--space-4);">Send Us a Message</h2>
-            <form action="https://formspree.io/f/xgvpgkao" method="POST">
-              <div>
-                <label for="email">Your E-mail Address*</label>
-                <input type="email" id="email" name="email" required>
-              </div>
-              <div>
-                <label for="subject">Subject</label>
-                <textarea id="subject" name="subject" rows="2"></textarea>
-              </div>
-              <div>
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="6"></textarea>
-              </div>
-              <div>
-                <input type="submit" value="Send">
-              </div>
-            </form>
+          <div class="info-section" style="padding: 0; border: none; background: none;">
+            <img src="images/Labette Health.webp" alt="Labette Health building at 1902 S US Hwy 59, Parsons, KS" style="width: 100%; height: auto; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
           </div>
 
           <div class="contact-info">
             <div class="info-section">
               <h3>Meeting Location</h3>
-              <p>Parsons Arboretum</p>
-              <p>South 21st St. and Briggs Avenue</p>
+              <p>Jerry Lillie Conference Rms 1 &amp; 2</p>
+              <p>Labette Health</p>
+              <p>1902 S US Hwy 59</p>
               <p>Parsons, KS 67357</p>
+              <p style="margin-top: var(--space-4);"><strong>Directions:</strong> Enter Main Entrance, walk south towards Family Practice Clinic, turn right at 1st hallway after the ramp. Third door on left.</p>
               <p style="margin-top: var(--space-4);"><strong>Meetings:</strong> 7:00 pm first Monday of each month</p>
             </div>
 
             <div class="info-section">
               <h3>Contact Information</h3>
               <p><strong>Phone:</strong> (620) 820-2066</p>
-              <p><strong>Email:</strong> ae0aq@yahoo.com</p>
+              <p><strong>Email:</strong> parsonsareaarc@gmail.com</p>
             </div>
 
             <div class="info-section">
@@ -249,13 +235,28 @@
           </div>
         </div>
 
-        <div class="map-container">
-          <img src="images/Arboretum-and-map.jpg" alt="Parsons Arboretum Location Map">
-          <p style="margin-top: var(--space-4); font-size: var(--font-size-lg);">
-            <strong>Parsons Arboretum</strong><br>
-            South 21st St. and Briggs Avenue<br>
-            Parsons, KS 67357
-          </p>
+        <!-- Compact Send Us a Message form below -->
+        <div class="contact-form" style="max-width: 700px; margin: var(--space-8) auto 0;">
+          <h2 style="font-size: var(--font-size-xl); margin-bottom: var(--space-3);">Send Us a Message</h2>
+          <form action="https://formspree.io/f/xgvpgkao" method="POST">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3);">
+              <div>
+                <label for="email">Your E-mail Address*</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div>
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" style="width: 100%; padding: var(--space-3); background: var(--color-bg-white); border: 1px solid var(--color-border); border-radius: var(--radius-md); color: var(--color-text-body); font-family: var(--font-family); font-size: var(--font-size-base);">
+              </div>
+            </div>
+            <div>
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="3"></textarea>
+            </div>
+            <div>
+              <input type="submit" value="Send">
+            </div>
+          </form>
         </div>
       </div>
     </section>
